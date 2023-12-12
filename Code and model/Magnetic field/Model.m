@@ -17,7 +17,8 @@ end
 
 %% Summatory to obtain V
 
-r = 21232;
+R = 6371.2;     % Earth radius [km]
+r = R;
 phi = 0;
 theta = 0;
 k = 8;      % order of the magnetic field
@@ -25,11 +26,13 @@ k = 8;      % order of the magnetic field
 sum_on_n = 0;
 for n = 1:k
 
+    P = legendre(n, cos(theta), 'sch');
     sum_on_m = 0;
     for m = m_ind(0:n)
-        sum_on_m = sum_on_m + (g(n,m)*cos(m*phi) + h(n,m)*sin(m*phi)) * 235235;
-        % da sistemare
+        sum_on_m = sum_on_m + (g(n,m)*cos(m*phi) + h(n,m)*sin(m*phi)) * P(m);
     end
-
+    sum_on_n = sum_on_n + (R/r)^(n+1) * sum_on_m;
 
 end
+
+V = R * sum_on_n;
