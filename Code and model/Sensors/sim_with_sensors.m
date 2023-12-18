@@ -74,3 +74,28 @@ wE = incl_matrix * wE;
 chsi = (i - deg2rad(11)); % relative inclination of orbit wrt to equatorial magnetic plane
 
 k_gain  = (4*pi/T) * (1 + sin(chsi)) * I1 *1e-9;
+
+%%
+
+out = sim("sim_with_sensors_sim.slx");
+%%
+w  = out.omegab;
+MC = out.M_c;
+tt = out.tout;
+
+figure;
+plot(tt, w(:,1));
+hold on;
+plot(tt, w(:,2));
+plot(tt, w(:,3));
+grid on;
+
+figure;
+plot(tt, MC(:,1));
+hold on;
+plot(tt, MC(:,2));
+plot(tt, MC(:,3));
+grid on;
+
+
+
