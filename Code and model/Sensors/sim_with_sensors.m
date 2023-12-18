@@ -1,12 +1,12 @@
 clear; close all; clc;
 
-I1 = 7776999842.85;
+I1 = 7776999842.85*1e-9;
 
-I2 = 22972402681.94;
+I2 = 22972402681.94*1e-9;
 
-I3 = 23189503421.86;
+I3 = 23189503421.86*1e-9;
 
-I = diag([I1 I2 I3])*1e-9;
+I = diag([I1 I2 I3]);
 
 Iinv = I\eye(3);
 
@@ -73,7 +73,22 @@ wE = incl_matrix * wE;
 
 chsi = (i - deg2rad(11)); % relative inclination of orbit wrt to equatorial magnetic plane
 
-k_gain  = (4*pi/T) * (1 + sin(chsi)) * I1 *1e-9;
+k_gain  = (4*pi/T) * (1 + sin(chsi)) * I1;
+
+% state space equation for control law (tracking of LVLH)
+% ky = (I3 - I2)/I1;
+% kr = (I3 - I1)/I2;
+% kp = (I2 - I1)/I3;
+% 
+% A11 = [0 (1 - ky)*n 0; (kr-1)*n 0 0; 0 0 0];
+% A12 = diag([-ky*n^2 -4*kr*n^2 -3*kp*n^2 -3*kp*n^2]);
+% A21 = eye(3);
+% A22 = zeros(3,3);
+% A   = [A11 A12; A21 A22];
+% 
+% B   = [diag(1/I1, 1/I2, 1/I2); zeros(3,3)];
+% 
+% C   = [[0 0 0 0 1 0]; [0 0 0 0 0 1]];
 
 %%
 
@@ -82,13 +97,22 @@ out = sim("sim_with_sensors_sim.slx");
 w  = out.omegab;
 MC = out.M_c;
 tt = out.tout;
+t_dot = out.th_dot;
 
 figure;
+plot(tt, t_dot);
+hold on;
+plot(tt, n*ones(size(tt)));
+%%
+figure;
 plot(tt, w(:,1));
+
 hold on;
 plot(tt, w(:,2));
 plot(tt, w(:,3));
 grid on;
+
+
 
 figure;
 plot(tt, MC(:,1));
