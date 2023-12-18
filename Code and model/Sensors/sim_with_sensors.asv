@@ -110,7 +110,7 @@ hold on;
 plot(tt, w(:,2));
 plot(tt, w(:,3));
 grid on;
-legend('wx', 'wy', 'wz')
+legend('w1', )
 
 
 figure;
