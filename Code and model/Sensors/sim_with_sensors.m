@@ -1,8 +1,8 @@
 clear; close all; clc;
 
-I1 = 7776999842.85*1e-9;
+I1 = 22972402681.94*1e-9;
 
-I2 = 22972402681.94*1e-9;
+I2 = 7776999842.85*1e-9;
 
 I3 = 23189503421.86*1e-9;
 
@@ -73,7 +73,7 @@ wE = incl_matrix * wE;
 
 chsi = (i - deg2rad(11)); % relative inclination of orbit wrt to equatorial magnetic plane
 
-k_gain  = (4*pi/T) * (1 + sin(chsi)) * I1;
+k_gain  = (4*pi/T) * (1 + sin(chsi)) * I2;
 
 % state space equation for control law (tracking of LVLH)
 % ky = (I3 - I2)/I1;
