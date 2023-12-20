@@ -21,7 +21,8 @@ e    = 0.001830122216180;
 i    = 1.699980862034725;
 om   = 1.772848103192913;
 OM   = 0.554268509489784;
-th_0 = 3.109851878856139;
+% th_0 = 3.109851878856139;
+th_0 = 0;
 n    = sqrt(mu/a^3);
 T    = 2*pi/n;
 
@@ -42,8 +43,8 @@ rs = -rr;
 
 %--------------------Dynamics and Kinematics subsystems--------------------
 
-omega0 = [0.01; 0.01; 0.01]*6;
-s0     = zeros(3,1);
+omega0 = [1e-6; 1e-6; n];
+s0     = [2.099, -0.2003, -1.703];
 tol    = 0.2;  % tolerance for kinematic switch 312 - 313 and viceversa
 %---------------------Keplerian Dynamic Sub-system-------------------------
 
@@ -92,8 +93,6 @@ freq_act  = 5;
 
 %-----------------------------De-Tumbling----------------------------------
 
-chsi = (i - deg2rad(11));
-k_gain  = (4*pi/T) * (1 + sin(chsi)) * I2;
 
 %% SIMULATIONS 
 
@@ -102,5 +101,4 @@ k_gain  = (4*pi/T) * (1 + sin(chsi)) * I2;
 t0   = 0;
 tf   = 500;
 step = 0.05;
-out  = sim("complete_model.slx", "Solver", "ode5", "StartTime", "t0", "StopTime", "tf", "SolverType", "Fixed-Step", "FixedStep", "step");
-
+out  = sim("lvlh_control_sim.slx", "Solver", "ode5", "StartTime", "t0", "StopTime", "tf", "SolverType", "Fixed-Step", "FixedStep", "step");
