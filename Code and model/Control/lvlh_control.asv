@@ -75,9 +75,7 @@ D   = zeros(2,3);
 
 R   = diag([(deg2rad(0.05)/3)^2 (deg2rad(0.05)/3)^2]);
 Q   = eye(3);
-sys = ss(A,B,C,zeros(2,3));
- [kalmf,L,P] = kalman(sys,Q,R);
-
+kalman(A,B,C,zeros(3,3))
 %---------------------Keplerian Dynamic Sub-system-------------------------
 
 R_OM =  [ cos(OM),    sin(OM),    0;
