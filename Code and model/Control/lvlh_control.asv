@@ -43,7 +43,7 @@ rs = -rr;
 
 %--------------------Dynamics and Kinematics subsystems--------------------
 
-omega0 = [1e-6; 1e-6; n];
+omega0 = [0; 0; n];
 s0     = [2.099, -0.2003, -1.703];
 tol    = 0.2;  % tolerance for kinematic switch 312 - 313 and viceversa
 
@@ -72,10 +72,45 @@ C   = [[0 0 0 0 1 0]; [0 0 0 0 0 1]];
 D   = zeros(2,3);
 
 % Kalman observer
+sys = ss(A, B, C, D);
+pzplot(sys)
 
-R   = diag([(deg2rad(0.05)/3)^2 (deg2rad(0.05)/3)^2]);
-Q   = eye(3);
-kalman(A,B,C,zeros(3,3))
+% target system
+
+Ixm = I2;
+Iym = I1;
+Izm = I3;
+
+kym = (Izm - Iym)/Ixm;
+krm = (Izm - Ixm)/Iym;
+kpm = (Iym - Ixm)/Izm;
+
+A11m = [0 (1 - kym)*n 0; (krm-1)*n 0 0; 0 0 0];
+A12m = diag([-kym*n^2 -4*krm*n^2 -3*kpm*n^2 ]);
+A21m = eye(3);
+
+Am   = zeros(6,6);
+Bm   = zeros(6,3);
+
+Am(1:3,1:3)  = A11m;
+Am(4:6, 1:3) = A21m;
+Am(1:3, 4:6) = A12m;
+
+B(1:3,1:3)   = diag([1/Ixm 1/Iym 1/Izm]);
+
+Q = eye(6);
+R = eye(3);
+Q = (A-Am)' * Q * (A-Am);
+R = R + (B-Bm)' * Q * (B-Bm);
+N = (A - Am)'*Q*(B-Bm);
+[K,S,P] = lqr(sys,Q,R,N);
+
+eig_obs = 10*real(eig(A - B*K)) + 1i*imag(eig(A - B*K));
+
+Ltr = place(A', C', eig_obs);
+
+L = Ltr';
+
 %---------------------Keplerian Dynamic Sub-system-------------------------
 
 R_OM =  [ cos(OM),    sin(OM),    0;
