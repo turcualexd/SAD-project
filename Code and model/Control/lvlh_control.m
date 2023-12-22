@@ -68,9 +68,9 @@ A(1:3, 4:6) = A12;
 
 B(1:3,1:3)   = diag([1/I1 1/I2 1/I3]);
 
-C   = [[0 0 0 0 1 0]; [0 0 0 0 0 1]];
+C   = [[0 0 0 1 0 0];[0 0 0 0 1 0]; [0 0 0 0 0 1]];
 
-D   = zeros(2,3);
+D   = zeros(3,3);
 
 
 sys = ss(A, B, C, D);
@@ -101,18 +101,29 @@ Am(1:3, 4:6) = A12m;
 
 B(1:3,1:3)   = diag([1/Ixm 1/Iym 1/Izm]);
 
-Q = eye(6);
-R = eye(3);
-Q = (A-Am)' * Q * (A-Am);
-R = R + (B-Bm)' * Q * (B-Bm);
-N = (A - Am)'*Q*(B-Bm);
+Q = diag([1/deg2rad(3)^2 1/deg2rad(3)^2 1/deg2rad(3)^2 1/n^2 1/n^2 1/n^2]);
+R = diag(100*ones(3,1));
+N =  zeros(6,3);
 [K,S,P] = lqr(sys,Q,R,N);
 
-eig_obs = 10*real(eig(A - B*K)) + 1i*imag(eig(A - B*K));
+eig_obs = 2*(eig(A - B*K));
 
 Ltr = place(A', C', eig_obs);
 
 L = Ltr';
+
+% Q = eye(6);
+% R = eye(3);
+% Q = (A-Am)' * Q * (A-Am);
+% R = R + (B-Bm)' * Q * (B-Bm);
+% N = (A - Am)'*Q*(B-Bm);
+% [K,S,P] = lqr(sys,Q,R,N);
+% 
+% eig_obs = 10*real(eig(A - B*K)) + 1i*imag(eig(A - B*K));
+% 
+% Ltr = place(A', C', eig_obs);
+% 
+% L = Ltr';
 
 %---------------------Keplerian Dynamic Sub-system-------------------------
 
