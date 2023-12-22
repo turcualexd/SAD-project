@@ -18,6 +18,7 @@ Iinv = I\eye(3);
 mu   = astroConstants(13);
 a    = 6.851221970532768e+03;
 e    = 0.001830122216180;
+
 i    = 1.699980862034725;
 om   = 1.772848103192913;
 OM   = 0.554268509489784;
@@ -71,9 +72,11 @@ C   = [[0 0 0 0 1 0]; [0 0 0 0 0 1]];
 
 D   = zeros(2,3);
 
-% Kalman observer
+
 sys = ss(A, B, C, D);
 pzplot(sys)
+
+
 
 % target system
 

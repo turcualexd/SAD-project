@@ -3,7 +3,9 @@ clear; close all; clc;
 %------------------Space-Craft Geometry and Properties---------------------
 
 I1 = 22972402681.94*1e-9;
+%I1 = 7776999842.85*1e-9;
 I2 = 7776999842.85*1e-9;
+%I3 = 7776999842.85*1e-9;
 I3 = 23189503421.86*1e-9;
 
 I = diag([I1 I2 I3]);
@@ -78,6 +80,7 @@ FOV_sun    = deg2rad(85); % ??? to choose
 freq_earth = 5; %Hertz to decrease
 freq_sun   = 5; %Hertz to decrease
 freq_mag   = 5;
+variance_E_sens = (deg2rad(0.05)/3)^2;
 
 %---------------------------Att. Determination-----------------------------
 
