@@ -43,7 +43,7 @@ rs = -rr;
 
 %--------------------Dynamics and Kinematics subsystems--------------------
 
-omega0  = [0; 0; n];
+omega0  = [1e-6; 1e-6; n];
  s0     = [2.099, -0.2003, -1.703];
 tol     = 0.2;  % tolerance for kinematic switch 312 - 313 and viceversa
 %---------------------Keplerian Dynamic Sub-system-------------------------
@@ -122,31 +122,29 @@ C = [
 
 D = zeros(3);
 
+sys = ss(A, B, C, D);
+
 Co = ctrb(A,B);
 
 Ob = obsv(A,C);
 
-% p = [
-%     -0.05 + 0.011i;
-%     -0.05 - 0.011i;
-%     -0.1 + 0.02i;
-%     -0.1 - 0.02i;
-%     -0.07 + 0.04i;
-%     -0.07 - 0.04i];
+% Kp = 1e-2*diag([0.4;0.1;0.56]);
+% Kd = 1e-4*diag([0.1;0.05;0.105]);
 % 
+% K = [Kd Kp];
 % 
-% 
-% K = place(A,B,p);
-Kp = 1e-2*diag([0.4;0.1;0.56]);
-Kd = 1e-4*diag([0.1;0.05;0.105]);
+p = [-0.02+0.1i;
+    -0.02-0.1i;
+    -0.01+0.06i;
+    -0.01-0.06i;
+    -0.05+0.1i;
+    -0.05-0.1i];
 
-K = [Kd Kp];
+K = place(A,B,p);
 
 eig(A)
 
 eig(A - B * K)
-
-
 %% SIMULATIONS 
 
 %------------------------------Simulation----------------------------------
@@ -154,7 +152,7 @@ eig(A - B * K)
 t0   = 0;
 tf   = 1000;
 step = 0.01/3;
-out  = sim("complete_model.slx", "Solver", "ode5", "StartTime", "t0", "StopTime", "tf", "SolverType", "Fixed-Step", "FixedStep", "step");
+out  = sim("control_lvlh_sim.slx", "Solver", "ode5", "StartTime", "t0", "StopTime", "tf", "SolverType", "Fixed-Step", "FixedStep", "step");
 
 %%
 
