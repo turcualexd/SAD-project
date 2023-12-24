@@ -18,7 +18,6 @@ Iinv = I\eye(3);
 mu   = astroConstants(13);
 a    = 6.851221970532768e+03;
 e    = 0.001830122216180;
-
 i    = 1.699980862034725;
 om   = 1.772848103192913;
 OM   = 0.554268509489784;
@@ -74,43 +73,48 @@ D   = zeros(3,3);
 
 
 sys = ss(A, B, C, D);
-pzplot(sys)
+
 
 
 
 % target system
 
-Ixm = I2/2;
-Iym = I1;
-Izm = I3;
-
-kym = (Izm - Iym)/Ixm;
-krm = (Izm - Ixm)/Iym;
-kpm = (Iym - Ixm)/Izm;
-
-A11m = [0 (1 - kym)*n 0; (krm-1)*n 0 0; 0 0 0];
-A12m = diag([-kym*n^2 -4*krm*n^2 -3*kpm*n^2 ]);
-A21m = eye(3);
-
-Am   = zeros(6,6);
-Bm   = zeros(6,3);
-
-Am(1:3,1:3)  = A11m;
-Am(4:6, 1:3) = A21m;
-Am(1:3, 4:6) = A12m;
-
-B(1:3,1:3)   = diag([1/Ixm 1/Iym 1/Izm]);
+% Ixm = I2/2;
+% Iym = I1;
+% Izm = I3;
+% 
+% kym = (Izm - Iym)/Ixm;
+% krm = (Izm - Ixm)/Iym;
+% kpm = (Iym - Ixm)/Izm;
+% 
+% A11m = [0 (1 - kym)*n 0; (krm-1)*n 0 0; 0 0 0];
+% A12m = diag([-kym*n^2 -4*krm*n^2 -3*kpm*n^2 ]);
+% A21m = eye(3);
+% 
+% Am   = zeros(6,6);
+% Bm   = zeros(6,3);
+% 
+% Am(1:3,1:3)  = A11m;
+% Am(4:6, 1:3) = A21m;
+% Am(1:3, 4:6) = A12m;
+% 
+% B(1:3,1:3)   = diag([1/Ixm 1/Iym 1/Izm]);
 
 Q = diag([1/deg2rad(3)^2 1/deg2rad(3)^2 1/deg2rad(3)^2 1/n^2 1/n^2 1/n^2]);
 R = diag(100*ones(3,1));
 N =  zeros(6,3);
 [K,S,P] = lqr(sys,Q,R,N);
+K = 1/100*K;
 
-eig_obs = 2*(eig(A - B*K));
 
-Ltr = place(A', C', eig_obs);
-
+poles_cl = eig(A - B*K);
+obs_poles = (min(real(poles_cl)))-0.05*(1:6);
+Ltr = place(A', C', obs_poles);
 L = Ltr';
+
+
+
+% observer
 
 % Q = eye(6);
 % R = eye(3);
