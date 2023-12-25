@@ -101,15 +101,16 @@ sys = ss(A, B, C, D);
 % 
 % B(1:3,1:3)   = diag([1/Ixm 1/Iym 1/Izm]);
 
-Q = diag([1/deg2rad(3)^2 1/deg2rad(3)^2 1/deg2rad(3)^2 1/n^2 1/n^2 1/n^2]);
-R = diag(100*ones(3,1));
+Q = diag([1/deg2rad(5)^2 1/deg2rad(5)^2 1/deg2rad(5)^2 deg2rad(20)^2 1/deg2rad(4)^2 1/deg2rad(4)^2]);
+% Q = diag([1/deg2rad(2)^2 1/deg2rad(2)^2 1/deg2rad(2)^2 1/deg2rad(20)^2 1/deg2rad(4)^2 1/deg2rad(4)^2]);
+R = diag(1/0.01^2 *ones(3,1));
 N =  zeros(6,3);
 [K,S,P] = lqr(sys,Q,R,N);
-K = 1/100*K;
 
 
-poles_cl = eig(A - B*K);
-obs_poles = (min(real(poles_cl)))-0.01*(1:6);
+
+poles_cl = eig(A - B*K)
+obs_poles = (min(real(poles_cl)))-0.001*(1:6)
 Ltr = place(A', C', obs_poles);
 L = Ltr';
 
