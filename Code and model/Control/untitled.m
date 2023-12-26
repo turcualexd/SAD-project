@@ -101,9 +101,9 @@ sys = ss(A, B, C, D);
 % 
 % B(1:3,1:3)   = diag([1/Ixm 1/Iym 1/Izm]);
 
-Q = diag([1/deg2rad(0.1)^2 1/deg2rad(0.1)^2 1/deg2rad(1)^2 deg2rad(2)^2 1/deg2rad(2)^2 1/deg2rad(2)^2]);
+Q = diag([1/deg2rad(0.1)^2 1/deg2rad(0.1)^2 1/deg2rad(0.1)^2 1/deg2rad(1)^2 1/deg2rad(1)^2 1/deg2rad(1)^2]);
 % Q = diag([1/deg2rad(2)^2 1/deg2rad(2)^2 1/deg2rad(2)^2 1/deg2rad(20)^2 1/deg2rad(4)^2 1/deg2rad(4)^2]);
-R = diag(1/0.01^2 *ones(3,1));
+R = diag(1/0.001^2 *ones(3,1));
 N =  zeros(6,3);
 [K,S,P] = lqr(sys,Q,R,N);
 

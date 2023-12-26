@@ -1,13 +1,14 @@
 clear; close all; clc;
 
 %------------------Space-Craft Geometry and Properties---------------------
-% Detumbling configuration 
+
 % I1 = 22972402681.94*1e-9;
 % I2 = 7776999842.85*1e-9;
 % I3 = 23189503421.86*1e-9;
 
+% Detumbling configuration 
 I1 = 49/6;
-I2 = 49/6;
+I2 = 49/6+1;
 I3 = 49/6;
 
 I = diag([I1 I2 I3]);
@@ -47,7 +48,7 @@ rs = -rr;
 %--------------------Dynamics and Kinematics subsystems--------------------
 
 omega0 = [0.01; 0.01; 0.01]*6;
-s0     = zeros(3,1);
+s0 = -pi + 2 * pi * rand(3,1);
 tol    = 0.2;  % tolerance for kinematic switch 312 - 313 and viceversa
 %---------------------Keplerian Dynamic Sub-system-------------------------
 
@@ -98,7 +99,7 @@ freq_act  = 5;
 %-----------------------------De-Tumbling----------------------------------
 
 chsi = (i - deg2rad(11));
-k_gain  = (4*pi/T) * (1 + sin(chsi)) * I2;
+k_gain  = (4*pi/T) * (1 + sin(chsi)) * min([I1, I2, I3]);
 
 %% SIMULATIONS 
 
