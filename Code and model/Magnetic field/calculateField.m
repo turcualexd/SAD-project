@@ -47,44 +47,44 @@ for k = 1:npq
     if k >= 5
 
         if m == n
-            aa = sqrt(1 - 0.5/fm);
+            a = sqrt(1 - 0.5/fm);
             j = k - n - 1;
-            p(k) = (1 + 1/fm) * aa * cos_lat * p(j);
-            q(k) = aa * (cos_lat * q(j) + sin_lat/fm * p(j));
+            p(k) = (1 + 1/fm) * a * cos_lat * p(j);
+            q(k) = a * (cos_lat * q(j) + sin_lat/fm * p(j));
             sl(m) = sl(m-1)*cl(1) + cl(m-1)*sl(1);
             cl(m) = cl(m-1)*cl(1) - sl(m-1)*sl(1);
         else
-            aa = sqrt(fn^2 - fm^2);
-            bb = sqrt((fn-1)^2 - fm^2) / aa;
-            cc = (2*fn - 1) / aa;
+            a = sqrt(fn^2 - fm^2);
+            b = sqrt((fn-1)^2 - fm^2) / a;
+            c = (2*fn - 1) / a;
             ii = k - n;
             j = k - 2*n + 1;
-            p(k) = (fn+1) * (cc * sin_lat/fn * p(ii) - bb/(fn-1) * p(j));
-            q(k) = cc * (sin_lat * q(ii) - cos_lat/fn * p(ii)) - bb * q(j);
+            p(k) = (fn+1) * (c * sin_lat/fn * p(ii) - b/(fn-1) * p(j));
+            q(k) = c * (sin_lat * q(ii) - cos_lat/fn * p(ii)) - b * q(j);
         end
 
     end
 
-    aa = rr * gh(l);
+    a = rr * gh(l);
     
     if m == 0
 
-        Bx = Bx + aa*q(k);
-        Bz = Bz - aa*p(k);
+        Bx = Bx + a*q(k);
+        Bz = Bz - a*p(k);
         
         l = l + 1;
 
     else
         
-        bb = rr * gh(l+1);
-        cc = aa*cl(m) + bb*sl(m);
-        Bx = Bx + cc * q(k);
-        Bz = Bz - cc * p(k);
+        b = rr * gh(l+1);
+        c = a*cl(m) + b*sl(m);
+        Bx = Bx + c * q(k);
+        Bz = Bz - c * p(k);
         
         if cos_lat > 0
-            By = By + (aa*sl(m) - bb*cl(m)) * fm * p(k)/((fn+1) * cos_lat);
+            By = By + (a*sl(m) - b*cl(m)) * fm * p(k)/((fn+1) * cos_lat);
         else
-            By = By + (aa*sl(m) - bb*cl(m)) * q(k) * sin_lat;
+            By = By + (a*sl(m) - b*cl(m)) * q(k) * sin_lat;
         end
         
         l = l + 2;
