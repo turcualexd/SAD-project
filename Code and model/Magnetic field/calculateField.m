@@ -1,14 +1,15 @@
-function B = calculateField(r, lat, lon, N)
+function B = calculateField(r, theta, phi, N)
 
-% Ricorda: theta = 90 - lat, phi = lon
+lat = pi/2 - theta;
+lon = phi;
 
 load("IGRF13_2020.mat", "gh");
 
 R = 6371.2;     % Radius of Earth in IGRF
 ratio = R / r;
 
-sin_lat = sind(lat);
-cos_lat = cosd(lat);
+sin_lat = sin(lat);
+cos_lat = cos(lat);
 
 npq = (N * (N+3)) / 2;
 
@@ -25,10 +26,10 @@ q(3) = -3 * cos_lat * sin_lat;
 q(4) = sqrt(3) * (sin_lat^2 - cos_lat^2);
 
 sl = zeros(N+1, 1);
-sl(1) = sind(lon);
+sl(1) = sin(lon);
 
 cl = zeros(N+1, 1);
-cl(1) = cosd(lon);
+cl(1) = cos(lon);
 
 Bx = 0; By = 0; Bz = 0;
 l = 1; n = 0; m = 1;
