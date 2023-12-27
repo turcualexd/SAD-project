@@ -106,15 +106,17 @@ Q = diag([1/deg2rad(0.1)^2 1/deg2rad(0.1)^2 1/deg2rad(0.1)^2 1/deg2rad(1)^2 1/de
 R = diag(1/0.001^2 *ones(3,1));
 N =  zeros(6,3);
 [K,S,P] = lqr(sys,Q,R,N);
+K = 1.6*K;
 
+% poles_cl = eig(A - B*K);
+% obs_poles = (min(real(poles_cl)))-(1:6);
+% Ltr = place(A', C', obs_poles);
+% L1 = Ltr';
 
-
-poles_cl = eig(A - B*K)
-obs_poles = (min(real(poles_cl)))-0.001*(1:6)
-Ltr = place(A', C', obs_poles);
-L = Ltr';
-
-
+cov_noise = diag([(deg2rad(0.05)/3)^2 (deg2rad(0.05)/3)^2 (deg2rad(0.05)/3)^2]);
+cov_proc  =  diag([1e-12 1e-12 1e-12]);
+ 
+[kalmf,L,P] = kalman(sys,cov_proc,cov_noise);
 
 % observer
 
