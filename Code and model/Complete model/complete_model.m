@@ -67,12 +67,11 @@ A_pn  = R_om * R_i * R_OM; %from inertial to perifocal
 
 %-------------Magnetic Field Modeling and distrubance dipole j-------------
 
-g01    = -29404.8; g11 = -1450.9; h11 = 4652.5;
-H0     = sqrt(g01^2+g11^2+h11^2)*1e-9;
 jb     = [0.01; 0.05; 0.01];
 incl   = deg2rad(11.5);
 omegaE = deg2rad(15)/3600;
 Rt     = astroConstants(23);
+load("IGRF13_2020.mat", "gh");
 
 %-------------------------------Sensors------------------------------------
 
