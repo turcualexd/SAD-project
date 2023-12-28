@@ -1,5 +1,6 @@
-function B = calculateField(r, theta, phi, N)
+function B = calculateField(r, theta, phi)
 
+N = 13;         % Order of the field
 lat = pi/2 - theta;
 lon = phi;
 
@@ -10,6 +11,8 @@ ratio = R / r;
 
 sin_lat = sin(lat);
 cos_lat = cos(lat);
+sin_lon = sin(lon);
+cos_lon = cos(lon);
 
 npq = (N * (N+3)) / 2;
 
@@ -26,10 +29,10 @@ q(3) = -3 * cos_lat * sin_lat;
 q(4) = sqrt(3) * (sin_lat^2 - cos_lat^2);
 
 sl = zeros(N+1, 1);
-sl(1) = sin(lon);
+sl(1) = sin_lon;
 
 cl = zeros(N+1, 1);
-cl(1) = cos(lon);
+cl(1) = cos_lon;
 
 Bx = 0; By = 0; Bz = 0;
 l = 1; n = 0; m = 1;
@@ -96,4 +99,11 @@ for k = 1:npq
 
 end
 
-B = [Bx; By; Bz];
+B_NED = [Bx; By; Bz];
+
+% Convert NED to ECEF
+R = [-sin_lat * cos_lon,    -sin_lon,   -cos_lat * cos_lon;
+     -sin_lat * sin_lon,    cos_lon,    -cos_lat * sin_lon;
+     cos_lat,               0,          -sin_lat            ];
+
+B = R * B_NED;
