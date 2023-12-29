@@ -80,7 +80,7 @@ Rt     = astroConstants(23);
 
 freq_mag     = 30;         % Can be modulated up to 500Hz
 noise_sd_mag = 1.18*1e-9;  % T/sqrt(Hz)
-pwr_sd_mag   = noise_sd_mag^2;
+pwr_sd_mag   = noise_sd_mag
 bias_mag     = rand(3,1);
 bias_mag     = bias_mag./norm(bias_mag);
 
@@ -90,15 +90,15 @@ freq_sun     = 30;
 bias_sun     = rand(3,1);
 bias_sun     = bias_mag./norm(bias_mag);
 variance_sun = deg2rad(0.5)^2;
-pwr_sd_sun   = (1/freq_sun)*variance_sun;
+pwr_sd_sun = (1/freq_sun)*variance_sun;
 
 % Earth Sensor - Meisei Electric
 freq_earth     = 30; 
 FOV_earth      = deg2rad(33);   
 bias_earth     = rand(3,1);
 bias_earth     = bias_mag./norm(bias_mag);
-variance_earth = deg2rad(0.5)^2;
-pwr_sd_earth   = (1/freq_earth)*variance_earth;
+
+
 %--------------------------------------------------------------------------
 
 freq_acds = 30;
