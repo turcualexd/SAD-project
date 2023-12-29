@@ -63,7 +63,7 @@ R_om =  [ cos(om),    sin(om),    0;
           0,          0,          1 ];
 
 
-A_pn  = R_om * R_i * R_OM; %from inertial to perifocal
+A_pn  = R_om * R_i * R_OM; % from inertial to perifocal
 
 %-------------Magnetic Field Modeling and distrubance dipole j-------------
 
@@ -77,9 +77,18 @@ load("IGRF13_2020.mat", "gh");
 
 FOV_earth  = deg2rad(33); % MEISEI ELECTRIC 
 FOV_sun    = deg2rad(100); % ??? to choose
-freq_earth = 5; %Hertz to decrease
-freq_sun   = 5; %Hertz to decrease
-freq_mag   = 5;
+freq_earth = 30;
+freq_sun   = 30;
+
+% Magnetometer AAC ClydeSpace MM200
+freq_mag     = 30;         % Can be modulated up to 500Hz
+noise_sd_mag = 1.18*1e-12;  % T/sqrt(Hz)
+bias_mag     = rand(3,1);
+bias_mag     = bias_mag./norm(bias_mag);
+
+%--------------------------------------------------------------------------
+
+freq_acds = 30;
 
 %---------------------------Att. Determination-----------------------------
 
@@ -90,7 +99,7 @@ alpha3 = 0.5;
 %-------------------------------Actuators----------------------------------
 
 max_dip   =  150; %[A m^2] NMTR-X CUSTOM
-freq_act  = 5;
+freq_act  = 30;
 
 %-----------------------------De-Tumbling----------------------------------
 
