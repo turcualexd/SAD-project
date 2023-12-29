@@ -78,9 +78,18 @@ Rt     = astroConstants(23);
 
 FOV_earth  = deg2rad(33); % MEISEI ELECTRIC 
 FOV_sun    = deg2rad(100); % ??? to choose
-freq_earth = 5; %Hertz to decrease
-freq_sun   = 5; %Hertz to decrease
-freq_mag   = 5;
+freq_earth = 30; 
+freq_sun   = 30; 
+
+% Magnetometer AAC ClydeSpace MM200
+freq_mag     = 30;         % Can be modulated up to 500Hz
+noise_sd_mag = 1.18*1e-9;  % T/sqrt(Hz) 
+bias_mag     = rand(3,1);
+bias_mag     = bias_mag./norm(bias_mag);
+
+%--------------------------------------------------------------------------
+
+freq_acds = 30;
 
 %---------------------------Att. Determination-----------------------------
 
