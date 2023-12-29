@@ -107,6 +107,7 @@ N =  zeros(6,3);
 [K,S,P] = lqr(sys,Q,R,N);
 K = 1/100*K;
 
+K = 
 
 poles_cl = eig(A - B*K);
 obs_poles = (min(real(poles_cl)))-0.01*(1:6);

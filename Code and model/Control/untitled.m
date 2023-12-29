@@ -106,7 +106,8 @@ Q = diag([1/deg2rad(0.1)^2 1/deg2rad(0.1)^2 1/deg2rad(0.1)^2 1/deg2rad(1)^2 1/de
 R = diag(1/0.001^2 *ones(3,1));
 N =  zeros(6,3);
 [K,S,P] = lqr(sys,Q,R,N);
-K = 1.6*K;
+K = K;
+K(1:3, 4:6) =  2.2*K(1:3, 4:6);
 
 % poles_cl = eig(A - B*K);
 % obs_poles = (min(real(poles_cl)))-(1:6);
@@ -114,7 +115,7 @@ K = 1.6*K;
 % L1 = Ltr';
 
 cov_noise = diag([(deg2rad(0.05)/3)^2 (deg2rad(0.05)/3)^2 (deg2rad(0.05)/3)^2]);
-cov_proc  =  diag([1e-12 1e-12 1e-12]);
+cov_proc  =  diag([1e-15 1e-15 1e-15]);
  
 [kalmf,L,P] = kalman(sys,cov_proc,cov_noise);
 
