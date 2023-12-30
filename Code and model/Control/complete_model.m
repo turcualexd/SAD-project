@@ -73,6 +73,7 @@ jb     = [0.01; 0.05; 0.01];
 incl   = deg2rad(11.5);
 omegaE = deg2rad(15)/3600;
 Rt     = astroConstants(23);
+load("IGRF13_2020.mat", "gh");
 
 %--------------------------------Sensors-----------------------------------
 
@@ -88,7 +89,7 @@ bias_mag     = bias_mag./norm(bias_mag);
 
 freq_sun     = 30; 
 bias_sun     = rand(3,1);
-bias_sun     = bias_mag./norm(bias_mag);
+bias_sun     = bias_sun./norm(bias_sun);
 variance_sun = deg2rad(0.5)^2;
 pwr_sd_sun   = (1/freq_sun)*variance_sun;
 
@@ -96,7 +97,7 @@ pwr_sd_sun   = (1/freq_sun)*variance_sun;
 freq_earth     = 30; 
 FOV_earth      = deg2rad(33);   
 bias_earth     = rand(3,1);
-bias_earth     = bias_mag./norm(bias_mag);
+bias_earth     = bias_earth./norm(bias_earth);
 variance_earth = deg2rad(0.5)^2;
 pwr_sd_earth   = (1/freq_earth)*variance_earth;
 %--------------------------------------------------------------------------
@@ -111,9 +112,9 @@ alpha3 = 0.5;
 
 %-------------------------------Actuators----------------------------------
 
-max_dip   =  150; %[A m^2] NMTR-X CUSTOM
-freq_act  = 5;
-
+max_dip   =  15; %[A m^2] NMTR-X CUSTOM
+freq_act  = 30;
+max_hdot = 0.1;
 %-----------------------------De-Tumbling----------------------------------
 
 chsi = (i - deg2rad(11));
