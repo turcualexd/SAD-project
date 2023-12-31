@@ -1658,8 +1658,33 @@ INPUT Sections\04_dynamics.tex
 INPUT .\Sections\04_dynamics.tex
 INPUT .\Sections\04_dynamics.tex
 INPUT Sections\04_dynamics.tex
-INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmn7t.vf
+INPUT .\Sections\05_kinematics.tex
+INPUT .\Sections\05_kinematics.tex
+INPUT .\Sections\05_kinematics.tex
+INPUT Sections\05_kinematics.tex
+INPUT .\Sections\05_kinematics.tex
+INPUT .\Sections\05_kinematics.tex
+INPUT Sections\05_kinematics.tex
+INPUT .\Sections\06_disturbances.tex
+INPUT .\Sections\06_disturbances.tex
+INPUT .\Sections\06_disturbances.tex
+INPUT Sections\06_disturbances.tex
+INPUT .\Sections\06_disturbances.tex
+INPUT .\Sections\06_disturbances.tex
+INPUT Sections\06_disturbances.tex
 INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpbn7t.vf
+INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmn7t.vf
+INPUT .\Images\\disturbances.eps
+INPUT Images\\disturbances.eps
+INPUT .\Images\\disturbances.eps
+INPUT .\Images\\disturbances.eps
+INPUT .\Images\\disturbances-eps-converted-to.pdf
+INPUT .\Images\\disturbances-eps-converted-to.pdf
+INPUT .\Images\\disturbances.eps
+INPUT .\Images\\disturbances-eps-converted-to.pdf
+INPUT .\Images\\disturbances-eps-converted-to.pdf
+INPUT .\Images\\disturbances-eps-converted-to.pdf
+INPUT .\Images\\disturbances-eps-converted-to.pdf
 INPUT .\SAD report.bbl
 INPUT SAD report.bbl
 INPUT .\SAD report.bbl

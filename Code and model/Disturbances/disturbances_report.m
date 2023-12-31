@@ -109,7 +109,7 @@ t0 = 0;
 tf = 3*T;
 sim_options.SolverType='Fixed-Step';
 sim_options.Solver='ode5';
-sim_options.FixedStep='1';
+sim_options.FixedStep='0.3';
 sim_options.StartTime='t0';
 sim_options.StopTime='tf';
 out   = sim("disturbances_report_sim.slx", sim_options);
@@ -123,18 +123,25 @@ t     = out.tout;
 
 figure;
 subplot(2,2,1)
-plot(t/T, magT);
-title('Magnetic Torque')
+plot(t/T, magT, 'LineWidth',2);
+xlabel('Orbits','interpreter','latex'); ylabel('Magnetic Torque [Nm]','interpreter','latex')
+title('Magnetic Torque','interpreter','latex')
+grid on;
 
 subplot(2,2,2)
-plot(t/T, dragT);
-title('Drag Torque')
+plot(t/T, dragT, 'LineWidth',2);
+xlabel('Orbits','interpreter','latex'); ylabel('Drag Torque [Nm]','interpreter','latex')
+title('Drag Torque','interpreter','latex')
+grid on;
 
 subplot(2,2,3)
-plot(t/T, ggT)
-title('GG Torque')
+plot(t/T, ggT, 'LineWidth',2)
+xlabel('Orbits','interpreter','latex'); ylabel('GG Torque [Nm]','interpreter','latex')
+title('GG Torque','interpreter','latex')
+grid on;
 
 subplot(2,2,4)
-plot(t/T, srpT)
-title('SRP Torque')
-
+plot(t/T, srpT, 'LineWidth',2)
+xlabel('Orbits','interpreter','latex'); ylabel('SRP Torque [Nm]','interpreter','latex')
+title('SRP Torque','interpreter','latex')
+grid on;
