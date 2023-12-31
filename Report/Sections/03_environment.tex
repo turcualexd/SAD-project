@@ -19,6 +19,34 @@ since there are always two predominant effects of disturbance, while the other c
 (usually some order of magnitude smaller, but always depends on the specific case) for this reason
 all the disturbances are analyzed. 
 
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Type & Reference formula & Value [Nm] \\ \hline
+		Gravity gradient & \( T_{\text{max}} = \frac{3G M_e}{2R^3} |I_{\text{max}} - I_{\text{min}}| \) & \\ \hline
+		Solar radiation pressure & \( T_{\text{max}} = P_s S_{\text{max}} \left(1 + \frac{2}{3} \rho_r + \rho_d \right) (c_{ps} - c_g) \) & \\ \hline
+		Magnetic field & \( T_{\text{max}} = |m_{\text{max}} B_{\text{max}}| \) & \\ \hline
+		Aerodynamics & \( T_{\text{max}} = \frac{\rho v^2 S_{\text{max}} C_d}{2} (c_{pa} - c_g) \) & \\ \hline
+	\end{tabular}
+	\caption{Disturbances with solar panel retracted}
+	\label{tab:torque_values}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Type & Reference formula & Value [Nm] \\ \hline
+		Gravity gradient & \( T_{\text{max}} = \frac{3G M_e}{2R^3} |I_{\text{max}} - I_{\text{min}}| \) & \\ \hline
+		Solar radiation pressure & \( T_{\text{max}} = P_s S_{\text{max}} \left(1 + \frac{2}{3} \rho_r + \rho_d \right) (c_{ps} - c_g) \) & \\ \hline
+		Magnetic field & \( T_{\text{max}} = |m_{\text{max}} B_{\text{max}}| \) & \\ \hline
+		Aerodynamics & \( T_{\text{max}} = \frac{\rho v^2 S_{\text{max}} C_d}{2} (c_{pa} - c_g) \) & \\ \hline
+	\end{tabular}
+	\caption{Disturbances with solar panel extended}
+	\label{tab:torque_values}
+\end{table}
+
 
 \subsubsection{Magnetic Disturbance}
 \label{subsubsec:dist_mag}
