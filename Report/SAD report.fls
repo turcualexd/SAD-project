@@ -1644,13 +1644,13 @@ INPUT Sections\02_requirements.tex
 INPUT .\Sections\02_requirements.tex
 INPUT .\Sections\02_requirements.tex
 INPUT Sections\02_requirements.tex
-INPUT .\Sections\03_environment.tex
-INPUT .\Sections\03_environment.tex
-INPUT .\Sections\03_environment.tex
-INPUT Sections\03_environment.tex
-INPUT .\Sections\03_environment.tex
-INPUT .\Sections\03_environment.tex
-INPUT Sections\03_environment.tex
+INPUT .\Sections\03_framework.tex
+INPUT .\Sections\03_framework.tex
+INPUT .\Sections\03_framework.tex
+INPUT Sections\03_framework.tex
+INPUT .\Sections\03_framework.tex
+INPUT .\Sections\03_framework.tex
+INPUT Sections\03_framework.tex
 INPUT .\Sections\04_dynamics.tex
 INPUT .\Sections\04_dynamics.tex
 INPUT .\Sections\04_dynamics.tex
@@ -1658,8 +1658,8 @@ INPUT Sections\04_dynamics.tex
 INPUT .\Sections\04_dynamics.tex
 INPUT .\Sections\04_dynamics.tex
 INPUT Sections\04_dynamics.tex
-INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpbn7t.vf
 INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmn7t.vf
+INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpbn7t.vf
 INPUT .\SAD report.bbl
 INPUT SAD report.bbl
 INPUT .\SAD report.bbl
@@ -1679,6 +1679,8 @@ INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpbn8a.pfb
 INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpbn8a.pfb
 INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpbsc8a.pfb
 INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpbsc8a.pfb
+INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpex.pfb
+INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpex.pfb
 INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpmi.pfb
 INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpmi.pfb
 INPUT C:\Miktex\fonts\type1\public\kpfonts\jkpmia.pfb

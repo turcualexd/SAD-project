@@ -19,8 +19,8 @@ i    = 1.699980862034725;
 om   = 1.772848103192913;
 OM   = 0.554268509489784;
 th_0 = 3.109851878856139;
-nn    = sqrt(muE/a^3);
-T    = 2*pi/nn;
+n    = sqrt(mu/a^3);
+T    = 2*pi/n;
 
 %--------------------------Position of Earth wrt Sun-----------------------
 
@@ -34,7 +34,7 @@ a_E = 1.497081833259778E+08;
 
 [rr, vv] = kep2car(a_E, e_E, i_E, OM_E, om_E, th_E, mu_sun);
 rs = -rr;
-n_sun = sqrt(mu_sun/a_E^3);
+
 %------------Initial Conditions % constant values for Simulation-----------
 
 %--------------------Dynamics and Kinematics subsystems--------------------
@@ -103,18 +103,9 @@ h0=450;              % standard height for the density equation model between 50
 H=60.828; 
 
 
-%---------------------------SIMULATION-------------------------------
-
-t0 = 0;
-tf = 3*T;
-sim_options.SolverType='Fixed-Step';
-sim_options.Solver='ode5';
-sim_options.FixedStep='1';
-sim_options.StartTime='t0';
-sim_options.StopTime='tf';
-out   = sim("disturbances_report_sim.slx", sim_options);
+out   = sim("disturbances_report_sim.slx");
 srpT  = out.SRP_torque.data;
-magT  = squeeze(out.MAG_torque);
+magT  = out.MAG_torque.data;
 dragT = out.DRAG_torque.data;
 ggT   = out.GRAV_torque.data;
 t     = out.tout;
@@ -123,18 +114,18 @@ t     = out.tout;
 
 figure;
 subplot(2,2,1)
-plot(t/T, magT);
+plot(t/5643, magT);
 title('Magnetic Torque')
 
 subplot(2,2,2)
-plot(t/T, dragT);
+plot(t/5643, dragT);
 title('Drag Torque')
 
 subplot(2,2,3)
-plot(t/T, ggT)
+plot(t/5643, ggT)
 title('GG Torque')
 
 subplot(2,2,4)
-plot(t/T, srpT)
+plot(t/5643, srpT)
 title('SRP Torque')
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  31 DEC 2023 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  31 DEC 2023 16:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1140,14 +1140,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 LaTeX Font Info:    Trying to load font information for T1+jkp on input line 200.
  (C:\Miktex\tex/latex/kpfonts\t1jkp.fd
 File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
-) (SAD report.aux
-
-LaTeX Warning: Label `subsec:orbit_characterization' multiply defined.
-
-
-LaTeX Warning: Label `subsec:orbit_characterization@cref' multiply defined.
-
-)
+) (SAD report.aux)
 \openout1 = `"SAD report.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 200.
@@ -1339,7 +1332,7 @@ Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on i
 \ltmcbox=\box139
 ) [3
 
-] (Sections/02_requirements.tex) (Sections/03_environment.tex) (Sections/04_dynamics.tex) [1] (SAD report.bbl)
+] (Sections/02_requirements.tex) (Sections/03_framework.tex) (Sections/04_dynamics.tex) [1] [2] (SAD report.bbl)
 
 Package caption Warning: Unused \captionsetup[figure] on input line 22.
 See the caption package documentation for explanation.
@@ -1348,27 +1341,24 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 23.
 See the caption package documentation for explanation.
 
-[2
+[3
 
 ] (SAD report.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `"SAD report".out' has not changed.
-(rerunfilecheck)             Checksum: D98DEFD3C27A7ECB5A6E1E5CAC042ABF;2440.
+(rerunfilecheck)             Checksum: 91ACDEBBFC296F9BA47710CA1533A097;2478.
  ) 
 Here is how much of TeX's memory you used:
- 32031 strings out of 475385
- 581728 string characters out of 2793321
- 1005994 words of memory out of 3000000
- 52775 multiletter control sequences out of 15000+600000
+ 32035 strings out of 475385
+ 581782 string characters out of 2793321
+ 1009994 words of memory out of 3000000
+ 52778 multiletter control sequences out of 15000+600000
  581983 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,15n,80p,635b,622s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Miktex/fonts/enc/dvips/base/8r.enc}{C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Miktex/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on "SAD report.pdf" (5 pages, 226840 bytes).
+{C:/Miktex/fonts/enc/dvips/base/8r.enc}{C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Miktex/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpex.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsy.pfb>
+Output written on "SAD report.pdf" (6 pages, 240876 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
  159 words of extra memory for PDF output out of 10000 (max. 10000000)
 

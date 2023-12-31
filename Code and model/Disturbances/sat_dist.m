@@ -23,6 +23,7 @@ c = c * 1e3; %m/s
 P = Fe/c; %radiation pressure Pa
 Ts = 365.2564*24*60*60; %sidereal year in seconds
 ns = 2*pi / Ts;
+
 N = [1 0 0; 0 1 0; -1 0 0; 0 -1 0; 0 0 1; 0 0 -1; 1 0 0; -1 0 0; 1 0 0; -1 0 0];
 A = [6*1e-2; 6*1e-2; 6*1e-2; 6*1e-2; 4*1e-2; 4*1e-2; 12*1e-2; 12*1e-2; 12*1e-2; 12*1e-2];
 rhos = 0.5*ones(10,1);
