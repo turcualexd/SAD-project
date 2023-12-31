@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2023.12.31)  31 DEC 2023 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2023.12.31)  31 DEC 2023 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1380,6 +1380,24 @@ LaTeX Warning: Label `subsec:orbit_characterization' multiply defined.
 
 LaTeX Warning: Label `subsec:orbit_characterization@cref' multiply defined.
 
+
+LaTeX Warning: Label `subsec:sat_characterization' multiply defined.
+
+
+LaTeX Warning: Label `subsec:sat_characterization@cref' multiply defined.
+
+
+LaTeX Warning: Label `subsec:orbit_characterization' multiply defined.
+
+
+LaTeX Warning: Label `subsec:orbit_characterization@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:torque_values' multiply defined.
+
+
+LaTeX Warning: Label `tab:torque_values@cref' multiply defined.
+
 )
 \openout1 = `"SAD report.aux"'.
 
@@ -1529,7 +1547,7 @@ d-to.pdf>
 ng_indinf-eps-converted-to.pdf Images/logo_polimi_ing_indinf.eps>
 (epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
-<Images/logo_polimi_ing_indinf-eps-converted-to.pdf, id=72, 493.845pt x 227.851
+<Images/logo_polimi_ing_indinf-eps-converted-to.pdf, id=84, 493.845pt x 227.851
 26pt>
 File: Images/logo_polimi_ing_indinf-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1586,7 +1604,7 @@ f>
 mi-eps-converted-to.pdf Images/raggiera_polimi.eps>
 (epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
-<Images/raggiera_polimi-eps-converted-to.pdf, id=73, 502.87875pt x 502.87875pt>
+<Images/raggiera_polimi-eps-converted-to.pdf, id=85, 502.87875pt x 502.87875pt>
 
 File: Images/raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/raggiera_polimi-eps-converted-to.pdf>
@@ -1611,14 +1629,11 @@ nverted-to.pdf>] (SAD report.toc)
 ) [3
 
 ] (Sections/02_requirements.tex)
-(Sections/03_environment.tex) (Sections/04_dynamics.tex [1]) [2]
+(Sections/03_framework.tex) (Sections/04_dynamics.tex)
+(Sections/05_kinematics.tex) (Sections/06_disturbances.tex [1]) [2]
 (SAD report.bbl)
 
 Package caption Warning: Unused \captionsetup[figure] on input line 22.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[table] on input line 23.
 See the caption package documentation for explanation.
 
 [3
@@ -1633,16 +1648,16 @@ L3 programming layer <2023-12-11>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `"SAD report".out' has not changed.
-(rerunfilecheck)             Checksum: D98DEFD3C27A7ECB5A6E1E5CAC042ABF;2440.
+(rerunfilecheck)             Checksum: 7FE457F3379877804CA0E04AB642AE48;2957.
  ) 
 Here is how much of TeX's memory you used:
- 31977 strings out of 474495
- 591806 string characters out of 5743934
- 1943460 words of memory out of 5000000
- 53632 multiletter control sequences out of 15000+600000
- 680901 words of font info for 167 fonts, out of 8000000 for 9000
+ 32014 strings out of 474495
+ 592760 string characters out of 5743934
+ 1947460 words of memory out of 5000000
+ 53656 multiletter control sequences out of 15000+600000
+ 681672 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,93p,586b,709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,15n,93p,586b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpb
 mi.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts
 /jkpbn8a.pfb><C:/Users/tamim/AppData/Local/Programs/MiKTeX/fonts/type1/public/k
@@ -1654,9 +1669,9 @@ fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/tamim/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/tamim/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/tamim/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on "SAD report.pdf" (6 pages, 241792 bytes).
+Output written on "SAD report.pdf" (6 pages, 248380 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 210 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
 
