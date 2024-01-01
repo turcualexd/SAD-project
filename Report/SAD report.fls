@@ -1674,6 +1674,8 @@ INPUT .\Sections\06_disturbances.tex
 INPUT Sections\06_disturbances.tex
 INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpbn7t.vf
 INPUT C:\Miktex\fonts\vf\public\kpfonts\jkpmn7t.vf
+INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmn8t.tfm
+INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmn8t.tfm
 INPUT .\Images\\disturbances.eps
 INPUT Images\\disturbances.eps
 INPUT .\Images\\disturbances.eps
@@ -1681,8 +1683,6 @@ INPUT .\Images\\disturbances.eps
 INPUT .\Images\\disturbances-eps-converted-to.pdf
 INPUT .\Images\\disturbances-eps-converted-to.pdf
 INPUT .\Images\\disturbances.eps
-INPUT .\Images\\disturbances-eps-converted-to.pdf
-INPUT .\Images\\disturbances-eps-converted-to.pdf
 INPUT .\Images\\disturbances-eps-converted-to.pdf
 INPUT .\Images\\disturbances-eps-converted-to.pdf
 INPUT .\Images\\disturbances-eps-converted-to.pdf
