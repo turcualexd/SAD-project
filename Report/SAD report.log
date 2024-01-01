@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  31 DEC 2023 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  1 JAN 2024 14:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1334,22 +1334,26 @@ Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on i
 
 ] (Sections/02_requirements.tex) (Sections/03_framework.tex) (Sections/04_dynamics.tex) (Sections/05_kinematics.tex) (Sections/06_disturbances.tex [1]
 Package epstopdf Info: Source file: <Images//disturbances.eps>
-(epstopdf)                    date: 2023-12-31 16:53:20
-(epstopdf)                    size: 497269 bytes
+(epstopdf)                    date: 2024-01-01 14:54:35
+(epstopdf)                    size: 304755 bytes
 (epstopdf)             Output file: <Images//disturbances-eps-converted-to.pdf>
 (epstopdf)                    date: 2023-12-31 16:56:31
 (epstopdf)                    size: 162039 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//disturbances-eps-converted-to.pdf Images//disturbances.eps>
 (epstopdf)             \includegraphics on input line 58.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(miktex-epstopdf --outfile=Images//disturbances-eps-converted-to.pdf Images//disturbances.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Images//disturbances-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-01 14:54:48
+(epstopdf)                    size: 112608 bytes.
 
 
 pdfTeX warning: pdflatex (file ./Images//disturbances-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//disturbances-eps-converted-to.pdf, id=139, 513.92pt x 280.04625pt>
+<Images//disturbances-eps-converted-to.pdf, id=139, 545.03625pt x 441.65pt>
 File: Images//disturbances-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//disturbances-eps-converted-to.pdf>
 Package pdftex.def Info: Images//disturbances-eps-converted-to.pdf  used on input line 58.
-(pdftex.def)             Requested size: 512.14963pt x 279.10117pt.
+(pdftex.def)             Requested size: 512.14963pt x 415.02301pt.
 ) [2 <./Images//disturbances-eps-converted-to.pdf>] (SAD report.bbl)
 
 Package caption Warning: Unused \captionsetup[table] on input line 23.
@@ -1370,7 +1374,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  83i,15n,80p,635b,622s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Miktex/fonts/enc/dvips/base/8r.enc}{C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Miktex/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpex.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on "SAD report.pdf" (6 pages, 402288 bytes).
+Output written on "SAD report.pdf" (6 pages, 352857 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  24 named destinations out of 1000 (max. 500000)
