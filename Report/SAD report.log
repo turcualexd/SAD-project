@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  1 JAN 2024 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  1 JAN 2024 23:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1341,29 +1341,29 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//disturbances-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//disturbances-eps-converted-to.pdf, id=159, 545.03625pt x 441.65pt>
+<Images//disturbances-eps-converted-to.pdf, id=160, 545.03625pt x 441.65pt>
 File: Images//disturbances-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//disturbances-eps-converted-to.pdf>
 Package pdftex.def Info: Images//disturbances-eps-converted-to.pdf  used on input line 131.
 (pdftex.def)             Requested size: 512.14963pt x 415.02301pt.
-[3 <./Images//disturbances-eps-converted-to.pdf>]) (Sections/07_sensors.tex) [4] (SAD report.bbl) [5
+[3]) (Sections/07_sensors.tex [4 <./Images//disturbances-eps-converted-to.pdf>]) [5] (SAD report.bbl) [6
 
 ] (SAD report.aux)
 Package rerunfilecheck Info: File `"SAD report".out' has not changed.
 (rerunfilecheck)             Checksum: 5FB53EB1CDF9366B71ED8885A34E7397;2951.
  ) 
 Here is how much of TeX's memory you used:
- 32358 strings out of 476361
- 605237 string characters out of 5788046
- 1873993 words of memory out of 5000000
- 52109 multiletter control sequences out of 15000+600000
+ 32364 strings out of 476361
+ 605367 string characters out of 5788046
+ 1874993 words of memory out of 5000000
+ 52114 multiletter control sequences out of 15000+600000
  640480 words of font info for 181 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,80p,635b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,16n,80p,635b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on "SAD report.pdf" (8 pages, 384086 bytes).
+Output written on "SAD report.pdf" (9 pages, 387836 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

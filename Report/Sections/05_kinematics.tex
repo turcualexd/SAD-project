@@ -1,2 +1,30 @@
 \section{Kinematics}
 \label{sec:kinematics}
+
+As specified in \autoref{sec:requirements}, the attitude parameters of the satellite are expressed through the use of Euler angles. The kinematics calculated according to this parameterization follows these steps:
+
+\begin{itemize}[wide,itemsep=3pt,topsep=3pt]
+    \item given the angular velocity $\omega$ from dynamics for each time and the initial condition on Euler angles $s_0$, compute the time derivatives of the angles $\dot{s}$;
+    \item integrate the derivatives to obtain the set of Euler angles $s$ for each time;
+    \item from the calculated angles, compute the attitude matrix $A$.
+\end{itemize}
+
+The main problem when dealing with this kind of parameterization is that, for any chosen set of three Euler angles, there are always some singularity conditions on the second angle $\theta$ that could make the derivatives of the other two angles tend to infinite. The problem is related to the fact that, in this particular conditions, the set of Euler angles is not uniquely defined, since the first and the third rotation are done on the same physical direction.
+
+To avoid these singularities, it becomes necessary to have two systems working on two different sets of Euler angles:
+
+\begin{itemize}[wide,itemsep=3pt,topsep=3pt]
+    \item one set of angles defined by three different indexes, which have the singularity condition on $\theta = (2n+1) \pi / 2$;
+    \item one set of angles where the first and the last indexes coincide, which have the singularity condition on $\theta = n \pi$.
+\end{itemize}
+
+To merge these two systems together and avoid all the singularities, there are two main paths:
+
+\begin{itemize}[wide,itemsep=3pt,topsep=3pt]
+    \item run both systems all the time, get the attitude kinematics only from one system until it reaches its singularity condition on $\theta$, then switch to the other system, which will be further from its singularity;
+    \item run just one system at a time; when the system reaches its singularity condition, convert from the current set of angles to the other set through the attitude matrix, impose the calculated angles as the initial condition of the system, then start the integration from where it interrupted, deactivating the system that reached the singularity.
+\end{itemize}
+
+Although the first option is simpler, the second option offers significant computational savings for the simulation. It is important to note that the kinematics model is only executed in the simulation to calculate the satellite's motion over time and is not executed on the satellite processor. Despite the added complexity of the system switch, the second option was chosen to accelerate the execution of the Simulink model.
+
+...
