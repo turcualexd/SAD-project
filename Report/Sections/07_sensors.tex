@@ -1,0 +1,42 @@
+\section{Sensors}
+\label{subsec:sensors}
+
+Sensors are fundamental tools that allows the SC to know its orientation or angular velocity. Their presence onboard 
+is fundamental for having a controlled motion of the satellite. In this section, the 3 sensors used will be presented, 
+it will be also clarified the motivation that lead the team to choose two additional sensors over the horizon sensor 
+assigned. 
+
+\subsection{Horizon Sensor}
+Horizon sensors are devices that can detect the centre of the planet, in our case Earth, and reconstruct the direction 
+of that point with respect to the satellite. They usually work by analyzing the IR spectrum of the image through a thermopile
+to reduce the visible light spectrum interference caused by transition of day and night on earth. 
+Due to the nadir pointing requirment a static earth sensor has been chosen for this specific application. In particular, the 
+\textit{Meisei Earth Horizon} was chosen, which has the following specifics:
+
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    $\bm{F.O.V. \, [\deg]}$ & $\bm{Accuracy \, [\deg]}$ & $\bm{Frequency \, [Hz]}$ \\
+    \hline
+    $33$ & $1$ & $30$  \\
+    \hline
+    \end{tabular}
+    
+    \caption{Real data for Horizon Sensor}
+    \label{table:Hor_sensor}
+    
+\end{table}
+
+Due to operational requirements, the static sensor has to point the Earth, in particular the optical
+axis must have the same direction of the nadir (direction that links centre of earth and CoM of the S/C).
+To fulfill this request, a good option could be to position the sensor on the face that also contains the 
+payload, that is the face of the spacecraft main body (cube) that has normal along the $\boldsymbol{x_b}$ 
+direction. The model implemented to simulate the behaviour of the sensor in the Simulink environment, 
+was to take the real position of the S/C with respect to centre of Earth expressed in inertial space, change its
+direction multiplying by -1 and express it in the $\mathcal{B}$ frame through the real attitude matrix $\boldsymbol{A_{B,N}}$. 
+This unit vector is the input of the sensor block, here it is sampled through a zero-order hold of frequency specified by
+\autoref{table:Hor_sensor} to simulate the digital nature of the sensor. Then some errors of measurments has to be added.
+It was decided to model two typical effects of real sensor: the mounting error that cause misalignment and also an 
+accuracy error modeled with a band-limited white noise on all the components of the direction vector. 
