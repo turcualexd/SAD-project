@@ -9,22 +9,99 @@ As specified in \autoref{sec:requirements}, the attitude parameters of the satel
     \item from the calculated angles, compute the attitude matrix $A$.
 \end{itemize}
 
-The main problem when dealing with this kind of parameterization is that, for any chosen set of three Euler angles, there are always some singularity conditions on the second angle $\theta$ that could make the derivatives of the other two angles tend to infinite. The problem is related to the fact that, in this particular conditions, the set of Euler angles is not uniquely defined, since the first and the third rotation are done on the same physical direction.
+When dealing with this type of parameterization, a major issue arises due to the singularity conditions on the second angle $\theta$ for any chosen set of three Euler angles. This can cause the derivatives of the other two angles to tend towards infinity. The problem is a result of the fact that, under these specific conditions, the set of Euler angles is not uniquely defined, as the first and third rotations are performed on the same physical direction.
 
 To avoid these singularities, it becomes necessary to have two systems working on two different sets of Euler angles:
 
 \begin{itemize}[wide,itemsep=3pt,topsep=3pt]
-    \item one set of angles defined by three different indexes, which have the singularity condition on $\theta = (2n+1) \pi / 2$;
-    \item one set of angles where the first and the last indexes coincide, which have the singularity condition on $\theta = n \pi$.
+    \item one set of angles defined by three different indexes, which has the singularity condition on $\theta = (2n+1) \pi / 2$;
+    \item one set of angles where the first and the last indexes coincide, which has the singularity condition on $\theta = n \pi$.
 \end{itemize}
 
-To merge these two systems together and avoid all the singularities, there are two main paths:
+To merge these two systems and avoid singularities, there are two main options:
 
 \begin{itemize}[wide,itemsep=3pt,topsep=3pt]
     \item run both systems all the time, get the attitude kinematics only from one system until it reaches its singularity condition on $\theta$, then switch to the other system, which will be further from its singularity;
-    \item run just one system at a time; when the system reaches its singularity condition, convert from the current set of angles to the other set through the attitude matrix, impose the calculated angles as the initial condition of the system, then start the integration from where it interrupted, deactivating the system that reached the singularity.
+    \item run just one system at a time; when the system reaches its singularity condition, convert from the current set of angles to the other set through the attitude matrix, impose the calculated angles as initial condition on the other system, then start the integration from where it was interrupted, deactivating the system that reached the singularity.
 \end{itemize}
 
 Although the first option is simpler, the second option offers significant computational savings for the simulation. It is important to note that the kinematics model is only executed in the simulation to calculate the satellite's motion over time and is not executed on the satellite processor. Despite the added complexity of the system switch, the second option was chosen to accelerate the execution of the Simulink model.
 
-...
+In the model discussed in this report, the 312 and 313 sets of Euler angles were chosen. The equations for the integration and the conversion to attitude matrix are reported below:
+
+{
+\vspace*{10pt}
+\centering
+\small
+\begin{tabular}{c c}
+    $\begin{dcases}
+        \dot{\phi}_{312} = \frac{\omega_z \cos \psi - \omega_x \sin \psi}{\cos \theta} \\
+        \dot{\theta}_{312} = \omega_x \cos \psi + \omega_z \sin \psi \\
+        \dot{\psi}_{312} = \omega_y - \left( \omega_z \cos \psi - \omega_x \sin \psi \right) \tan \theta
+    \end{dcases}$
+    &
+    $A_{312} =
+    \begin{bmatrix}
+        \cos \psi \cos \phi - \sin \psi \sin \phi \sin \theta &
+        \cos \psi \sin \phi + \sin \psi \cos \phi \sin \theta &
+        -\sin \psi \cos \theta \\
+        -\sin \phi \cos \theta & \cos \phi \cos \theta & \sin \theta \\
+        \sin \psi \cos \phi + \cos \psi \sin \phi \sin \theta &
+        \sin \psi \sin \phi - \cos \psi \cos \phi \sin \theta &
+        \cos \theta \cos \psi
+    \end{bmatrix}$
+    \\[1cm]
+    $\begin{dcases}
+        \dot{\phi}_{313} = \frac{\omega_x \sin \psi + \omega_y \cos \psi}{\sin \theta} \\
+        \dot{\theta}_{313} = \omega_x \cos \psi - \omega_y \sin \psi \\
+        \dot{\psi}_{313} = \omega_z - \left( \omega_x \sin \psi + \omega_y \cos \psi \right) \cot \theta
+    \end{dcases}$
+    &
+    $A_{313} =
+    \begin{bmatrix}
+        \cos \psi \cos \phi - \sin \psi \sin \phi \cos \theta &
+        \cos \psi \sin \phi + \sin \psi \cos \phi \cos \theta &
+        \sin \psi \sin \theta \\
+        -\sin \psi \cos \phi - \cos \psi \sin \phi \cos \theta &
+        -\sin \psi \sin \phi + \cos \psi \cos \phi \cos \theta &
+        \cos \psi \sin \theta \\
+        \sin \phi \sin \theta & -\cos \phi \sin \theta & \cos \theta
+    \end{bmatrix}$
+\end{tabular}
+\par
+\vspace*{10pt}
+}
+
+In order to translate one set of Euler angles to the other set is sufficient to remember that $A_{312}$ must be equal to $A_{313}$, since attitude matrices are both related to the same physical object. Inverting the formulas:
+
+{
+\vspace*{10pt}
+\centering
+\begin{tabular}{c c c}
+    $\begin{dcases}
+        \phi_{312} = \atantwo \left( -A^{2,1} , A^{2,2} \right) \\
+        \theta_{312} = \arcsin \left( A^{2,3} \right) \\
+        \psi_{312} = \atantwo \left( -A^{1,3} , A^{3,3} \right)
+    \end{dcases}$
+    & \hspace*{2cm} &
+    $\begin{dcases}
+        \phi_{313} = \atantwo \left( A^{3,1} , -A^{3,2} \right) \\
+        \theta_{313} = \arccos \left( A^{3,3} \right) \\
+        \psi_{313} = \atantwo \left( A^{1,3} , A^{2,3} \right)
+    \end{dcases}$
+\end{tabular}
+\par
+\vspace*{10pt}
+}
+
+The system switcher has been designed in Simulink using basic boolean operators. These operators are combined to generate a 'flag' signal that selects the appropriate system, taking into account the singularity conditions of both.
+
+In more detail, the switcher logic takes as input three boolean signals:
+
+\begin{itemize}[wide,itemsep=3pt,topsep=3pt]
+    \item $\lvert \cos \theta_{312} \rvert < tol$, where $tol$ is a chosen tolerance value to keep the 312 system distant from the singularity;
+    \item $\lvert \sin \theta_{313} \rvert < tol$, where $tol$ is a chosen tolerance value to keep the 313 system distant from the singularity;
+    \item the \textbf{flag} of the system at the previous step time.
+\end{itemize}
+
+A truth table can be created using the given signals and expected output. The truth table can then be simplified using basic logic operators such as AND, OR, and NOT through boolean algebra. Finally, the logic can be implemented in the simulation to handle the activation of the two systems.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  1 JAN 2024 23:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  2 JAN 2024 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1133,46 +1133,46 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \c@proposition=\count374
 \c@algsubstate=\count375
 )
-LaTeX Font Info:    Trying to load font information for T1+jkp on input line 200.
+LaTeX Font Info:    Trying to load font information for T1+jkp on input line 203.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\t1jkp.fd
 File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
 ) (SAD report.aux)
 \openout1 = `"SAD report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 200.
-LaTeX Font Info:    Trying to load font information for OML+jkp on input line 200.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 203.
+LaTeX Font Info:    Trying to load font information for OML+jkp on input line 203.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 200.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 200.
-LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 200.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 203.
+LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 203.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 200.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 200.
-LaTeX Font Info:    ... okay on input line 200.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 200.
-LaTeX Font Info:    ... okay on input line 200.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 200.
-LaTeX Font Info:    ... okay on input line 200.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 200.
-LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 200.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 203.
+LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 203.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 200.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 200.
-LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 200.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 203.
+LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 203.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 200.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 200.
-LaTeX Font Info:    ... okay on input line 200.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 200.
-LaTeX Font Info:    ... okay on input line 200.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count376
@@ -1203,20 +1203,20 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \[ on input line 200.
-LaTeX Info: Redefining \] on input line 200.
+LaTeX Info: Redefining \[ on input line 203.
+LaTeX Info: Redefining \] on input line 203.
 \c@lstlisting=\count382
 \symgns@font=\mathgroup13
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/jkp/m/n --> TS1/jkp/b/n on input line 200.
-Package gensymb Info: Math companion symbols declared on input line 200.
-LaTeX Info: Redefining \degree on input line 200.
-LaTeX Info: Redefining \celsius on input line 200.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 200.
-LaTeX Info: Redefining \ohm on input line 200.
-Package gensymb Info: Using \textohm for \ohm on input line 200.
-Package gensymb Info: Using \textmu for \micro on input line 200.
-Package hyperref Info: Link coloring ON on input line 200.
+(Font)                  TS1/jkp/m/n --> TS1/jkp/b/n on input line 203.
+Package gensymb Info: Math companion symbols declared on input line 203.
+LaTeX Info: Redefining \degree on input line 203.
+LaTeX Info: Redefining \celsius on input line 203.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 203.
+LaTeX Info: Redefining \ohm on input line 203.
+Package gensymb Info: Using \textohm for \ohm on input line 203.
+Package gensymb Info: Using \textmu for \micro on input line 203.
+Package hyperref Info: Link coloring ON on input line 203.
  (SAD report.out) (SAD report.out)
 \@outlinefile=\write5
 \openout5 = `"SAD report.out"'.
@@ -1306,7 +1306,7 @@ Package epstopdf Info: Source file: <Images//raggiera_polimi.eps>
 (epstopdf)                    date: 2023-12-31 17:25:31
 (epstopdf)                    size: 40418 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//raggiera_polimi-eps-converted-to.pdf Images//raggiera_polimi.eps>
-(epstopdf)             \includegraphics on input line 213.
+(epstopdf)             \includegraphics on input line 216.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1314,7 +1314,7 @@ pdfTeX warning: pdflatex (file ./Images//raggiera_polimi-eps-converted-to.pdf): 
 <Images//raggiera_polimi-eps-converted-to.pdf, id=90, 502.87875pt x 502.87875pt>
 File: Images//raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//raggiera_polimi-eps-converted-to.pdf>
-Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 213.
+Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 216.
 (pdftex.def)             Requested size: 298.75394pt x 298.75233pt.
 [1
 
@@ -1328,7 +1328,7 @@ Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on i
 \ltmcbox=\box139
 ) [3
 
-] (Sections/02_requirements.tex) (Sections/03_framework.tex) (Sections/04_dynamics.tex) (Sections/05_kinematics.tex) (Sections/06_disturbances.tex [1] [2]
+] (Sections/02_requirements.tex) (Sections/03_framework.tex) (Sections/04_dynamics.tex) (Sections/05_kinematics.tex [1]) (Sections/06_disturbances.tex [2] [3]
 Package epstopdf Info: Source file: <Images//disturbances.eps>
 (epstopdf)                    date: 2024-01-01 17:14:17
 (epstopdf)                    size: 317732 bytes
@@ -1341,27 +1341,27 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//disturbances-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//disturbances-eps-converted-to.pdf, id=160, 545.03625pt x 441.65pt>
+<Images//disturbances-eps-converted-to.pdf, id=164, 545.03625pt x 441.65pt>
 File: Images//disturbances-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//disturbances-eps-converted-to.pdf>
 Package pdftex.def Info: Images//disturbances-eps-converted-to.pdf  used on input line 131.
 (pdftex.def)             Requested size: 512.14963pt x 415.02301pt.
-[3]) (Sections/07_sensors.tex [4 <./Images//disturbances-eps-converted-to.pdf>]) [5] (SAD report.bbl) [6
+[4 <./Images//disturbances-eps-converted-to.pdf>]) (Sections/07_sensors.tex) [5] (SAD report.bbl) [6
 
 ] (SAD report.aux)
 Package rerunfilecheck Info: File `"SAD report".out' has not changed.
 (rerunfilecheck)             Checksum: 5FB53EB1CDF9366B71ED8885A34E7397;2951.
  ) 
 Here is how much of TeX's memory you used:
- 32364 strings out of 476361
- 605367 string characters out of 5788046
- 1874993 words of memory out of 5000000
- 52114 multiletter control sequences out of 15000+600000
+ 32366 strings out of 476361
+ 605382 string characters out of 5788046
+ 1882993 words of memory out of 5000000
+ 52116 multiletter control sequences out of 15000+600000
  640480 words of font info for 181 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,80p,635b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,16n,80p,635b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on "SAD report.pdf" (9 pages, 387836 bytes).
+Output written on "SAD report.pdf" (9 pages, 391565 bytes).
 PDF statistics:
  244 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)
