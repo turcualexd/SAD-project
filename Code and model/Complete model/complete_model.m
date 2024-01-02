@@ -20,8 +20,7 @@ Iinv_ext = I_ext\eye(3);
 
 mu   = astroConstants(13);
 a    = 6.851221970532768e+03;
-%e    = 0.001830122216180;
-e = 0;
+e    = 0.001830122216180;
 i    = 1.699980862034725;
 om   = 1.772848103192913;
 OM   = 0.554268509489784;
@@ -50,6 +49,7 @@ omega0  = 0.06 * ones(3,1);
 s0      = 2*pi*rand(3,1);
 
 tol     = 0.2;  % tolerance for kinematic switch 312 - 313 and viceversa
+
 %---------------------Keplerian Dynamic Sub-system-------------------------
 
 R_OM =  [ cos(OM),    sin(OM),    0;
