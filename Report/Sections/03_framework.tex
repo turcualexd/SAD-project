@@ -83,16 +83,16 @@ Then, the radial distance is found as:
  At this point it is easy to retrieve the position $\boldsymbol{r_p}$ of the S/C in the perifocal frame $\mathcal{P}$.
 
  \begin{align}
-    \underline{r}_{P} &= r\begin{bmatrix}
+    \boldsymbol{r_P} = r\begin{bmatrix}
            cos \theta \\
            sin \theta \\
            0
          \end{bmatrix}
-  \end{align}.
+  \end{align}
 
   The position in the inertial frame $\mathcal{N}$ is found using the  the transpose of the transformation matrix 
   $\boldsymbol{A_{pn}} = \boldsymbol{R_3}\left(\omega\right) \boldsymbol{R_1}\left(i\right) \boldsymbol{R_3}\left(\Omega\right)$. 
   In particular:
   \begin{empheq}{equation*}
-    \boldsymbol{r_n} = \boldsymbol{A_{pn}r_p} 
+    \boldsymbol{r_N} = \boldsymbol{A_{pn}r_P} 
  \end{empheq}
