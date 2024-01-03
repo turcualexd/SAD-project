@@ -27,4 +27,4 @@
 \contentsline {section}{\numberline {10}Control logic}{11}{section.10}%
 \contentsline {subsection}{\numberline {10.1}De-tumbling phase: the B-dot control}{11}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Slew and Nadir phase}{12}{subsection.10.2}%
-\contentsline {section}{Bibliography}{13}{subsection.10.2}%
+\contentsline {section}{Bibliography}{13}{figure.caption.28}%
