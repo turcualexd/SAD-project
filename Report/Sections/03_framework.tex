@@ -4,6 +4,73 @@
 \subsection{Satellite characterization }
 \label{subsec:sat_characterization}
 
+
+
 \subsection{Orbit characterization}
 \label{subsec:orbit_characterization}
 
+The orbit adopted for the simulation is a Sun-synchronous (SSO), nearly polar and LEO orbit. Polar orbits allows to scan the whole globe during
+the several orbits, due to Earth rotation. SSO are orbits that maintain the same angle between their orbital plane and the direction that connects
+the Earth with the Sun \cite{curtis_book}. This allows the spacecraft the monitor the Earth surface with always the same conditions of light 
+(or eventually darkness, if the plane is oriented in a certain way). Also, a SSO orbit can be choosen in such a way to have always the sun visible \cite{esa_sso_site}.
+
+The real data are based on the ephemeris of the ESAIL mission from which we were inspired. In particular, it was taken the orbital parameters on 16/12/2023 at $12$ UT of ESAIL satellite, then we 
+propagated the orbit using the simple two body problem  without any perturbation. This clearly is an approximation since several distrubances act 
+on the satellite as it will be seen in \autoref{sec:disturbances_analysis}, also the SSO orbits are intrisically caused by the J2 effect of Earth.
+Nevertheless, the simulation of few LEO orbit's periods considered in this report wouldn't be enough to show the distrubances effects caused on 
+the motion of the centre of mass of the satellite. The advantage to take as initial condition the ephemeris is that the motion of the spacecraft in 
+those two or three periods of the orbit of simulation that are considered is seen as sun-synchronous. Infact, that time of simulation taken into account
+is a snapshot compared to the time of action of the J2 effect responsible for the SSO orbit, that is one year. Clearly, a more detailed simulation should
+consider the variation of the orbital parameters due to J2 and all other perturbations.
+
+The orbital parameters chosen, following the description given above, are:
+
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $\bm{a \, [km]}$ & $\bm{e \, [-]}$ & $\bm{i \, [\deg]}$  & $\bm{\omega \, [\deg]}$   & $\bm{\Omega \, [\deg]}$ \\
+    \hline
+    $6851$ & $0.0018$ & $97.40$ & $101.58$ & $0$ \\
+    \hline
+    \end{tabular}
+    
+    \caption{Orbital Parameters}
+    \label{table:orb_table}
+    
+\end{table}
+
+\twofigII{orbit.eps}{Orbit Representation}{leo_orbit}{orbit_2.eps}{Sun Direction view}{leo_orbit2}{1}
+
+In the \autoref{fig:leo_orbit} and \autoref{fig:leo_orbit2} the sun direction is also plotted, in this case it is possible
+to see that the orbit doesn't go into eclipse condition.
+
+On Simulink, the model for the orbital position implemented is based on the integration of the true anomaly
+
+\begin{empheq}{equation*}
+   \dot{\theta} = \frac{n \left(1 + e\cos{\theta}\right)^2}{\left(1 - e^2 \right)^{3/2}}
+\end{empheq}
+
+Then, the radial distance is found as:
+
+\begin{empheq}{equation*}
+    r = \frac{a \left(1 - e^2 \right)}{1 + e\cos{\theta}}
+\end{empheq}
+
+ At this point it is easy to retrieve the position $\boldsymbol{r_p}$ of the S/C in the perifocal frame $\mathcal{P}$.
+
+ \begin{align}
+    \underline{r}_{P} &= r\begin{bmatrix}
+           cos \theta \\
+           sin \theta \\
+           0
+         \end{bmatrix}
+  \end{align}.
+
+  The position in the inertial frame $\mathcal{N}$ is found using the  the transpose of the transformation matrix 
+  $\boldsymbol{A_{pn}} = \boldsymbol{R_3}\left(\omega\right) \boldsymbol{R_1}\left(i\right) \boldsymbol{R_3}\left(\Omega\right)$. 
+  In particular:
+  \begin{empheq}{equation*}
+    \boldsymbol{r_n} = \boldsymbol{A_{pn}r_p} 
+ \end{empheq}

@@ -1,0 +1,22 @@
+\section{Attitude determination}
+\label{subsec:attitude_det}
+
+The problem of estimating the attitude matrix from the available measurements is central to spacecraft control. To determine the attitude of the spacecraft, the sensor models introduced earlier were used. The method used to determine the attitude is the SVD method, which has been developed whitin the framework of Wahba's problem. The latter consists in finding the orthogonal matrix which  minimizes the weighted cost function
+$$J(A)=\frac{1}{2}\sum_{i=1}^N\alpha_i\lVert s_i - A_{BN}v_i \rVert^2$$
+in which   $\{s_i\}$ is a set of the N measured unit vectors in body frame and $\{v_i\}$ the corresponding set of unitt vectors in the inertial frame, computed using the on-board models. The set of weights $\{\alpha_i\}$ was chosen based on the relative accuracy of each sensor. It was assumed that the weight vector $\underline{\alpha}$ is normalized to 1, i.e. $\sum_{i=1}^N\alpha_i=1$. This method needs at least two available measurements, so it works also in the case that the Earth is outside the FOV of the horizon sensor. \\
+Since A is a orthogonal matrix and $s_i$ and $v_i$ are unit vectors, with some simple algebraic passages, the expression of J can be rewritten as: 
+$$J(A)=1-\sum_{i=1}^N\alpha_i(s_i^TA_{BN}v_i)$$.
+The optimal solution minimizes J, therefore maximizes $$\Tilde{J}(A)=\sum_{i=1}^N\alpha_i(s_i^TA_{BN}v_i)=Tr(A_{BN}B^T)$$ 
+where Tr is the trace operator and $B=\sum_{i=1}^N\alpha_is_iv_i^T$.\\
+Since a direct solution is computationally expensive, a single value decomposition technique is used. The matrix B can be decomposed as\\
+$$B=USV^T=Udiag([s_1 \ \ s_2 \ \ s_3])V^T$$
+U and V are orthogonal matrices, representing the matrices of eigenvectors of $BB^T$ and $B^TB$ respectively, S is the diagonal matrix containing the square roots of the eigenvalues of $B^TB$. We can define the matrices
+$$U_{+}=Udiag([1 \ \ 1 \ \ det(U)]) \ \ \ and \ \ \ V_{+}=Vdiag([1 \ \ 1 \ \ det(V)])$$
+Then 
+$$B=U_{+}S'V_{+}^T=B=U_{+}diag([s_1 \ \ s_2 \ \ s_3'])V_{+}^T$$
+where $$s_3'=s_3\det(U)\det(V)$$
+Now it can be defined the matrix W and its representation in terms of Euler axis/angle:
+$$W=U_{+}^TAV_{+}=cos\theta I_3 -sin\theta[\vec{e}\  \times]+(1-cos\theta) \vec{e}\vec{e}^T$$
+$$Tr(AB^T)=Tr(WS')=\vec{e}^TS'\vec{e} + cos\theta(TrS'-\vec{e}^TS'\vec{e})$$
+The trace is maximized for $\theta=0$, which gives $W=I_3$ and thus the optimal attitude matrix is
+$$A=U_{+}V_{+}^T=Udiag([1 \  \ \ 1 \ \ \ det(U)\cdot{}det(V)])V^T$$

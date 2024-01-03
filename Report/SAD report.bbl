@@ -5,4 +5,27 @@ Georce C. Marshall Space~Flight Center.
 \newblock {\em {Saturn V Flight Manual SA-507}}.
 \newblock National Aeronautics and Space Administration, 10 1969.
 
+\bibitem{curtis_book}
+Howard~D. Curtis.
+\newblock {\em Orbital Mechanics for Engineering Students}.
+\newblock Elsevier, 2014.
+
+\bibitem{esa_sso_site}
+ESA.
+\newblock Types of orbits.
+\newblock Website, 2020.
+\newblock Site:
+  \url{https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits}.
+
+\bibitem{crass_book}
+John l.~Crassidis F.~Landis~Markley.
+\newblock {\em Fundamentals of Spacecraft Attitude Determination and Control}.
+\newblock Springer, 2014.
+
+\bibitem{bdot}
+{Giulio Avanzini, Fabrizio Giulietti}.
+\newblock {Magnetic Detumbling of a Rigid Spacecraft}.
+\newblock {\em Journal of Guidance, Control and Dynamics}, 35(4):1326--1333, 8
+  2012.
+
 \end{thebibliography}

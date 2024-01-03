@@ -17,7 +17,8 @@ a    = 6.851221970532768e+03;
 e    = 0.001830122216180;
 i    = 1.699980862034725;
 om   = 1.772848103192913;
-OM   = 0.554268509489784;
+%OM   = 0.554268509489784;
+OM = 0;
 %th_0 = 3.109851878856139;
 th_0 = 0;
 nn    = sqrt(muE/a^3);
@@ -124,26 +125,26 @@ t     = out.tout;
 %%
 figure;
 subplot(2,2,1)
-plot(t/T, magT, 'LineWidth', 2);
-xlabel('Orbits','interpreter','latex'); ylabel('Magnetic Torque [Nm]','interpreter','latex')
+plot(t/T, magT, 'LineWidth', 1.5);
+xlabel("Orbits"+newline+"   ",'interpreter','latex'); ylabel('Magnetic Torque [Nm]','interpreter','latex')
 title('Magnetic Torque','interpreter','latex');
-lgd1 = legend('Mx', 'My', 'Mz','interpreter','latex','fontsize', 3);
+lgd1 = legend('Mx', 'My', 'Mz','interpreter','latex','fontsize', 2.5);
 grid on;
 
 subplot(2,2,2)
-plot(t/T, dragT, 'LineWidth',2);
+plot(t/T, dragT, 'LineWidth',1.5);
 xlabel('Orbits','interpreter','latex'); ylabel('Drag Torque [Nm]','interpreter','latex')
 title('Drag Torque','interpreter','latex');
 grid on;
 
 subplot(2,2,3)
-plot(t/T, ggT, 'LineWidth',2)
+plot(t/T, ggT, 'LineWidth',1.5)
 xlabel('Orbits','interpreter','latex'); ylabel('GG Torque [Nm]','interpreter','latex')
 title('GG Torque','interpreter','latex');
 grid on;
 
 subplot(2,2,4)
-plot(t/T, srpT, 'LineWidth',2)
+plot(t/T, srpT, 'LineWidth',1.5)
 xlabel('Orbits','interpreter','latex'); ylabel('SRP Torque [Nm]','interpreter','latex')
 title('SRP Torque','interpreter','latex');
 grid on;
