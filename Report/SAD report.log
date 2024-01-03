@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  3 JAN 2024 19:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  3 JAN 2024 19:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1265,7 +1265,7 @@ Package epstopdf Info: Source file: <Images//logo_polimi_ing_indinf.eps>
 (epstopdf)                    date: 2023-12-31 11:00:58
 (epstopdf)                    size: 1016894 bytes
 (epstopdf)             Output file: <Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-01 15:03:16
+(epstopdf)                    date: 2024-01-03 19:17:06
 (epstopdf)                    size: 81939 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//logo_polimi_ing_indinf-eps-converted-to.pdf Images//logo_polimi_ing_indinf.eps>
 (epstopdf)             \includegraphics on input line 9.
@@ -1273,7 +1273,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//logo_polimi_ing_indinf-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=105, 493.845pt x 227.85126pt>
+<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=116, 493.845pt x 227.85126pt>
 File: Images//logo_polimi_ing_indinf-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
 Package pdftex.def Info: Images//logo_polimi_ing_indinf-eps-converted-to.pdf  used on input line 9.
@@ -1307,7 +1307,7 @@ Package epstopdf Info: Source file: <Images//raggiera_polimi.eps>
 (epstopdf)                    date: 2023-12-31 11:00:58
 (epstopdf)                    size: 1813066 bytes
 (epstopdf)             Output file: <Images//raggiera_polimi-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-01 15:03:16
+(epstopdf)                    date: 2024-01-03 19:17:06
 (epstopdf)                    size: 40418 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//raggiera_polimi-eps-converted-to.pdf Images//raggiera_polimi.eps>
 (epstopdf)             \includegraphics on input line 213.
@@ -1315,7 +1315,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//raggiera_polimi-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//raggiera_polimi-eps-converted-to.pdf, id=106, 502.87875pt x 502.87875pt>
+<Images//raggiera_polimi-eps-converted-to.pdf, id=117, 502.87875pt x 502.87875pt>
 File: Images//raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 213.
@@ -1333,46 +1333,52 @@ Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on i
 ) [3
 
 ] (Sections/02_requirements.tex) (Sections/03_framework.tex
+<Images//CAD.jpg, id=182, 1318.9275pt x 632.3625pt>
+File: Images//CAD.jpg Graphic file (type jpg)
+<use Images//CAD.jpg>
+Package pdftex.def Info: Images//CAD.jpg  used on input line 9.
+(pdftex.def)             Requested size: 409.72125pt x 196.43561pt.
+ [1 <./Images//CAD.jpg>]
 Package epstopdf Info: Source file: <Images//orbit.eps>
-(epstopdf)                    date: 2024-01-03 18:16:05
+(epstopdf)                    date: 2024-01-03 19:17:06
 (epstopdf)                    size: 435323 bytes
 (epstopdf)             Output file: <Images//orbit-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-03 18:16:05
+(epstopdf)                    date: 2024-01-03 19:17:06
 (epstopdf)                    size: 238727 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//orbit-eps-converted-to.pdf Images//orbit.eps>
-(epstopdf)             \includegraphics on input line 44.
+(epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//orbit-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//orbit-eps-converted-to.pdf, id=171, 513.92pt x 385.44pt>
+<Images//orbit-eps-converted-to.pdf, id=199, 513.92pt x 385.44pt>
 File: Images//orbit-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//orbit-eps-converted-to.pdf>
-Package pdftex.def Info: Images//orbit-eps-converted-to.pdf  used on input line 44.
+Package pdftex.def Info: Images//orbit-eps-converted-to.pdf  used on input line 66.
 (pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
 Package epstopdf Info: Source file: <Images//orbit_2.eps>
-(epstopdf)                    date: 2024-01-03 18:16:05
+(epstopdf)                    date: 2024-01-03 19:17:06
 (epstopdf)                    size: 406291 bytes
 (epstopdf)             Output file: <Images//orbit_2-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-03 18:16:05
+(epstopdf)                    date: 2024-01-03 19:17:06
 (epstopdf)                    size: 267251 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//orbit_2-eps-converted-to.pdf Images//orbit_2.eps>
-(epstopdf)             \includegraphics on input line 44.
+(epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//orbit_2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//orbit_2-eps-converted-to.pdf, id=172, 513.92pt x 385.44pt>
+<Images//orbit_2-eps-converted-to.pdf, id=200, 513.92pt x 385.44pt>
 File: Images//orbit_2-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//orbit_2-eps-converted-to.pdf>
-Package pdftex.def Info: Images//orbit_2-eps-converted-to.pdf  used on input line 44.
+Package pdftex.def Info: Images//orbit_2-eps-converted-to.pdf  used on input line 66.
 (pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
-[1 <./Images//orbit-eps-converted-to.pdf> <./Images//orbit_2-eps-converted-to.pdf>]) (Sections/04_dynamics.tex) (Sections/05_kinematics.tex [2]) (Sections/06_disturbances.tex [3]
+) (Sections/04_dynamics.tex) [2 <./Images//orbit-eps-converted-to.pdf> <./Images//orbit_2-eps-converted-to.pdf>] (Sections/05_kinematics.tex) (Sections/06_disturbances.tex [3] [4]
 Package epstopdf Info: Source file: <Images//disturbances.eps>
-(epstopdf)                    date: 2024-01-03 18:16:05
+(epstopdf)                    date: 2024-01-03 19:17:06
 (epstopdf)                    size: 355157 bytes
 (epstopdf)             Output file: <Images//disturbances-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-03 18:16:05
+(epstopdf)                    date: 2024-01-03 19:17:06
 (epstopdf)                    size: 122458 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//disturbances-eps-converted-to.pdf Images//disturbances.eps>
 (epstopdf)             \includegraphics on input line 129.
@@ -1380,33 +1386,33 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//disturbances-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//disturbances-eps-converted-to.pdf, id=220, 513.92pt x 385.44pt>
+<Images//disturbances-eps-converted-to.pdf, id=245, 513.92pt x 385.44pt>
 File: Images//disturbances-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//disturbances-eps-converted-to.pdf>
 Package pdftex.def Info: Images//disturbances-eps-converted-to.pdf  used on input line 129.
 (pdftex.def)             Requested size: 512.14963pt x 384.13927pt.
-[4]) (Sections/07_sensors.tex [5 <./Images//disturbances-eps-converted-to.pdf>]) [6] (Sections/08_attitude_determination.tex) (Sections/09_control_logic.tex [7] [8]) (Sections/10_actuators.tex) [9] (SAD report.bbl
+[5]) (Sections/07_sensors.tex [6 <./Images//disturbances-eps-converted-to.pdf>]) [7] (Sections/08_attitude_determination.tex) (Sections/09_control_logic.tex [8] [9]) (Sections/10_actuators.tex) [10] (SAD report.bbl
 LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 18.
  (C:\Miktex\tex/latex/kpfonts\t1jkptt.fd
 File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
-)) [10
+)) [11
 
 ] (SAD report.aux)
 Package rerunfilecheck Info: File `"SAD report".out' has not changed.
-(rerunfilecheck)             Checksum: 84B6875D46A23393A229A7AAFB4AC903;3579.
+(rerunfilecheck)             Checksum: 285D78EE3B3899703FCC78AAE2B6A3C3;3983.
  ) 
 Here is how much of TeX's memory you used:
- 32262 strings out of 475385
- 586361 string characters out of 2793321
+ 32286 strings out of 475385
+ 586716 string characters out of 2793321
  1016994 words of memory out of 3000000
- 52935 multiletter control sequences out of 15000+600000
+ 52948 multiletter control sequences out of 15000+600000
  599116 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,80p,645b,713s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 83i,17n,80p,709b,749s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Miktex/fonts/enc/dvips/base/8r.enc}{C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Miktex/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpex.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on "SAD report.pdf" (13 pages, 953093 bytes).
+Output written on "SAD report.pdf" (14 pages, 2705356 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 

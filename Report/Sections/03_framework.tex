@@ -3,8 +3,30 @@
 
 \subsection{Satellite characterization }
 \label{subsec:sat_characterization}
-
-
+The group was inspired by ESAIL, a microsatellite, developed by exactEarth in cooperation with ESA, which has the mission of ship targeting. Two configurations of the satellite were implemented: the undeployed configuration, for the detumbling phase, and the extended configutation, for the slew and tracking phase. The latter was modeled as a cubic central body, of side 70 cm, and four solar panels, modeled as rectangular bodies of dimensions $70\times 70 \times  1 \ cm$. Solar panels are set along y axis of body frame, as shown in figure ,with normal parallel to z axis of body frame.  
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\columnwidth]{CAD.jpg}
+        \vspace{2.5mm}
+\caption{Satellite model}
+\end{figure}
+The mass was assumed to be 100 Kg  and the satellite was considered to be, in first approximation, isotropic. Under these assumptions, the inertia matrix was computed as 
+\begin{align}
+    I = \begin{bmatrix}
+        22.9724 & 0 & 0 \\
+        0 & 7.7770 & 0 \\
+        0 & 0 & 23.1895
+    \end{bmatrix} Kg \ m^2
+  \end{align}
+On the other hand, the undeployed configuration was implemented as a  isotropic cube of side 70 cm, with mass $m=100 \ Kg$
+The inertia matrix of the undeployed configuration is then 
+\begin{align}
+    I = \begin{bmatrix}
+        8.1667 & 0 & 0 \\
+        0 & 8.1667 & 0 \\
+        0 & 0 & 8.1667
+    \end{bmatrix} Kg \ m^2
+  \end{align}
 
 \subsection{Orbit characterization}
 \label{subsec:orbit_characterization}
