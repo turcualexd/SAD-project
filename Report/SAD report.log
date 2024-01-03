@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  2 JAN 2024 20:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  3 JAN 2024 19:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1258,10 +1258,10 @@ Package hyperref Info: Link coloring ON on input line 203.
 
 (Configuration files/title_page.tex
 Package epstopdf Info: Source file: <Images//logo_polimi_ing_indinf.eps>
-(epstopdf)                    date: 2023-12-30 18:53:42
+(epstopdf)                    date: 2024-01-02 20:28:39
 (epstopdf)                    size: 1016894 bytes
 (epstopdf)             Output file: <Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-31 17:25:31
+(epstopdf)                    date: 2024-01-02 20:28:39
 (epstopdf)                    size: 81939 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//logo_polimi_ing_indinf-eps-converted-to.pdf Images//logo_polimi_ing_indinf.eps>
 (epstopdf)             \includegraphics on input line 9.
@@ -1269,7 +1269,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//logo_polimi_ing_indinf-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=89, 493.845pt x 227.85126pt>
+<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=93, 493.845pt x 227.85126pt>
 File: Images//logo_polimi_ing_indinf-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
 Package pdftex.def Info: Images//logo_polimi_ing_indinf-eps-converted-to.pdf  used on input line 9.
@@ -1300,10 +1300,10 @@ LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 21
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )) (Sections/00_abstract.tex)
 Package epstopdf Info: Source file: <Images//raggiera_polimi.eps>
-(epstopdf)                    date: 2023-12-30 18:53:42
+(epstopdf)                    date: 2024-01-02 20:28:39
 (epstopdf)                    size: 1813066 bytes
 (epstopdf)             Output file: <Images//raggiera_polimi-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-12-31 17:25:31
+(epstopdf)                    date: 2024-01-02 20:28:39
 (epstopdf)                    size: 40418 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//raggiera_polimi-eps-converted-to.pdf Images//raggiera_polimi.eps>
 (epstopdf)             \includegraphics on input line 216.
@@ -1311,7 +1311,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//raggiera_polimi-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//raggiera_polimi-eps-converted-to.pdf, id=90, 502.87875pt x 502.87875pt>
+<Images//raggiera_polimi-eps-converted-to.pdf, id=94, 502.87875pt x 502.87875pt>
 File: Images//raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 216.
@@ -1330,10 +1330,10 @@ Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on i
 
 ] (Sections/02_requirements.tex) (Sections/03_framework.tex) (Sections/04_dynamics.tex) (Sections/05_kinematics.tex [1]) (Sections/06_disturbances.tex [2] [3]
 Package epstopdf Info: Source file: <Images//disturbances.eps>
-(epstopdf)                    date: 2024-01-01 17:14:17
+(epstopdf)                    date: 2024-01-02 20:28:39
 (epstopdf)                    size: 317732 bytes
 (epstopdf)             Output file: <Images//disturbances-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-01 17:17:13
+(epstopdf)                    date: 2024-01-02 20:28:39
 (epstopdf)                    size: 112608 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//disturbances-eps-converted-to.pdf Images//disturbances.eps>
 (epstopdf)             \includegraphics on input line 131.
@@ -1341,29 +1341,29 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//disturbances-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//disturbances-eps-converted-to.pdf, id=164, 545.03625pt x 441.65pt>
+<Images//disturbances-eps-converted-to.pdf, id=183, 545.03625pt x 441.65pt>
 File: Images//disturbances-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//disturbances-eps-converted-to.pdf>
 Package pdftex.def Info: Images//disturbances-eps-converted-to.pdf  used on input line 131.
 (pdftex.def)             Requested size: 512.14963pt x 415.02301pt.
-[4 <./Images//disturbances-eps-converted-to.pdf>]) (Sections/07_sensors.tex) [5] (SAD report.bbl) [6
+[4 <./Images//disturbances-eps-converted-to.pdf>]) (Sections/07_sensors.tex [5]) [6] (SAD report.bbl) [7
 
 ] (SAD report.aux)
 Package rerunfilecheck Info: File `"SAD report".out' has not changed.
-(rerunfilecheck)             Checksum: 5FB53EB1CDF9366B71ED8885A34E7397;2951.
+(rerunfilecheck)             Checksum: 984CF207E1036EF3DFF17AC361F7F5A6;3063.
  ) 
 Here is how much of TeX's memory you used:
- 32366 strings out of 476361
- 605382 string characters out of 5788046
- 1882993 words of memory out of 5000000
- 52116 multiletter control sequences out of 15000+600000
+ 32395 strings out of 476361
+ 605734 string characters out of 5788046
+ 1885993 words of memory out of 5000000
+ 52124 multiletter control sequences out of 15000+600000
  640480 words of font info for 181 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,80p,635b,708s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,25n,80p,635b,619s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on "SAD report.pdf" (9 pages, 391565 bytes).
+Output written on "SAD report.pdf" (10 pages, 399800 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 
