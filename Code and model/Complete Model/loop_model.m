@@ -87,12 +87,12 @@ pwr_sd_mag   = noise_sd_mag^2;
 bias_mag     = rand(3,1);
 bias_mag     = bias_mag./norm(bias_mag);
 
-% Sun Sensor   - Tensor Tech FSS-15 
+% Sun Sensor - AAC Clyde Space SS200
 
-freq_sun     = 30; 
+freq_sun     = 30;
 bias_sun     = rand(3,1);
 bias_sun     = bias_sun./norm(bias_sun);
-variance_sun = deg2rad(0.5)^2;
+variance_sun = deg2rad(0.3)^2;
 pwr_sd_sun   = (1/freq_sun)*variance_sun;
 
 % Earth Sensor - Meisei Electric
