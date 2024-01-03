@@ -22,5 +22,5 @@
 \contentsline {subsection}{\numberline {7.2}Magnetometer}{6}{subsection.7.2}%
 \contentsline {section}{\numberline {8}Attitude determination}{7}{section.8}%
 \contentsline {section}{\numberline {9}Control logic}{7}{section.9}%
-\contentsline {subsection}{\numberline {9.1}De-tumbling phase: the B-dot control}{7}{subsection.9.1}%
-\contentsline {section}{Bibliography}{9}{AMS.10}%
+\contentsline {subsection}{\numberline {9.1}De-tumbling phase: the B-dot control}{8}{subsection.9.1}%
+\contentsline {section}{Bibliography}{10}{AMS.10}%

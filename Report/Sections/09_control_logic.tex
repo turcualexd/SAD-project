@@ -1,6 +1,20 @@
 \section{Control logic}
 \label{sec:control_logic}
+The control logic of the satellite is implemented on the computer that handle all the on-board calculations. In particular, all the data from the in-FOV sensors has to be 
+gathered. Then, based on the mission phase, the necessary control has to be calculated and a command has to be sent to the system of actuators. The necessary control calculation is 
+discussed in this section. Clearly, every phase of the mission is somehow different, this could be due to the mission requirments (i.e. detumble or pointing) or to the physical 
+equations that describe the problem (linear or non-linear). Also, when a phase of the mission has to be analyzed and a control applied to it, all the possibilities and limitations 
+coming from sensors and actuators has to be evaluated. As a consequence, the design of a control logic is strictly related to the implementation of the actuators in the system, since
+even though a perfect control $\boldsymbol{u}$ can be designed by placing the fastest poles (in the linear case), then the actuator system will be highly penalized by not being able 
+to perform that torque. As a consequence, it is important to bear in mind that when designing the control logic, always keep in consideration the actuators that will be used. 
 
+In the case under analysis, the magnetorquer actuators posses some useful and powerful proprerties, in particular when they are coupled with a magnetometer, the theory tells that
+the de-tumbling phase can be easily implemented \cite{bdot}. On the other side, the control for a direction pointing (i.e. Nadir), in the case of magnetorquer is more difficult due to the unpleasent
+underactuated property of these magnetic systems. Infact, considering the equation of the actuator for the magnetorquer, and implementing that into the system equations, would result into a istantanteously
+uncontrollable system as cited in \cite{lovera}. Nevertheless, by following the steps presented in \cite{lovera}, a fully magnetic actuated control can be reached but not without some 
+effort and also drawbacks. In order not to complicate the next discussion, it was choosen the take into consideration also reaction wheels as a secondary actuator system.
+
+In the next sub-sections the logic implemented in the Simulink environment will be presented, then all the more detailed actuator's cosniderations will be clarified. 
 \subsection{De-tumbling phase: the B-dot control}
 \label{subsec:detumbling}
 The De-tumbling phase is performed immediately after the release of the spacecraft by the launcher, at this moment the angular velocities are random and depends

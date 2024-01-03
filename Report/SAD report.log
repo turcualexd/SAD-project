@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  3 JAN 2024 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  3 JAN 2024 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1385,28 +1385,28 @@ File: Images//disturbances-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//disturbances-eps-converted-to.pdf>
 Package pdftex.def Info: Images//disturbances-eps-converted-to.pdf  used on input line 129.
 (pdftex.def)             Requested size: 512.14963pt x 384.13927pt.
-[4]) (Sections/07_sensors.tex [5 <./Images//disturbances-eps-converted-to.pdf>]) [6] (Sections/08_attitude_determination.tex) (Sections/09_control_logic.tex [7]) (Sections/10_actuators.tex) [8] (SAD report.bbl
+[4]) (Sections/07_sensors.tex [5 <./Images//disturbances-eps-converted-to.pdf>]) [6] (Sections/08_attitude_determination.tex) (Sections/09_control_logic.tex [7] [8]) (Sections/10_actuators.tex) [9] (SAD report.bbl
 LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 18.
  (C:\Miktex\tex/latex/kpfonts\t1jkptt.fd
 File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
-)) [9
+)) [10
 
 ] (SAD report.aux)
 Package rerunfilecheck Info: File `"SAD report".out' has not changed.
 (rerunfilecheck)             Checksum: 84B6875D46A23393A229A7AAFB4AC903;3579.
  ) 
 Here is how much of TeX's memory you used:
- 32256 strings out of 475385
- 586285 string characters out of 2793321
- 1012994 words of memory out of 3000000
- 52931 multiletter control sequences out of 15000+600000
+ 32262 strings out of 475385
+ 586361 string characters out of 2793321
+ 1016994 words of memory out of 3000000
+ 52935 multiletter control sequences out of 15000+600000
  599116 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,16n,80p,645b,725s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 83i,16n,80p,645b,713s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Miktex/fonts/enc/dvips/base/8r.enc}{C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Miktex/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpex.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Miktex/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on "SAD report.pdf" (12 pages, 949140 bytes).
+Output written on "SAD report.pdf" (13 pages, 953093 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
  238 words of extra memory for PDF output out of 10000 (max. 10000000)
 
