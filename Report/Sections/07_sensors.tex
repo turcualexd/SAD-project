@@ -35,18 +35,74 @@ Due to operational requirements, the static sensor has to point the Earth, in pa
 axis must have the same direction of the nadir (direction that links centre of earth and CoM of the S/C).
 To fulfill this request, a good option could be to position the sensor on the face that also contains the 
 payload, that is the face of the spacecraft main body (cube) that has normal along the $\boldsymbol{x_b}$ 
-direction. The model implemented to simulate the behaviour of the sensor in the Simulink environment, 
-was to take the real position of the S/C with respect to centre of Earth expressed in inertial space, change its
-direction multiplying by -1 and express it in the $\mathcal{B}$ frame through the real attitude matrix $\boldsymbol{A_{B,N}}$. 
+direction. 
+
+The model implemented to simulate the behaviour of the sensor in the Simulink environment takes the real position of the S/C with respect to centre of Earth expressed in inertial space, changes its direction multiplying by -1 and expresses it in the $\mathcal{B}$ frame through the real attitude matrix $\boldsymbol{A_{B,N}}$. 
 This unit vector is the input of the sensor block, here it is sampled through a zero-order hold of frequency specified by
 \autoref{table:Hor_sensor} to simulate the digital nature of the sensor. Then some errors of measurments has to be added.
 It was decided to model two typical effects of real sensor: the mounting error that cause misalignment and also an 
 accuracy error modeled with a band-limited white noise on all the components of the direction vector.
-\pagebreak
+Chronologically, first the misalignment is calculated, then the noise is introduced:
+\begin{itemize}
+    \item The misalignment error was computed on Simulink by introducing a small deviation with respect to the nominal condition. This can
+    be done by adding a small-scaled vector in the direction perpendicular of the unit vector that has to be measured. The scaling of 
+    this vector has to be small with respect to the unit direction considered as the measurment. Since the vector of the measured 
+    direction is initially unitary, the length of the bias vector introduced can be considered as $\tan{\theta_{small}} \approx \theta_{small}$,
+    where $\theta_{small}$ represents the angle between real measurment and misaligned measurment. The $\theta_{small}$ selected is ... 
+    \item In the Simulink environment the white noise has to be defined through the power spectral density. This was selected as $N_p = \sigma^2 {T_s} $, 
+    where $sigma^2$ represents the variance as the standard deviation squared, while $T_s$ is the sampling time of the sensor.
+    It was decided to consider as standard deviation the value of $1\deg$ (that is the accuracy from \autoref{table:Hor_sensor})
+\end{itemize}
+
+
+\subsection{Magnetometer}
+Due to the LEO orbit and seen that from \autoref{subsec:sim_disturbances} the magnetic field  was considered as one of the main disturbances, 
+it was thought that a magnetometer could have been a sensor to implement on-board the satellite. This kind of sensor are in general less accurate 
+than optical sensor as sun sensor or star sensor, but since the magnetic field of LEO orbit is effectively enough strong, the sensor can provide 
+always a measurment. Also, having a magnetorquer assigned as mandatory, the coupling of this actuator with a magnetometer can be exploited during 
+the de-tumbling manuever since a direct dipole command is produced by the so-called \textit{B-dot Control}, extensively discussed in section (...)
+
+The fluxgate magnetometer typology is used, where for each body axis, two ferromagnetic cores are used parallel to the specific axis. The primary coil 
+saturates the two bars alternatively in opposite direction, so that the secondary output theoretically can read a null induced voltage output produced 
+by the time-varying flux. When external field is present, the symmetry of the alternate saturation is broken so that a shift on the magnetic flux of the 
+secondary coil is produced. This net flux can be read by the time-history of a voltmeter on the secondary coil, since the spacing of the measured output
+voltage depends on the external magnetic field value. 
+
+Since magnetometer are usually characterized by low accuracy values, we searched for a high-accuracy and low-noise typology. The research of a suitable
+sensor opted for \textit{MM200} furnished by \textit{AAC ClydeSpace}. The following performance paramters characterize the sensor:
+
+\begin{table}[H]
+
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+     $\bm{N.S.D \, [nT/\sqrt{Hz}]}$ & $\bm{Frequency \, [Hz]}$ \\
+    \hline
+    $1.18$ & $<500$  \\
+    \hline
+    \end{tabular}
+    
+    \caption{Real data for Magnetometer Sensor}
+    \label{table:mag_sensor}
+    
+\end{table}
+
+For the Simulink model, the same approach of the Horizon sensor in \autoref{subsec:horizon_sensor} has been used. In particular, the magnetic fiel vector
+from the block of \autoref{subsec:dist_mag} has been trasnformed into the $\mathcal{B}$ reference frame through the attitude matrix from the true kinematics 
+block \autoref{sec:kinematics}. This is the input vector that has to be sampled with a frequency specified by \autoref{table:mag_sensor}. For this case a range
+of frequencies can be chosen: we used the same frequency of the horizon sensor from \autoref{table:Hor_sensor} since it respects the constraint 
+given by the magnetometer requirments. 
+
+Then the measurments errors have to be added, a first misalignment error modeled in the same way of the horizon sensor in \autoref{subsec:horizon_sensor}. For this case the perpendicular
+vector has been scaled by a factor of (...).
+The accuracy error, induced by the noise, has been modeled through a band-limited white noise added on each component. The value of the PSD is the square of 
+the NSD presented in \autoref{table:mag_sensor}.
+
+
 \subsection{Sun Sensor}
 \label{subsec:sun_sensor}
 
-Sun sensors are devices that detect the position of the Sun by measuring the incidence angle of its radiation on a sensor surface. This surface is typically made of materials that can generate a current proportional to the intensity of the incident light. From the measure of the current $I$ generated by the sensor surface of area $S$, knowing the intensity of the radiation $W$ and the coefficient $\alpha$ of the sensor, the angle of the incident light $\theta$ is internally computed as follows:
+Sun sensors are devices that detect the position of the Sun by measuring the incidence angle of its radiation on a sensor surface. This surface is typically made of materials that can generate a current proportional to the intensity of the incident light. From the measure of the current $I$ generated by the sensor surface of area $S$, knowing the intensity of the radiation $W$ and the coefficient $\alpha$ of the sensor, the angle of the incident light $\theta$ is internally computed as:
 
 \begin{equation}
     I = \alpha S W \cos \theta  \implies  \theta = \arccos \left( \frac{I}{\alpha S W} \right)
@@ -54,7 +110,7 @@ Sun sensors are devices that detect the position of the Sun by measuring the inc
 
 The unit vector pointing towards the Sun can be easily computed by the sensor using the knowledge of two angles obtained by placing two surfaces on different directions on the same plane.
 
-As discussed in \autoref{sec:framework}, the satellite mission consists in pointing the Earth on a Sun-synchronous orbit with no eclipse periods. In view of this, it is important to prioritize accuracy over having the best Field of View (FOV) to select the sensor. For this reason, the choice falls upon a small and light Fine Sun sensor with good performances such as the \textit{AAC Clyde Space SS200}:
+As discussed in \autoref{sec:framework}, the satellite mission consists in pointing the Earth on a Sun-synchronous orbit without any eclipse periods. Therefore, accuracy should be prioritised over having the best Field of View (FOV) when selecting the sensor. For this reason, the choice falls upon a small and light Fine Sun sensor with good performances such as the \textit{AAC Clyde Space SS200}:
 
 \begin{table}[H]
 
@@ -72,5 +128,5 @@ As discussed in \autoref{sec:framework}, the satellite mission consists in point
     
 \end{table}
 
-This sensor has to be placed in the same direction as the solar panels, in the $\boldsymbol{z_b}$ direction, so the Sun is constantly visible (since the Orbit is Sun-synchronous). In order to not overcomplicate the Simulink model, it does not consider the FOV of the sensor, since in the detumbling manoeuvre the sensor is not used while in the tracking phase the Sun is always visible.
-To simulate the output of the real sensor, the model takes the Sun direction computed summing up the initial Earth-Sun vector with the position vector of the satellite in the inertial frame, which is computed through the keplerian dynamics. This vector is then normalized, reversed and brought in the body frame using the attitude matrix. From here, errors have been added in the same way as described for the horizon sensor (\autoref{subsec:horizon_sensor}).
+This sensor has to be placed in the same direction as the solar panels (i.e. in the $\boldsymbol{z_b}$ direction) so the Sun is constantly visible (since the orbit is Sun-synchronous). To avoid unnecessary complexity in the Simulink model, the sensor's field of view is not taken into consideration. This is because the sensor is not used during the detumbling manoeuvre, and in the tracking phase, the Sun is always visible.
+To simulate the output of the real sensor, the model uses the Sun direction calculated by adding the initial Earth-Sun vector to the position vector of the satellite in the inertial frame, which is computed through Keplerian dynamics. The resulting vector is then normalized, reversed, and transformed into the body frame using the attitude matrix. From here, errors have been added in the same manner as described for the horizon sensor (\autoref{subsec:horizon_sensor}).

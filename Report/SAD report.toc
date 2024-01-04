@@ -7,17 +7,24 @@
 \contentsline {section}{\numberline {2}Requirements}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Mandatory requests for simulation}{1}{subsection.2.1}%
 \contentsline {section}{\numberline {3}Framework Analysis}{1}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Satellite characterization }{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Satellite characterization}{1}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Orbit characterization}{1}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Dynamics}{1}{section.4}%
-\contentsline {section}{\numberline {5}Kinematics}{1}{section.5}%
-\contentsline {section}{\numberline {6}Disturbances analysis}{2}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Magnetic Disturbance}{2}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}SRP Disturbance}{3}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Drag Disturbance}{3}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Gravity Gradient Disturbance}{3}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Simulation of all disturbances}{4}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Sensors}{5}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Horizon Sensor}{5}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Sun Sensor}{6}{subsection.7.2}%
-\contentsline {section}{Bibliography}{7}{table.caption.12}%
+\contentsline {section}{\numberline {4}Dynamics}{2}{section.4}%
+\contentsline {section}{\numberline {5}Kinematics}{3}{section.5}%
+\contentsline {section}{\numberline {6}Disturbances analysis}{4}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Magnetic Disturbance}{4}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}SRP Disturbance}{4}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Drag Disturbance}{5}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Gravity Gradient Disturbance}{5}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Simulation of all disturbances}{6}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Sensors}{6}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Horizon Sensor}{6}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Magnetometer}{7}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Sun Sensor}{8}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Attitude determination}{8}{section.8}%
+\contentsline {section}{\numberline {9}Control logic}{9}{section.9}%
+\contentsline {subsection}{\numberline {9.1}De-tumbling phase: the B-dot control}{9}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Slew and Nadir phase}{10}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Actuators}{10}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Reaction Wheels}{10}{subsection.10.1}%
+\contentsline {section}{Bibliography}{12}{subsection.10.1}%

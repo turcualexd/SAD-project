@@ -1,0 +1,91 @@
+\section{Control logic}
+\label{sec:control_logic}
+The control logic of the satellite is implemented on the computer that handle all the on-board calculations. In particular, all the data from the in-FOV sensors has to be 
+gathered. Then, based on the mission phase, the necessary control has to be calculated and a command has to be sent to the system of actuators. The necessary control calculation is 
+discussed in this section. Clearly, every phase of the mission is somehow different, this could be due to the mission requirments (i.e. detumble or pointing) or to the physical 
+equations that describe the problem (linear or non-linear). Also, when a phase of the mission has to be analyzed and a control applied to it, all the possibilities and limitations 
+coming from sensors and actuators has to be evaluated. As a consequence, the design of a control logic is strictly related to the implementation of the actuators in the system, since
+even though a perfect control $\boldsymbol{u}$ can be designed by placing the fastest poles (in the linear case), then the actuator system will be highly penalized by not being able 
+to perform that torque. As a consequence, it is important to bear in mind that when designing the control logic, always keep in consideration the actuators that will be used. 
+
+In the case under analysis, the magnetorquer actuators posses some useful and powerful proprerties, in particular when they are coupled with a magnetometer, the theory tells that
+the de-tumbling phase can be easily implemented \cite{bdot}. On the other side, the control for a direction pointing (i.e. Nadir), in the case of magnetorquer is more difficult due to the unpleasent
+underactuated property of these magnetic systems. Infact, considering the equation of the actuator for the magnetorquer, and implementing that into the system equations, would result into a istantanteously
+uncontrollable system as cited in \cite{lovera}. Nevertheless, by following the steps presented in \cite{lovera}, a fully magnetic actuated control can be reached but not without some 
+effort and also drawbacks. In order not to complicate the next discussion, it was choosen the take into consideration also reaction wheels as a secondary actuator system.
+
+In the next sub-sections the logic implemented in the Simulink environment will be presented, then all the more detailed actuator's cosniderations will be clarified. 
+\subsection{De-tumbling phase: the B-dot control}
+\label{subsec:detumbling}
+The De-tumbling phase is performed immediately after the release of the spacecraft by the launcher, at this moment the angular velocities are random and depends
+on the launcher motion, also the attitude is initally unknown. In order to make the satellite ready to enter in the operational regime, so that it can start the 
+pointing of the sensor's targets and the payload, the spacecraft must be de-tumbled. This means to create a control that decelerate the rotational velocities and 
+fetch them to arbitrarly small values. 
+
+A frequently adopted option on magnetic-actuated satellites is to implement the so-called \textit{B-dot control}, this method allows to exploit magnetic measurments 
+to produce a direct magnetic dipole command to the magnetorquer which at the end leads to arbitrarly small values of $\omega$. The increasing interest on this kind of
+control law is due to the fact that magnetorquers posses very intersting propreties, such as \cite{bdot}: 
+\begin{itemize}
+    \item absence of catastrophic failure modes (an example of this would be the RW actuators which were characterized by catastrophic failure due to electrostatic charge on the bearing);
+    \item reliable architecture which leads to unlimited operational life;
+    \item the possibility to smoothly modulate the control torque, without inducing coupling with flexible modes (when bang-bang techniques are not adopted);
+    \item significant savings in terms of weight and complexity since no moving parts are present.
+\end{itemize}
+Instead, the major drawback of this kind of system is surely the underactuated property. In general the magnetorquer cannot provide an arbitrarly
+oriented control torque due to the physical law that rules this device.
+
+\begin{empheq}{equation}
+    \boldsymbol{M_c}  = \boldsymbol{D} \times \boldsymbol{B}_B
+\end{empheq}
+
+Clearly, it doesn't exist a $\boldsymbol{D}$ that satisfies the above equation if $\boldsymbol{M_c}$ and $\boldsymbol{B}$ are parallel. 
+This implies to have, in general, a system that is not controllable at every istant, but it is in an averaged-sense.
+This implies a major difficulty in implementing a solely magnetic-actuated microsatellite. Avanzini et al. \cite{bdot} demonstrate that asympotitc stability can 
+be obtained through a law of this kind (using only magnetorquer and a magnetometer):
+
+\begin{empheq}{equation}
+    \label{eq:ctrl_bdot}
+    \boldsymbol{D} = - \frac{k_{\omega}}{\lVert \boldsymbol{B}_B \rVert} \dot{\hat{\boldsymbol{B}}}\boldsymbol{_B}
+\end{empheq}
+
+The idea of this kind of command is that the variation in magnetic field $\boldsymbol{B}$ in the $\mathcal{B}$ frame can be written as:
+
+\begin{empheq}{equation}
+    \label{eq:b_dot}
+    \dot{\boldsymbol{B}}_B = \frac{d\left( \boldsymbol{A}_{B,N}\boldsymbol{B}_N \right)}{dt} = 
+    \dot{\boldsymbol{A}}_{B,N}\boldsymbol{B}_N + \boldsymbol{A}_{B,N}\dot{\boldsymbol{B}}_N \approx \dot{\boldsymbol{A}}_{B,N}\boldsymbol{B}_N 
+    = - \left[ \boldsymbol{\omega} \times \right]\boldsymbol{A}_{B,N} \boldsymbol{B}_N = - \left[ \boldsymbol{\omega} \times \right]\boldsymbol{B}_B
+\end{empheq}
+
+The approximation symbol is due to the fact that when $\omega >> 1$, the variation of the magnetic field vector in $\mathcal{B}$ frame is mainly 
+due to the rotation of the frame and less due to the changing of $\boldsymbol{b}_N$ (that is caused by the evolution in he orbital position and other slow
+variations due to geomagnetic field). With the above equation it has been demonstrated that $\boldsymbol{\omega}$ and $\dot{\boldsymbol{B}}$ are strictly related, so making the control
+law proportional to $\dot{\boldsymbol{B}}$ would be similar to make it proportional to $\boldsymbol{\omega}$ (like the 'standard' de-tumbling law). 
+This mathematical considerations imply that for a detumbling law, it could be sufficient to have a magnetometer and a magnetorquer without a direct measurment of the angular
+velocity obtained by a gyro. Another positive consequence of having a proportional law that produces directly a magnetic dipole $\boldsymbol{D}$, is that the command is directly 
+make as an input of the actuator (without inverting any actuator law). It is important to underline that this kind of law would work at his best when angular velocity is high 
+enough to make the assumption of \autoref{eq:b_dot} true. 
+In theory the acutated torque is:
+\begin{empheq}{equation}
+    \label{eq:m_c}
+    \boldsymbol{M_c} = - \frac{k_{\omega}}{\lVert \boldsymbol{B}_B \rVert} \dot{\hat{\boldsymbol{B}}}\boldsymbol{_B}\times \boldsymbol{B_B} 
+\end{empheq}
+also notice that when $\omega >> 1$ \autoref{eq:b_dot} is more and more true, and so $\boldsymbol{B}_B$ and $\dot{\hat{\boldsymbol{B}}}\boldsymbol{_B}$ are perpendicular, resulting 
+in the maximum actuable control torque.
+
+Regarding the control law \autoref{eq:ctrl_bdot}, it has to be seen that the vector derived is not the derivative of the magnetic field vector, but it is the derivative of the unit vector of the 
+direction of the magnetic field. Also, notice that all the vector in the above relationship are in the $\mathcal{B}$ frame since the magnetic 
+field vector $\boldsymbol{B}$ comes from the magnetometer measurment.
+
+In the context of the simulation environment on Simulink, the formulation choosen for the b-dot control comes from \cite{bdot} of Avanzini et Al. Some precaution has to be taken
+when implementing the law, since the numerical derivative of a mesaured (hence noisy) signal has to be performed. This inconvinence can be overcome by using a low-pass filter \cite{crass_book}.
+In order to make some sense out of the calculation, a discrete low-pass Butterworth filter of the 1st order has been used just after the discrete derivative block. 
+Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the results of simulation are coherent
+
+
+\subsection{Slew and Nadir phase}
+\label{subsec:slew_subsec}
+
+
+
+

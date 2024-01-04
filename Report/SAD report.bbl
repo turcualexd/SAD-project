@@ -1,8 +1,43 @@
 \begin{thebibliography}{1}
 
-\bibitem{flight_manual}
-Georce C. Marshall Space~Flight Center.
-\newblock {\em {Saturn V Flight Manual SA-507}}.
-\newblock National Aeronautics and Space Administration, 10 1969.
+\bibitem{esail_site}
+ESA.
+\newblock Esail maritime satellite launched.
+\newblock Website, 2020.
+\newblock Site:
+  \url{https://www.esa.int/Applications/Connectivity_and_Secure_Communications/ESAIL_maritime_satellite_launched}.
+
+\bibitem{curtis_book}
+Howard~D. Curtis.
+\newblock {\em Orbital Mechanics for Engineering Students}.
+\newblock Elsevier, 2014.
+
+\bibitem{esa_sso_site}
+ESA.
+\newblock Types of orbits.
+\newblock Website, 2020.
+\newblock Site:
+  \url{https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits}.
+
+\bibitem{wertz}
+James~R. Wertz.
+\newblock {\em Spacecraft Attitude Determination And Control}.
+\newblock Kluwer Academic Publishers, 1978.
+
+\bibitem{bdot}
+{Giulio Avanzini, Fabrizio Giulietti}.
+\newblock {Magnetic Detumbling of a Rigid Spacecraft}.
+\newblock {\em Journal of Guidance, Control and Dynamics}, 35(4):1326--1333, 8
+  2012.
+
+\bibitem{lovera}
+{M. Lovera, A. Astolfi}.
+\newblock {Spacecraft attitude control using magnetic actuators}.
+\newblock {\em Elsevier}, 40(4):1405--1414, 2 2004.
+
+\bibitem{crass_book}
+John l.~Crassidis F.~Landis~Markley.
+\newblock {\em Fundamentals of Spacecraft Attitude Determination and Control}.
+\newblock Springer, 2014.
 
 \end{thebibliography}
