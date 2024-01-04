@@ -83,9 +83,87 @@ In order to make some sense out of the calculation, a discrete low-pass Butterwo
 Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the results of simulation are coherent
 
 
-\subsection{Slew and Nadir phase}
+\subsection{Slew and Nadir pointing phases}
 \label{subsec:slew_subsec}
 
+\subsubsection{Control law for the Slew and Tracking Manuever}
 
+\label{subsubsec:slew_nadir_law}
 
+The goal for the control system at this phase of the mission, is to track the LVLH frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the LVLH frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $A_{BL}$, which leads from the LVLH to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as 
+$$\boldsymbol{\alpha}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V$$
+The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a skew-symmetric matrix back to its generating vector. 
+The angular velocity error was defined as $$\boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T$$ 
+$\Vec{\omega}$ was obtained by taking the numerical derivative of the matrix $A_{BN}$, the matrix computed with the attitude determination algorithm, and then inverting the formula 
+\begin{empheq}{equation}
+    \label{}  \dot{\boldsymbol{A}}\boldsymbol{_{BN}} = -[\boldsymbol{\omega} \times] \boldsymbol{A_{BN}}
+\end{empheq}
 
+Since $\boldsymbol{A_{BN}}$ is affected by noise, taking its derivative numerically amplifies it, leading to a bad estimation of the angular velocity. Therefore a discrete lowpass Butterworth filter was applied before the computation of $\Vec{\omega}$. This was set as a 1st order filter with cut-off frequency at 1 rad/s. Once computed $\Vec{\alpha}$ and $\Vec{\omega}_{BL}$ a suitable control law was: 
+$$\Vec{M}_c=-k_1\Vec{\alpha}-k_2\Vec{\omega}_{BL}$$
+
+\subsubsection{Actuator command logic}
+\label{subsubsec:act_cmd_logic}
+
+Once the control torque $\boldsymbol{M_c}$ has been calculated, a logic was implemented to translate it into a command to be sent to the actuators. Magnetic actuators generate the torque with the formula
+\begin{empheq}{equation}
+    \label{eq:act}
+    M= - [\boldsymbol{B} \times] \boldsymbol{D}
+\end{empheq}
+
+where $[\boldsymbol{B} \times]$ is the skew symmetric matrix obtained applying the $[\cdot \ \times] $ operator to the magnetic field vector in body frame, measured by the magnetometer.
+However, it isn't possible to compute $\boldsymbol{D}$ by inverting \autoref{eq:act} because $[\boldsymbol{B} \times]$ is singular. This reflects the fact that is never possible to generate three independents components of the control torque, since $\boldsymbol{M}$ is always perpendicular to both $\boldsymbol{D}$ and $\boldsymbol{B}$. One possible solution is to add one or more reaction wheel(s). It was chosen to add two reaction wheels, one along $\boldsymbol{x_B}$ and one along $\boldsymbol{y_B}$ of the $\mathcal{B}$ frame. This because, as it is shown in \autoref{eq:syst1} and \autoref{eq:syst2}, when only one reaction wheel is used, the matrix of the linear system necessary to be solved, becomes singular when the component of the magnetic field aligned with the reaction wheel is zero. As shown in \autoref{fig:mag_field} all components of the magnetic field will go to zero at a certain point. 
+If just one reaction wheel would be used, it should be disactivated when the respective component of $\boldsymbol{B}$ goes to 0. This would mean that at certain istants of time, the only actuators that can operate are the magnetorquer. This would lead 
+to the undeterminate problem of defining a command to the magnetoactuator \autoref{eq:ctrl_bdot}.  
+
+Following the considerations given just above, the command is always given in the form:
+\begin{empheq}{equation}
+    \label{eq:cmd}
+    \boldsymbol{cmd} = [D_x \ \ D_y \ \ D_z \ \ -\Dot{h}_x \ \ -\Dot{h}_y]^T
+\end{empheq} 
+
+where $D_x$, $D_y$ and $D_z$ are the dipoles to be given by the magnetic actuators, $\Dot{h}_x$ and $\Dot{h}_y$ are the moments to be given by the reaction wheels.
+
+Only one reaction wheel is used at a time, they are never used all at once. A logic was implemented to choose which reaction wheel to use. It consists in an if/else construct, implemented in Simulink through two enabled subsystems, which takes as condition that $|B_x|\geq 10^{-5} \ T$.
+If the condition is satisfied, the reaction wheel along x is used and the linear system reported below is solved, 
+\begin{equation}
+\label{eq:syst1}
+\begin{aligned} 
+    \begin{bmatrix}
+        1 & B_z & -B_y \\
+        -B_z & 0 & B_x \\
+        B_y & -B_x & 0 
+    \end{bmatrix}\begin{bmatrix}
+        -\Dot{h}_x \\
+        D_y \\
+        D_z
+    \end{bmatrix} &=\begin{bmatrix}
+        M_x \\
+        M_y \\
+        M_z
+    \end{bmatrix}
+\end{aligned}
+\end{equation}
+
+ The command vector is assembled as indicated in \autoref{eq:cmd} by taking the solution \autoref{eq:syst1} and setting to zero $D_x$ and $\Dot{h}_y$.  If the condition is not satisfied, the reaction wheel along y is used, the linear system to be solved is 
+\begin{equation}
+ \label{eq:syst2}
+ \begin{aligned} 
+    \begin{bmatrix}
+        0 & B_z & -B_y \\
+        -B_z & 1 & B_x \\
+        B_y & -B_x & 0 
+    \end{bmatrix}\begin{bmatrix}
+        D_x \\
+        -\Dot{h}_y \\
+        D_z
+    \end{bmatrix} &=\begin{bmatrix}
+        M_x \\
+        M_y \\
+        M_z
+    \end{bmatrix}
+  \end{aligned}
+\end{equation}
+  and the command vector is assembled as indicated in \autoref{eq:cmd} by taking the solution of\autoref{eq:syst2} and setting to zero $D_y$ and $\Dot{h}_x$. The idea behind this kind of logic was to be always able to compute the command vector. Indeed, the matrix of \autoref{eq:syst1} is singular when $B_x=0 \ T$ and the matrix of \autoref{eq:syst2} is singular when $B_y= 0 \ T$. It is clear that, using this kind of logic, it is always possible to compute a command to be sent to the actuators. The assumption that was made is that at every instant of time, at least one of $B_x$ and $B_y$ is non zero. Looking at the graph in figure \autoref{fig:mag_field}, it can be noticed that, when $B_x$ is zero, $B_y$ is far from zero and vice-versa. It wasn't chosen to put the second reaction wheel along z axis because, as it is shown in the graph reported in the same figure, there are instant of times along the orbit during which both $B_x$ and $B_z$ are null or both $B_y$ and $B_z$ are null.
+
+\cfig{B_forRW}{Magnetic Field in $\mathcal{B}$ frame}{mag_field}{0.5}

@@ -928,18 +928,29 @@ INPUT Sections\08_attitude_determination.tex
 INPUT .\Sections\08_attitude_determination.tex
 INPUT .\Sections\08_attitude_determination.tex
 INPUT Sections\08_attitude_determination.tex
-INPUT .\Sections\09_control_logic.tex
-INPUT .\Sections\09_control_logic.tex
-INPUT Sections\09_control_logic.tex
-INPUT .\Sections\09_control_logic.tex
-INPUT .\Sections\09_control_logic.tex
-INPUT Sections\09_control_logic.tex
-INPUT .\Sections\10_actuators.tex
-INPUT .\Sections\10_actuators.tex
-INPUT Sections\10_actuators.tex
-INPUT .\Sections\10_actuators.tex
-INPUT .\Sections\10_actuators.tex
-INPUT Sections\10_actuators.tex
+INPUT .\Sections\09_actuators.tex
+INPUT .\Sections\09_actuators.tex
+INPUT Sections\09_actuators.tex
+INPUT .\Sections\09_actuators.tex
+INPUT .\Sections\09_actuators.tex
+INPUT Sections\09_actuators.tex
+INPUT .\Sections\10_control_logic.tex
+INPUT .\Sections\10_control_logic.tex
+INPUT Sections\10_control_logic.tex
+INPUT .\Sections\10_control_logic.tex
+INPUT .\Sections\10_control_logic.tex
+INPUT Sections\10_control_logic.tex
+INPUT .\Images\\B_forRW.eps
+INPUT Images\\B_forRW.eps
+INPUT .\Images\\B_forRW.eps
+INPUT .\Images\\B_forRW.eps
+INPUT .\Images\\B_forRW-eps-converted-to.pdf
+INPUT .\Images\\B_forRW-eps-converted-to.pdf
+INPUT .\Images\\B_forRW.eps
+INPUT .\Images\\B_forRW-eps-converted-to.pdf
+INPUT .\Images\\B_forRW-eps-converted-to.pdf
+INPUT .\Images\\B_forRW-eps-converted-to.pdf
+INPUT .\Images\\B_forRW-eps-converted-to.pdf
 INPUT .\SAD report.bbl
 INPUT SAD report.bbl
 INPUT .\SAD report.bbl
