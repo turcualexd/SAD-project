@@ -27,6 +27,7 @@ xlabel('$K_r$', 'interpreter', 'latex'); ylabel('$K_y$', 'interpreter', 'latex')
 
 
 impl = @(x,y) (1 + 3.*x + x.*y) - 4*sqrt(x.*y);
+area(linspace(-1,0))
 
 k_yaw
 k_roll
