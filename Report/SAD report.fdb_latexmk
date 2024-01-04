@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex SAD report"] 1704386953 "SAD report.aux" "SAD report.bbl" "SAD report" 1704387404 0
+["bibtex SAD report"] 1704401174 "SAD report.aux" "SAD report.bbl" "SAD report" 1704401178 0
   "./bibliography.bib" 1704380758 6922 892b58e0ae0e1c76a1ec416568dff7a6 ""
   "C:/Miktex/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "SAD report.aux" 1704387403 12344 11d0ebb1078fdaa0c7b36095a9be47e1 "pdflatex"
+  "SAD report.aux" 1704401177 13339 5929136512d7e202ff9e2fd620a5cbb5 "pdflatex"
   (generated)
   "SAD report.bbl"
   "SAD report.blg"
   (rewritten before read)
-["pdflatex"] 1704387401 "c:/Users/danie/Documents/GitHub/SAD-project/Report/SAD report.tex" "SAD report.pdf" "SAD report" 1704387404 0
+["pdflatex"] 1704401174 "c:/Users/danie/Documents/GitHub/SAD-project/Report/SAD report.tex" "SAD report.pdf" "SAD report" 1704401178 0
   "C:/Miktex/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Miktex/fonts/enc/dvips/kpfonts/kpfonts-expert.enc" 1674488844 2639 b7bbeb66c016cde6fdcad9263fe54a4a ""
   "C:/Miktex/fonts/tfm/jknappen/ec/ecrm1000.tfm" 993062122 3148 7e594c8240c71e432203f65ab5f95a51 ""
@@ -260,26 +260,27 @@
   "Images//B_forRW.eps" 1704380758 131242 d12cfad3b737d7d4fc89ff3ffcf83913 ""
   "Images//CAD.jpg" 1704380758 1744519 4941374cb0a42e48c6fcff8754d4c6fe ""
   "Images//disturbances.eps" 1704380758 355157 92f1dc3e4f47303bc7ffc48bbbc3f3b3 ""
+  "Images//gg_stab.eps" 1704400893 56113 fce24b655ddaeeb00e7be2e549bde0a3 ""
   "Images//logo_polimi_ing_indinf.eps" 1704319364 1016894 50c9d95dbacdb6a7531ebeec13361098 ""
   "Images//orbit.eps" 1704380758 435323 7e181460183c10667f8bc0efe22e8684 ""
   "Images//orbit_2.eps" 1704380758 406291 9a47fee1636b66dc8134acd918e568c0 ""
   "Images//raggiera_polimi.eps" 1704319365 1813066 68b21695bbcbb6d7e09839c06406f8f3 ""
-  "SAD report.aux" 1704387403 12344 11d0ebb1078fdaa0c7b36095a9be47e1 "pdflatex"
-  "SAD report.bbl" 1704386953 1095 5d66feed589d4c805d907f3903ce4f98 "bibtex SAD report"
-  "SAD report.out" 1704387403 4658 70472b3b4ca3bc6aeaa0ceace8958957 "pdflatex"
+  "SAD report.aux" 1704401177 13339 5929136512d7e202ff9e2fd620a5cbb5 "pdflatex"
+  "SAD report.bbl" 1704401174 1095 5d66feed589d4c805d907f3903ce4f98 "bibtex SAD report"
+  "SAD report.out" 1704401177 4658 c31339410c330d77c8bcc4e0c042fd59 "pdflatex"
   "SAD report.tex" 1704380758 8985 60d77f49b6280cb0d8071e520c60664f ""
-  "SAD report.toc" 1704387403 2531 203023eb1b85a25d300bb3750742143b "pdflatex"
+  "SAD report.toc" 1704401177 2531 1fa30616c1e61963362da07f7891f7e5 "pdflatex"
   "Sections/00_abstract.tex" 1704319365 1266 fbcd14354a981a91a4cf3c1807869596 ""
   "Sections/01_symbols.tex" 1704319365 971 63788c6fa9fc2daaff76df3f1fd42a19 ""
   "Sections/02_requirements.tex" 1704319365 164 3187a4aeb7e52fb2b7c44b13c404724a ""
   "Sections/03_framework.tex" 1704380758 5215 4434904f2e8a3de9a9ded2ca7fd8b174 ""
   "Sections/04_dynamics.tex" 1704319365 1902 07923c1255e8b8b399ec1b78887f8370 ""
   "Sections/05_kinematics.tex" 1704380758 6508 d1e9442fcde05c494c535c96644a4a05 ""
-  "Sections/06_disturbances.tex" 1704380758 10968 f768543641820c9e8f43a45aa2e7f14f ""
+  "Sections/06_disturbances.tex" 1704401170 11041 57c4abdfc70e5a77f08a740787b7f3b4 ""
   "Sections/07_sensors.tex" 1704380758 9472 297b4be459b4670dbc985f81019b8367 ""
-  "Sections/08_attitude_determination.tex" 1704380758 3610 1680a2c284054c052625df4290b156c5 ""
+  "Sections/08_attitude_determination.tex" 1704400836 6123 15519f192e7ae53bd2380eaa42bd7f1d ""
   "Sections/09_actuators.tex" 1704380758 2513 3911e16c0720dbb228c47f1f469d2e91 ""
-  "Sections/10_control_logic.tex" 1704387401 15135 f0618e290a2b9be66146471ca632ae97 ""
+  "Sections/10_control_logic.tex" 1704399837 15148 ea6097d331ef778ede332611b994685b ""
   "c:/Users/danie/Documents/GitHub/SAD-project/Report/SAD report.tex" 1704380758 8985 60d77f49b6280cb0d8071e520c60664f ""
   (generated)
   "SAD report.aux"

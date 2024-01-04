@@ -93,7 +93,7 @@ The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a ske
 The angular velocity error was defined as $$\boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T$$ 
 $\Vec{\omega}$ was obtained by taking the numerical derivative of the matrix $A_{BN}$, the matrix computed with the attitude determination algorithm, and then inverting the formula 
 \begin{empheq}{equation}
-    \label{}  \dot{\boldsymbol{A}}\boldsymbol{_{BN}} = -[\omega \times] \boldsymbol{A_{BN}}
+    \label{}  \dot{\boldsymbol{A}}\boldsymbol{_{BN}} = -[\boldsymbol{\omega} \times] \boldsymbol{A_{BN}}
 \end{empheq}
 
 Since $\boldsymbol{A_{BN}}$ is affected by noise, taking its derivative numerically amplifies it, leading to a bad estimation of the angular velocity. Therefore a discrete lowpass Butterworth filter was applied before the computation of $\Vec{\omega}$. This was set as a 1st order filter with cut-off frequency at 1 rad/s. Once computed $\Vec{\alpha}$ and $\Vec{\omega}_{BL}$ a suitable control law was: 

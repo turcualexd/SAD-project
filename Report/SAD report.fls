@@ -1725,6 +1725,17 @@ INPUT .\Sections\06_disturbances.tex
 INPUT Sections\06_disturbances.tex
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmn8t.tfm
 INPUT C:\Miktex\fonts\tfm\public\kpfonts\jkpmn8t.tfm
+INPUT .\Images\\gg_stab.eps
+INPUT Images\\gg_stab.eps
+INPUT .\Images\\gg_stab.eps
+INPUT .\Images\\gg_stab.eps
+INPUT .\Images\\gg_stab-eps-converted-to.pdf
+INPUT .\Images\\gg_stab-eps-converted-to.pdf
+INPUT .\Images\\gg_stab.eps
+INPUT .\Images\\gg_stab-eps-converted-to.pdf
+INPUT .\Images\\gg_stab-eps-converted-to.pdf
+INPUT .\Images\\gg_stab-eps-converted-to.pdf
+INPUT .\Images\\gg_stab-eps-converted-to.pdf
 INPUT .\Images\\disturbances.eps
 INPUT Images\\disturbances.eps
 INPUT .\Images\\disturbances.eps
