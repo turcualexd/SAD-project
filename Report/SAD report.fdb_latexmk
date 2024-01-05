@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex SAD report"] 1704465131 "SAD report.aux" "SAD report.bbl" "SAD report" 1704465141 0
+["bibtex SAD report"] 1704467140 "SAD report.aux" "SAD report.bbl" "SAD report" 1704467528 0
   "./bibliography.bib" 1704390091 1634 930353f9a482875f8b727baad7e7d6a2 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291864736 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "SAD report.aux" 1704465140 14717 f25ce078d55ebcb32b387110664efaef "pdflatex"
+  "SAD report.aux" 1704467527 15417 20caa3cd3aa9904a236ecf2712d532e4 "pdflatex"
   (generated)
   "SAD report.bbl"
   "SAD report.blg"
   (rewritten before read)
-["pdflatex"] 1704465138 "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" "SAD report.pdf" "SAD report" 1704465141 0
+["pdflatex"] 1704467525 "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" "SAD report.pdf" "SAD report" 1704467528 0
   "C:/Users/turcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1704406291 95607 034e0737ccfe37fc78b0169eb44187f4 ""
   "C:/Users/turcu/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1684232945 23188739 a2fc3e86f82404b52dad9870f4800c11 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -265,23 +265,24 @@
   "Images//orbit.eps" 1704309926 435323 7e181460183c10667f8bc0efe22e8684 ""
   "Images//orbit_2.eps" 1704309922 406291 9a47fee1636b66dc8134acd918e568c0 ""
   "Images//raggiera_polimi.eps" 1704223719 1813066 68b21695bbcbb6d7e09839c06406f8f3 ""
-  "SAD report.aux" 1704465140 14717 f25ce078d55ebcb32b387110664efaef "pdflatex"
-  "SAD report.bbl" 1704465131 1290 8f76ac90ab9b663fa3f29b75612a6545 "bibtex SAD report"
-  "SAD report.out" 1704465140 4536 4f42f91bf7257983986895e002a6b88a "pdflatex"
-  "SAD report.tex" 1704465137 8666 974d6b190277b0b84c63589590eed427 ""
-  "SAD report.toc" 1704465140 2506 a4bd3de253aa29fb994680d00ae4e680 "pdflatex"
+  "SAD report.aux" 1704467527 15417 20caa3cd3aa9904a236ecf2712d532e4 "pdflatex"
+  "SAD report.bbl" 1704467140 1290 8f76ac90ab9b663fa3f29b75612a6545 "bibtex SAD report"
+  "SAD report.out" 1704467527 4786 5e2d4aea5534b45abee58686fc3e5895 "pdflatex"
+  "SAD report.tex" 1704467100 8782 55807d0ce2640c4046bab80dd1a54477 ""
+  "SAD report.toc" 1704467527 2603 5b774ca2a13b2b274d07d7d9fd57972a "pdflatex"
   "Sections/00_abstract.tex" 1704223719 1266 fbcd14354a981a91a4cf3c1807869596 ""
   "Sections/01_symbols.tex" 1704223719 971 63788c6fa9fc2daaff76df3f1fd42a19 ""
   "Sections/02_requirements.tex" 1704406420 788 b480ef771e3b5655bccdc6d302bce039 ""
-  "Sections/03_framework.tex" 1704448379 4776 e7c2263a90d57e9fda91de67acf47112 ""
+  "Sections/03_framework.tex" 1704466850 4779 956405bc67154aecaf7daae667375dd0 ""
   "Sections/04_dynamics.tex" 1704328887 1912 383e06d0d70ace0af2d0324b3548567f ""
   "Sections/05_kinematics.tex" 1704373570 6624 334e7580ccd9348ca10443b225f1659b ""
-  "Sections/06_disturbances.tex" 1704412094 11952 ee13f6376ea05950c19eda8b0791edbf ""
+  "Sections/06_disturbances.tex" 1704466872 11985 c1fcd7a3b4c809ddd0e2358684e3c6f2 ""
   "Sections/07_sensors.tex" 1704310915 9491 9da52837d4e8b7cb6bb96d1d9455944a ""
-  "Sections/08_attitude_determination.tex" 1704404084 6123 15519f192e7ae53bd2380eaa42bd7f1d ""
-  "Sections/09_actuators.tex" 1704464393 5593 3a99f814db2caa0e40169d54236a1931 ""
-  "Sections/10_control_logic.tex" 1704404157 15154 e2d7824ecad9f50ebf0e8b52455907dc ""
-  "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" 1704465137 8666 974d6b190277b0b84c63589590eed427 ""
+  "Sections/08_attitude_determination.tex" 1704466888 6146 e90d988d761a71157ca0145537ace4ae ""
+  "Sections/09_actuators.tex" 1704467525 6851 9d74694f9159856c58e85edafb7ea8fc ""
+  "Sections/10_control_logic.tex" 1704467516 19018 a5bd404a41b4a65d7addb1ad9a978d4b ""
+  "Sections/11_conclusion.tex" 1704467136 48 5769086f4a561e987f74541a3eed48cc ""
+  "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" 1704467100 8782 55807d0ce2640c4046bab80dd1a54477 ""
   (generated)
   "SAD report.aux"
   "SAD report.log"
