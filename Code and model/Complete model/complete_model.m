@@ -23,7 +23,8 @@ a    = 6.851221970532768e+03;
 e    = 0.001830122216180;
 i    = 1.699980862034725;
 om   = 1.772848103192913;
-OM   = 0.554268509489784;
+%OM   = 0.554268509489784;
+OM = 0;
 th_0 = 3.109851878856139;
 n    = sqrt(mu/a^3);
 T    = 2*pi/n;
@@ -45,11 +46,14 @@ rs = -rr;
 
 %--------------------Dynamics and Kinematics subsystems--------------------
 
-%omega0  = 0.06 * ones(3,1);
+omega0  = 0.06 * ones(3,1);
+s0 = [5.11905989575681;
+     5.69125859039527;
+     0.797881698340871];
 %s0      = 2*pi*rand(3,1);
-omega0  = [1e-6; 1e-6; n];
-
-s0     = [2.099, -0.2003, -1.703];
+% omega0  = [1e-6; 1e-6; n];
+% 
+% s0     = [2.099, -0.2003, -1.703];
 
 tol     = 0.2;  % tolerance for kinematic switch 312 - 313 and viceversa
 
@@ -95,7 +99,7 @@ bias_mag     = bias_mag./norm(bias_mag);
 freq_sun     = 30; 
 bias_sun     = rand(3,1);
 bias_sun     = bias_sun./norm(bias_sun);
-variance_sun = deg2rad(0.5)^2;
+variance_sun = deg2rad(0.3)^2;
 pwr_sd_sun   = (1/freq_sun)*variance_sun;
 
 % Earth Sensor - Meisei Electric
@@ -103,7 +107,7 @@ freq_earth     = 30;
 FOV_earth      = deg2rad(33);   
 bias_earth     = rand(3,1);
 bias_earth     = bias_earth./norm(bias_earth);
-variance_earth = deg2rad(0.5)^2;
+variance_earth = deg2rad(1)^2;
 pwr_sd_earth   = (1/freq_earth)*variance_earth;
 %--------------------------------------------------------------------------
 
@@ -111,12 +115,12 @@ freq_acds = 30;
 
 %---------------------------Att. Determination-----------------------------
 
-alpha1 = 0.4;
-alpha2 = 0.1;
-alpha3 = 0.5;
+alpha1 = 0.05;
+alpha2 = 0.15;
+alpha3 = 0.8;
 
-alpha12 = 0.65; 
-alpha22 = 0.35;
+alpha12 = 0.2; 
+alpha22 = 0.8;
 
 %-------------------------------Actuators----------------------------------
 
@@ -190,8 +194,19 @@ k_gain  = (4*pi/T) * (1 + sin(chsi)) * I1_retr;
 out = sim("Loop_model.slx");
 t = out.tout;
 Bm = out.B_m;
+Bb = out.Bb;
+sb= out.sb;
+sbm = out.sb_m;
+rb = out.rb;
+rbm = out.rb_m;
 %%
 Bm = squeeze(Bm);
+Bb = squeeze(Bb);
+%%
+rb=rb';
+rbm=squeeze(rbm);
+sb=squeeze(sb);
+sbm=squeeze(sbm);
 %%
 figure
 hold on
@@ -202,4 +217,63 @@ plot(t/T, Bm(3,:), LineWidth=1.5)
 lgd = legend('B_x', 'B_y', 'B_z');
 xlabel('number of orbits [-]')
 ylabel('B [T]')
-xlim([0 1])
+xlim([0 2])
+%%
+Bmn = vecnorm(Bm, 2, 1);
+Bbn = vecnorm(Bb, 2, 1);
+bb = NaN(size(Bb));
+bm = bb;
+for i = 1 : length(t)
+    bb(:,i) = Bb(:,i)/Bbn(i);
+    bm(:,i) = Bm(:,i)/Bmn(i);
+end
+%%
+phi_mag = NaN(size(t));
+phi_hor = phi_mag;
+phi_sun = phi_hor;
+for i = 1 : length(t)
+    
+    cos_mag = dot(bb(:,i), bm(:,i));
+
+    sin_mag = norm(cross(bb(:,i), bm(:,i)));
+
+    phi_mag(i) = atan2(sin_mag, cos_mag);
+
+    cos_hor = dot(rb(:,i), rbm(:,i));
+
+    sin_hor = norm(cross(rb(:,i), rbm(:,i)));
+
+    phi_hor(i) = atan2(sin_hor, cos_hor);
+
+    cos_sun = dot(sb(:,i), sbm(:,i));
+
+    sin_sun = norm(cross(sb(:,i), sbm(:,i)));
+
+    phi_sun(i) = atan2(sin_sun, cos_sun);
+
+end
+%%
+figure
+plot(t/T, phi_mag)
+figure
+plot(t/T, phi_hor)
+figure
+plot(t/T, phi_sun)
+%%
+mu_mag = 1/t(end)*compute_integral(t, phi_mag);
+sigma2_mag = 1/t(end)*compute_integral(t, (phi_mag-mu_mag).^2);
+acc_mag = sqrt(sigma2_mag);
+mu_mag = rad2deg(mu_mag)
+acc_mag = rad2deg(acc_mag)
+
+mu_hor = 1/t(end)*compute_integral(t, phi_hor);
+sigma2_hor = 1/t(end)*compute_integral(t, (phi_hor-mu_hor).^2);
+acc_hor = sqrt(sigma2_hor);
+mu_hor = rad2deg(mu_hor)
+acc_hor = rad2deg(acc_hor)
+
+mu_sun = 1/t(end)*compute_integral(t, phi_sun);
+sigma2_sun = 1/t(end)*compute_integral(t, (phi_sun-mu_sun).^2);
+acc_sun = sqrt(sigma2_sun);
+mu_sun = rad2deg(mu_sun)
+acc_sun = rad2deg(acc_sun)
