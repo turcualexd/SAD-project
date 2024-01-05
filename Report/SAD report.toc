@@ -1,0 +1,32 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{Abstract}{I}{Doc-Start}%
+\contentsline {section}{Contents}{II}{Doc-Start}%
+\contentsline {section}{\numberline {1}Symbols}{III}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Analisi della missione}{III}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Analisi della missione 2}{III}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Requirements}{1}{section.2}%
+\contentsline {section}{\numberline {3}Framework Analysis}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Satellite characterization}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Orbit characterization}{2}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Dynamics}{3}{section.4}%
+\contentsline {section}{\numberline {5}Kinematics}{3}{section.5}%
+\contentsline {section}{\numberline {6}Disturbances analysis}{4}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Magnetic Disturbance}{4}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}SRP Disturbance}{4}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Drag Disturbance}{5}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Gravity Gradient Disturbance}{5}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Simulation of all disturbances}{6}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Sensors}{7}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Horizon Sensor}{7}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Magnetometer}{7}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Sun Sensor}{8}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Attitude determination}{8}{section.8}%
+\contentsline {section}{\numberline {9}Actuators}{10}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Magnetorquer}{10}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Reaction Wheels}{10}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Control logic}{11}{section.10}%
+\contentsline {subsection}{\numberline {10.1}De-tumbling phase: the B-dot control}{11}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Slew and Nadir pointing phases}{12}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Control law for the Slew and Tracking Manuever}{12}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Actuator command logic for Slew and Nadir pointing}{13}{subsubsection.10.2.2}%
+\contentsline {section}{Bibliography}{15}{figure.caption.43}%
