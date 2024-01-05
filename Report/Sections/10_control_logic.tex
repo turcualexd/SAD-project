@@ -85,8 +85,11 @@ Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the r
 
 \subsection{Slew and Nadir pointing phases}
 \label{subsec:slew_subsec}
+
 \subsubsection{Control law for the Slew and Tracking Manuever}
+
 \label{subsubsec:slew_nadir_law}
+
 The goal for the control system at this phase of the mission, is to track the LVLH frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the LVLH frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $A_{BL}$, which leads from the LVLH to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as 
 $$\boldsymbol{\alpha}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V$$
 The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a skew-symmetric matrix back to its generating vector. 

@@ -1,51 +1,47 @@
 \section{Framework Analysis}
 \label{sec:framework}
 
-\subsection{Satellite characterization }
+
+\subsection{Satellite characterization}
 \label{subsec:sat_characterization}
-The group was inspired by ESAIL, a microsatellite, developed by exactEarth in cooperation with ESA, which has the mission of ship targeting. Two configurations of the satellite were implemented: the undeployed configuration, for the detumbling phase, and the extended configutation, for the slew and tracking phase. The latter was modeled as a cubic central body, of side 70 cm, and four solar panels, modeled as rectangular bodies of dimensions $70\times 70 \times  1 \ cm$. Solar panels are set along y axis of body frame, as shown in figure ,with normal parallel to z axis of body frame.  
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\columnwidth]{CAD.jpg}
-        \vspace{2.5mm}
-\caption{Satellite model}
-\end{figure}
-The mass was assumed to be 100 Kg  and the satellite was considered to be, in first approximation, isotropic. Under these assumptions, the inertia matrix was computed as 
-\begin{align}
-    I = \begin{bmatrix}
+
+The satellite design was inspired by ESAIL, a microsatellite developed by exactEarth in cooperation with ESA. ESAIL was primarily developed for ship targeting.\cite{esail_site} Two configurations of the satellite are implemented: the undeployed configuration for the detumbling phase and the extended configuration for the slew and tracking phase. The deployed configuration is modeled as a cubic central body of side $70$ cm and four solar panels, modeled as rectangular bodies of dimensions $70 \times 70 \times 1$ cm. Solar panels are set along $\boldsymbol{y_B}$ axis of body frame $\mathcal{B}$ with the normal of surface parallel to $\boldsymbol{z_B}$ axis, as shown in \autoref{fig:CAD}.
+
+\cfig{CAD.jpg}{CAD model of the satellite}{CAD}{1}
+
+The mass is assumed to be $100$ kg with isotropic distribution for simplicity. The inertia matrix results to be:
+
+\begin{equation} \label{eq:dep_matrix}
+    I =
+    \begin{bmatrix}
         22.9724 & 0 & 0 \\
         0 & 7.7770 & 0 \\
         0 & 0 & 23.1895
-    \end{bmatrix} Kg \ m^2
-  \end{align}
-On the other hand, the undeployed configuration was implemented as a  isotropic cube of side 70 cm, with mass $m=100 \ Kg$
-The inertia matrix of the undeployed configuration is then 
-\begin{align}
-    I = \begin{bmatrix}
+    \end{bmatrix} \text{kg/m}^2
+\end{equation}
+
+The undeployed configuration is an isotropic cube of side 70 cm with the same mass. The inertia matrix of this undeployed configuration is then:
+
+\begin{equation} \label{eq:undep_matrix}
+    I =
+    \begin{bmatrix}
         8.1667 & 0 & 0 \\
         0 & 8.1667 & 0 \\
         0 & 0 & 8.1667
-    \end{bmatrix} Kg \ m^2
-  \end{align}
+    \end{bmatrix} \text{kg/m}^2
+\end{equation}
+
 
 \subsection{Orbit characterization}
 \label{subsec:orbit_characterization}
 
-The orbit adopted for the simulation is a Sun-synchronous (SSO), nearly polar and LEO orbit. Polar orbits allows to scan the whole globe during
-the several orbits, due to Earth rotation. SSO are orbits that maintain the same angle between their orbital plane and the direction that connects
-the Earth with the Sun \cite{curtis_book}. This allows the spacecraft the monitor the Earth surface with always the same conditions of light 
-(or eventually darkness, if the plane is oriented in a certain way). Also, a SSO orbit can be choosen in such a way to have always the sun visible \cite{esa_sso_site}.
+The orbit adopted for the simulation is a nearly polar, LEO, Sun-synchronous orbit (SSO). Polar orbits allows to scan the whole globe during the several orbits thanks to Earth rotation. SSO are orbits that maintain the same angle between their orbital plane and the direction that connects the Earth with the Sun.\cite{curtis_book} This allows the spacecraft to monitor the Earth surface with the same conditions of light (or eventually darkness, if the plane is oriented in a certain way). Furthermore, a SSO can be selected to ensure constant visibility of the Sun.\cite{esa_sso_site}
 
-The real data are based on the ephemeris of the ESAIL mission from which we were inspired. In particular, it was taken the orbital parameters on 16/12/2023 at $12$ UT of ESAIL satellite, then we 
-propagated the orbit using the simple two body problem  without any perturbation. This clearly is an approximation since several distrubances act 
-on the satellite as it will be seen in \autoref{sec:disturbances_analysis}, also the SSO orbits are intrisically caused by the J2 effect of Earth.
-Nevertheless, the simulation of few LEO orbit's periods considered in this report wouldn't be enough to show the distrubances effects caused on 
-the motion of the centre of mass of the satellite. The advantage to take as initial condition the ephemeris is that the motion of the spacecraft in 
-those two or three periods of the orbit of simulation that are considered is seen as sun-synchronous. Infact, that time of simulation taken into account
-is a snapshot compared to the time of action of the J2 effect responsible for the SSO orbit, that is one year. Clearly, a more detailed simulation should
-consider the variation of the orbital parameters due to J2 and all other perturbations.
+The data of the relation is based on the ephemeris of an ESAIL mission taken at 12:00 UT on December 16th, 2023. The orbit was then propagated using the simple two-body problem without any perturbations.
 
-The orbital parameters chosen, following the description given above, are:
+This is an approximation as several disturbances act on the satellite (as discussed in \autoref{sec:disturbances_analysis}). Using the ephemeris as the initial condition has the advantage of allowing the simulation of spacecraft motion in two or three periods of the orbit to be considered as Sun-synchronous. This is because the time of simulation is a snapshot compared to the time of action of the J2 effect responsible for the Sun-synchronous orbit, which is one year. Clearly, a more detailed simulation should consider the variation of the orbital parameters due to J2 and all the other perturbations.
+
+The orbital parameters chosen as described above are the following:
 
 \begin{table}[H]
 
@@ -58,41 +54,41 @@ The orbital parameters chosen, following the description given above, are:
     \hline
     \end{tabular}
     
-    \caption{Orbital Parameters}
+    \caption{Orbital parameters}
     \label{table:orb_table}
     
 \end{table}
 
-\twofigII{orbit.eps}{Orbit Representation}{leo_orbit}{orbit_2.eps}{Sun Direction view}{leo_orbit2}{1}
+\twofigII{orbit.eps}{Orbit representation}{leo_orbit}{orbit_2.eps}{View from Sun direction}{leo_orbit2}{1}
 
-In the \autoref{fig:leo_orbit} and \autoref{fig:leo_orbit2} the sun direction is also plotted, in this case it is possible
-to see that the orbit doesn't go into eclipse condition.
+In \autoref{fig:leo_orbit} and \autoref{fig:leo_orbit2} the Sun direction is plotted. It's easy to see that the orbit never goes into eclipse condition.
 
-On Simulink, the model for the orbital position implemented is based on the integration of the true anomaly
+On Simulink, the model implemented to retrieve the orbital position is based on the integration of the true anomaly:
 
-\begin{empheq}{equation*}
-   \dot{\theta} = \frac{n \left(1 + e\cos{\theta}\right)^2}{\left(1 - e^2 \right)^{3/2}}
-\end{empheq}
+\begin{equation}
+    \dot{\theta} = \frac{n \left( 1 + e \cos \theta \right)^2}{\left( 1 - e^2 \right)^{3/2}}
+\end{equation}
 
-Then, the radial distance is found as:
+Then, the radial distance is computed as:
 
-\begin{empheq}{equation*}
-    r = \frac{a \left(1 - e^2 \right)}{1 + e\cos{\theta}}
-\end{empheq}
+\begin{equation}
+    r = \frac{a \left( 1 - e^2 \right)}{1 + e \cos \theta}
+\end{equation}
 
- At this point it is easy to retrieve the position $\boldsymbol{r_p}$ of the S/C in the perifocal frame $\mathcal{P}$.
+At this point it is easy to retrieve the position $\boldsymbol{r_P}$ of the satellite in the perifocal frame $\mathcal{P}$:
 
- \begin{align}
-    \boldsymbol{r_P} = r\begin{bmatrix}
-           cos \theta \\
-           sin \theta \\
-           0
-         \end{bmatrix}
-  \end{align}
+\begin{equation}
+    \boldsymbol{r_P} = r
+    \begin{bmatrix}
+        \cos \theta \\
+        \sin \theta \\
+        0
+    \end{bmatrix}
+\end{equation}
 
-  The position in the inertial frame $\mathcal{N}$ is found using the  the transpose of the transformation matrix 
-  $\boldsymbol{A_{pn}} = \boldsymbol{R_3}\left(\omega\right) \boldsymbol{R_1}\left(i\right) \boldsymbol{R_3}\left(\Omega\right)$. 
-  In particular:
-  \begin{empheq}{equation*}
-    \boldsymbol{r_N} = \boldsymbol{A_{pn}r_P} 
- \end{empheq}
+The position in the inertial frame $\mathcal{N}$ is calculated using the transpose of the rotation matrix
+$\boldsymbol{A_{PN}} = \boldsymbol{R_3} \left( \omega \right) \boldsymbol{R_1} \left( i \right) \boldsymbol{R_3}  \left( \Omega \right)$:
+
+\begin{equation}
+    \boldsymbol{r_N} = \boldsymbol{A_{PN}^T r_p}
+\end{equation}
