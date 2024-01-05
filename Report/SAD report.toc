@@ -22,10 +22,11 @@
 \contentsline {subsection}{\numberline {7.3}Sun Sensor}{8}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Attitude determination}{8}{section.8}%
 \contentsline {section}{\numberline {9}Actuators}{10}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Reaction Wheels}{10}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.1}Magnetorquer}{10}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Reaction Wheels}{10}{subsection.9.2}%
 \contentsline {section}{\numberline {10}Control logic}{11}{section.10}%
 \contentsline {subsection}{\numberline {10.1}De-tumbling phase: the B-dot control}{11}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Slew and Nadir pointing phases}{12}{subsection.10.2}%
 \contentsline {subsubsection}{\numberline {10.2.1}Control law for the Slew and Tracking Manuever}{12}{subsubsection.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2}Actuator command logic}{12}{subsubsection.10.2.2}%
-\contentsline {section}{Bibliography}{14}{figure.caption.42}%
+\contentsline {subsubsection}{\numberline {10.2.2}Actuator command logic for Slew and Nadir pointing}{13}{subsubsection.10.2.2}%
+\contentsline {section}{Bibliography}{15}{figure.caption.43}%

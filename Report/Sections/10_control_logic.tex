@@ -90,7 +90,7 @@ Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the r
 
 \label{subsubsec:slew_nadir_law}
 
-The goal for the control system at this phase of the mission, is to track the LVLH frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the LVLH frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $A_{BL}$, which leads from the LVLH to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as 
+The goal for the control system at this phase of the mission, is to track the $\mathcal{LVLH}$ frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the $\mathcal{LVLH}$ frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $\boldsymbol{A_{BL}}$, which leads from the $\mathcal{LVLH}$ to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as 
 $$\boldsymbol{\alpha}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V$$
 The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a skew-symmetric matrix back to its generating vector. 
 The angular velocity error was defined as $$\boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T$$ 
@@ -100,9 +100,23 @@ $\Vec{\omega}$ was obtained by taking the numerical derivative of the matrix $A_
 \end{empheq}
 
 Since $\boldsymbol{A_{BN}}$ is affected by noise, taking its derivative numerically amplifies it, leading to a bad estimation of the angular velocity. Therefore a discrete lowpass Butterworth filter was applied before the computation of $\Vec{\omega}$. This was set as a 1st order filter with cut-off frequency at 1 rad/s. Once computed $\Vec{\alpha}$ and $\Vec{\omega}_{BL}$ a suitable control law was: 
-$$\Vec{M}_c=-k_1\Vec{\alpha}-k_2\Vec{\omega}_{BL}$$
+$$\boldsymbol{M}_c=-k_1\boldsymbol{\alpha}-k_2\boldsymbol{{\omega}_{BL}}$$
 
-\subsubsection{Actuator command logic}
+This kind of control law is inspired by the linear full-state feedback control  $\boldsymbol{u} = -\boldsymbol{kx} $. In particular, referred to the linearized Euler equations in which a set of three Euler angles $\boldsymbol{\alpha} = \left(\alpha_1 \alpha_2 \alpha_3 \right)$ is introduced. This set of small angles represent the misalignment between the $\mathcal{B}$ and $\mathcal{LVLH}$ frame. When this linearization is made, the state $\boldsymbol{x}$ for the state-space formulation, contains $\boldsymbol{\alpha}$ and $\dot{\boldsymbol{\alpha}}$. If the $\boldsymbol{u} = -\boldsymbol{kx} $ is implemented with that state, the control law becomes a \textit{Proportional-Derivative} control, in the form:
+$$\boldsymbol{M}_c=-\boldsymbol{K_p}\boldsymbol{\alpha}-\boldsymbol{K_d}\dot{\boldsymbol{\alpha}}$$
+
+Since the linear control theory allows to use different metholodogies to caluclate the gains matrices $\boldsymbol{k_p}$ and $\boldsymbol{k_d}$, the linearized control law was firstly analyzed. In particular, the pole placment technique was used, on the following state-space representation of the system. 
+.....
+The open-loop poles caluclated for this system are:
+The gain matrix $\boldsymbol{K} = \left[\boldsymbol{K_d} \; \boldsymbol{K_p} \right]$ is assesed through the the \textit{place(A,B,p)} Matlab function that requires the state-space matrices $\boldsymbol{A}$ and $\boldsymbol{B}$, and also the closed-loop poles that are desired $\boldsymbol{p}$. At this point, this vector of six poles must be hypotized. Some precatuions must be taken when the poles are decided:
+\begin{itemize}
+    \item closed-loop poles shall not be too far from the corresponding open-loop poles, since there are constraints on the capabilities of the actuator;
+    \item the real part of the closed-loop poles must be negative in order to guarantee asymptotic stability;
+    \item the imaginary part of the poles should be decided in order to minimize the overshoot;
+\end{itemize}
+The poles chosen are: ...., the gain matrix gain can be used for the linear-control law. From here, the order of magnitude of the gain matrix was selected and it is:.... This values has been used in the non-linear control law of equation (...) and then refined with trial and error. The response of the system was satisfactory with the following values:
+
+\subsubsection{Actuator command logic for Slew and Nadir pointing}
 \label{subsubsec:act_cmd_logic}
 
 Once the control torque $\boldsymbol{M_c}$ has been calculated, a logic was implemented to translate it into a command to be sent to the actuators. Magnetic actuators generate the torque with the formula
