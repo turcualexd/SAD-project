@@ -29,4 +29,4 @@
 \contentsline {subsection}{\numberline {10.2}Slew and Nadir pointing phases}{12}{subsection.10.2}%
 \contentsline {subsubsection}{\numberline {10.2.1}Control law for the Slew and Tracking Manuever}{12}{subsubsection.10.2.1}%
 \contentsline {subsubsection}{\numberline {10.2.2}Actuator command logic for Slew and Nadir pointing}{13}{subsubsection.10.2.2}%
-\contentsline {section}{Bibliography}{15}{figure.caption.43}%
+\contentsline {section}{Bibliography}{15}{figure.caption.46}%
