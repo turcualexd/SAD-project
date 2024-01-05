@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex SAD report"] 1704406298 "SAD report.aux" "SAD report.bbl" "SAD report" 1704412097 0
+["bibtex SAD report"] 1704448385 "SAD report.aux" "SAD report.bbl" "SAD report" 1704448388 0
   "./bibliography.bib" 1704390091 1634 930353f9a482875f8b727baad7e7d6a2 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291864736 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "SAD report.aux" 1704412096 14053 64383066671be0dd0c25df572423c860 "pdflatex"
+  "SAD report.aux" 1704448387 14049 efe3473414a79a01039b1b6f4b215d9d "pdflatex"
   (generated)
   "SAD report.bbl"
   "SAD report.blg"
   (rewritten before read)
-["pdflatex"] 1704412094 "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" "SAD report.pdf" "SAD report" 1704412097 0
+["pdflatex"] 1704448385 "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" "SAD report.pdf" "SAD report" 1704448388 0
   "C:/Users/turcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1704406291 95607 034e0737ccfe37fc78b0169eb44187f4 ""
   "C:/Users/turcu/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1684232945 23188739 a2fc3e86f82404b52dad9870f4800c11 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -258,22 +258,22 @@
   "Configuration files/config.tex" 1704223719 3227 9492fd718f6efd0f9ec35ab515cde4f3 ""
   "Configuration files/title_page.tex" 1704223719 1357 11c8e85a7b8ae732b6f942d64c274f7a ""
   "Images//B_forRW.eps" 1704403294 131242 d12cfad3b737d7d4fc89ff3ffcf83913 ""
-  "Images//CAD.jpg" 1704300596 1744519 4941374cb0a42e48c6fcff8754d4c6fe ""
+  "Images//CAD.pdf" 1704448250 9159 e3567e96721ac6a14a8d54b5bcd2f8fb ""
   "Images//disturbances.eps" 1704309931 355157 92f1dc3e4f47303bc7ffc48bbbc3f3b3 ""
   "Images//gg_stab.pdf" 1704411942 10121 aeda9c5367170c069cbf590fd9be31db ""
   "Images//logo_polimi_ing_indinf.eps" 1704223719 1016894 50c9d95dbacdb6a7531ebeec13361098 ""
   "Images//orbit.eps" 1704309926 435323 7e181460183c10667f8bc0efe22e8684 ""
   "Images//orbit_2.eps" 1704309922 406291 9a47fee1636b66dc8134acd918e568c0 ""
   "Images//raggiera_polimi.eps" 1704223719 1813066 68b21695bbcbb6d7e09839c06406f8f3 ""
-  "SAD report.aux" 1704412096 14053 64383066671be0dd0c25df572423c860 "pdflatex"
-  "SAD report.bbl" 1704406298 1290 8f76ac90ab9b663fa3f29b75612a6545 "bibtex SAD report"
-  "SAD report.out" 1704412096 4418 aae273d17a471fb14bca046b40d8a849 "pdflatex"
+  "SAD report.aux" 1704448387 14049 efe3473414a79a01039b1b6f4b215d9d "pdflatex"
+  "SAD report.bbl" 1704448385 1290 8f76ac90ab9b663fa3f29b75612a6545 "bibtex SAD report"
+  "SAD report.out" 1704448387 4418 aae273d17a471fb14bca046b40d8a849 "pdflatex"
   "SAD report.tex" 1704406283 8849 ca14d3342fd453db16652c11390d30ec ""
-  "SAD report.toc" 1704412096 2431 ab27bb5b8d4b5897fb96e21b9563aa49 "pdflatex"
+  "SAD report.toc" 1704448387 2431 b5982871c1a5924004b34ceb910ceeb9 "pdflatex"
   "Sections/00_abstract.tex" 1704223719 1266 fbcd14354a981a91a4cf3c1807869596 ""
   "Sections/01_symbols.tex" 1704223719 971 63788c6fa9fc2daaff76df3f1fd42a19 ""
   "Sections/02_requirements.tex" 1704406420 788 b480ef771e3b5655bccdc6d302bce039 ""
-  "Sections/03_framework.tex" 1704328148 4776 c8c4583f7ac19ec6126f614689f035cf ""
+  "Sections/03_framework.tex" 1704448379 4776 e7c2263a90d57e9fda91de67acf47112 ""
   "Sections/04_dynamics.tex" 1704328887 1912 383e06d0d70ace0af2d0324b3548567f ""
   "Sections/05_kinematics.tex" 1704373570 6624 334e7580ccd9348ca10443b225f1659b ""
   "Sections/06_disturbances.tex" 1704412094 11952 ee13f6376ea05950c19eda8b0791edbf ""

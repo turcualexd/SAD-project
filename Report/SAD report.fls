@@ -823,12 +823,11 @@ INPUT .\Sections\03_framework.tex
 INPUT .\Sections\03_framework.tex
 INPUT Sections\03_framework.tex
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmn8t.tfm
-INPUT .\Images\\CAD.jpg
-INPUT Images\\CAD.jpg
-INPUT .\Images\\CAD.jpg
-INPUT .\Images\\CAD.jpg
-INPUT .\Images\\CAD.jpg
-INPUT .\Images\\CAD.jpg
+INPUT .\Images\\CAD.pdf
+INPUT Images\\CAD.pdf
+INPUT .\Images\\CAD.pdf
+INPUT .\Images\\CAD.pdf
+INPUT .\Images\\CAD.pdf
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmn8t.tfm
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn8t.vf
 INPUT C:\Users\turcu\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7t.vf
