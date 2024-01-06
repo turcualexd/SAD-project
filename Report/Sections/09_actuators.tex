@@ -1,8 +1,11 @@
 \section{Actuators}
-
+\label{actuators}
 \subsection{Magnetorquer}
-\subsection{Reaction Wheels}
+\label{magnetorquer}
+\cite{magnetorquer_site}
 
+\subsection{Reaction Wheels}
+\label{reac_wheel}
 Reaction wheels are one of the primary attitude control actuators for controlling the spacecraft, as they can give precise pointing and be controlled through feedback actively. They are based on acceleration and deceleration of spinning rotors. If the nominal condition is with a null angular velocity then that is a defining characteristic for reaction wheels as actuator.
 
 Now, the equations for a dual spin satellite with no external torques applied are:
@@ -45,7 +48,7 @@ Here \( \mathbf{A}^* \) is the pseudo inverse matrix of \( \mathbf{A} \) for the
 
 The Simulink implementation of the reaction wheel is performed by an input signal that is the required torque that the actuators should theoretically give. As previously mentioned, the reaction wheel must produce an angular acceleration to generate that torque on the satellite. Since the reaction wheel are physical objects, there are some saturation constraints on them. In particular, the producers specifies a maximum speed that can be reached and also a maximum torque that can be generated. Also, the actuator is affected by noise, for the analyzed case modelled as a band limited white noise. 
 
-The model chosen for the reaction wheels is the \textit{OCE-RW40}, which is characterized by the following specifications:
+The model chosen for the reaction wheels is the \textit{OCE-RW40}, which is characterized by the following specifications \cite{reactionwheel_site}:
 
 \begin{table}[H]
 
