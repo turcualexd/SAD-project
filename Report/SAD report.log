@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  5 JAN 2024 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  6 JAN 2024 13:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1263,10 +1263,10 @@ Package hyperref Info: Link coloring ON on input line 200.
 
 (Configuration files/title_page.tex
 Package epstopdf Info: Source file: <Images//logo_polimi_ing_indinf.eps>
-(epstopdf)                    date: 2024-01-02 20:28:39
+(epstopdf)                    date: 2024-01-05 16:21:43
 (epstopdf)                    size: 1016894 bytes
 (epstopdf)             Output file: <Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-02 20:28:39
+(epstopdf)                    date: 2024-01-05 16:21:43
 (epstopdf)                    size: 81939 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//logo_polimi_ing_indinf-eps-converted-to.pdf Images//logo_polimi_ing_indinf.eps>
 (epstopdf)             \includegraphics on input line 9.
@@ -1274,7 +1274,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//logo_polimi_ing_indinf-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=134, 493.845pt x 227.85126pt>
+<Images//logo_polimi_ing_indinf-eps-converted-to.pdf, id=142, 493.845pt x 227.85126pt>
 File: Images//logo_polimi_ing_indinf-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//logo_polimi_ing_indinf-eps-converted-to.pdf>
 Package pdftex.def Info: Images//logo_polimi_ing_indinf-eps-converted-to.pdf  used on input line 9.
@@ -1305,10 +1305,10 @@ LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 21
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )) (Sections/00_abstract.tex)
 Package epstopdf Info: Source file: <Images//raggiera_polimi.eps>
-(epstopdf)                    date: 2024-01-02 20:28:39
+(epstopdf)                    date: 2024-01-05 16:21:43
 (epstopdf)                    size: 1813066 bytes
 (epstopdf)             Output file: <Images//raggiera_polimi-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-02 20:28:39
+(epstopdf)                    date: 2024-01-05 16:21:43
 (epstopdf)                    size: 40418 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//raggiera_polimi-eps-converted-to.pdf Images//raggiera_polimi.eps>
 (epstopdf)             \includegraphics on input line 213.
@@ -1316,14 +1316,14 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//raggiera_polimi-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//raggiera_polimi-eps-converted-to.pdf, id=135, 502.87875pt x 502.87875pt>
+<Images//raggiera_polimi-eps-converted-to.pdf, id=143, 502.87875pt x 502.87875pt>
 File: Images//raggiera_polimi-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//raggiera_polimi-eps-converted-to.pdf>
 Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on input line 213.
 (pdftex.def)             Requested size: 298.75394pt x 298.75233pt.
 [1
 
-{C:/Users/turcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-expert.enc} <./Images//raggiera_polimi-eps-converted-to.pdf> <./Images//logo_polimi_ing_indinf-eps-converted-to.pdf>] (SAD report.toc)
+{C:/Users/turcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Images//raggiera_polimi-eps-converted-to.pdf> <./Images//logo_polimi_ing_indinf-eps-converted-to.pdf>] (SAD report.toc)
 \tf@toc=\write6
 \openout6 = `"SAD report.toc"'.
 
@@ -1333,18 +1333,18 @@ Package pdftex.def Info: Images//raggiera_polimi-eps-converted-to.pdf  used on i
 \ltmcbox=\box139
 ) [3
 
-] (Sections/02_requirements.tex) (Sections/03_framework.tex
-<Images//CAD.pdf, id=205, 1205.50375pt x 489.83pt>
+{C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}] (Sections/02_requirements.tex) (Sections/03_framework.tex
+<Images//CAD.pdf, id=213, 1205.50375pt x 489.83pt>
 File: Images//CAD.pdf Graphic file (type pdf)
 <use Images//CAD.pdf>
 Package pdftex.def Info: Images//CAD.pdf  used on input line 10.
 (pdftex.def)             Requested size: 512.14963pt x 208.09651pt.
  [1 <./Images//CAD.pdf>]
 Package epstopdf Info: Source file: <Images//orbit.eps>
-(epstopdf)                    date: 2024-01-03 20:25:26
+(epstopdf)                    date: 2024-01-05 16:21:43
 (epstopdf)                    size: 435323 bytes
 (epstopdf)             Output file: <Images//orbit-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-03 20:36:41
+(epstopdf)                    date: 2024-01-05 16:21:43
 (epstopdf)                    size: 238727 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//orbit-eps-converted-to.pdf Images//orbit.eps>
 (epstopdf)             \includegraphics on input line 62.
@@ -1352,16 +1352,16 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//orbit-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//orbit-eps-converted-to.pdf, id=229, 513.92pt x 385.44pt>
+<Images//orbit-eps-converted-to.pdf, id=238, 513.92pt x 385.44pt>
 File: Images//orbit-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//orbit-eps-converted-to.pdf>
 Package pdftex.def Info: Images//orbit-eps-converted-to.pdf  used on input line 62.
 (pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
 Package epstopdf Info: Source file: <Images//orbit_2.eps>
-(epstopdf)                    date: 2024-01-03 20:25:22
+(epstopdf)                    date: 2024-01-05 16:21:43
 (epstopdf)                    size: 406291 bytes
 (epstopdf)             Output file: <Images//orbit_2-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-03 20:36:38
+(epstopdf)                    date: 2024-01-05 16:21:43
 (epstopdf)                    size: 267251 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//orbit_2-eps-converted-to.pdf Images//orbit_2.eps>
 (epstopdf)             \includegraphics on input line 62.
@@ -1369,7 +1369,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//orbit_2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//orbit_2-eps-converted-to.pdf, id=230, 513.92pt x 385.44pt>
+<Images//orbit_2-eps-converted-to.pdf, id=239, 513.92pt x 385.44pt>
 File: Images//orbit_2-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//orbit_2-eps-converted-to.pdf>
 Package pdftex.def Info: Images//orbit_2-eps-converted-to.pdf  used on input line 62.
@@ -1434,7 +1434,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
-<Images//gg_stab.pdf, id=309, 257.96375pt x 193.72375pt>
+<Images//gg_stab.pdf, id=319, 257.96375pt x 193.72375pt>
 File: Images//gg_stab.pdf Graphic file (type pdf)
 <use Images//gg_stab.pdf>
 Package pdftex.def Info: Images//gg_stab.pdf  used on input line 111.
@@ -1445,18 +1445,18 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 118.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 118.
 Package epstopdf Info: Source file: <Images//disturbances.eps>
-(epstopdf)                    date: 2024-01-03 20:25:31
-(epstopdf)                    size: 355157 bytes
+(epstopdf)                    date: 2024-01-06 11:04:58
+(epstopdf)                    size: 353382 bytes
 (epstopdf)             Output file: <Images//disturbances-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-03 20:25:34
-(epstopdf)                    size: 122458 bytes
+(epstopdf)                    date: 2024-01-06 11:06:02
+(epstopdf)                    size: 121919 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//disturbances-eps-converted-to.pdf Images//disturbances.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//disturbances-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//disturbances-eps-converted-to.pdf, id=323, 513.92pt x 385.44pt>
+<Images//disturbances-eps-converted-to.pdf, id=333, 513.92pt x 385.44pt>
 File: Images//disturbances-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//disturbances-eps-converted-to.pdf>
 Package pdftex.def Info: Images//disturbances-eps-converted-to.pdf  used on input line 124.
@@ -2181,707 +2181,956 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 92.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 92.
  [12]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 93.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 94.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 94.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 95.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 99.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 101.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 101.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 101.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 101.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 101.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 101.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 101.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 101.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 102.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 104.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 104.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 104.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 104.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 104.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 104.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 104.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 96.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 98.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 98.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 103.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 105.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 107.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 107.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 134.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 144.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 105.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 109.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 115.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 117.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 148.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 149.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 150.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 146.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 156.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 158.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 158.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 158.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 158.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 160.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 161.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 162.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 172.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
  [13]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 168.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 174.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 178.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 180.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 181.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 181.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 181.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 181.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 181.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 181.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 181.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 181.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 182.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 189.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 191.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 191.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 191.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 191.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 191.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 186.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 192.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 192.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 193.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 214.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 214.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 233.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 193.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 193.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 193.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 193.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 193.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 193.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 193.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 194.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 201.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 224.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 226.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 226.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 245.
 Package epstopdf Info: Source file: <Images//B_forRW.eps>
-(epstopdf)                    date: 2024-01-04 22:21:34
-(epstopdf)                    size: 131242 bytes
+(epstopdf)                    date: 2024-01-06 11:04:44
+(epstopdf)                    size: 158135 bytes
 (epstopdf)             Output file: <Images//B_forRW-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-04 22:36:01
-(epstopdf)                    size: 46479 bytes
+(epstopdf)                    date: 2024-01-06 11:04:52
+(epstopdf)                    size: 54069 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Images//B_forRW-eps-converted-to.pdf Images//B_forRW.eps>
-(epstopdf)             \includegraphics on input line 235.
+(epstopdf)             \includegraphics on input line 246.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images//B_forRW-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images//B_forRW-eps-converted-to.pdf, id=449, 513.92pt x 385.44pt>
+<Images//B_forRW-eps-converted-to.pdf, id=461, 513.92pt x 385.44pt>
 File: Images//B_forRW-eps-converted-to.pdf Graphic file (type pdf)
 <use Images//B_forRW-eps-converted-to.pdf>
-Package pdftex.def Info: Images//B_forRW-eps-converted-to.pdf  used on input line 235.
+Package pdftex.def Info: Images//B_forRW-eps-converted-to.pdf  used on input line 246.
 (pdftex.def)             Requested size: 256.07481pt x 192.05493pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 235.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 235.
-) [14] (Sections/11_conclusion.tex) [15 <./Images//B_forRW-eps-converted-to.pdf>] (SAD report.bbl
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 246.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 246.
+) [14] (Sections/11_conclusion.tex
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+Package epstopdf Info: Source file: <Images//omega_true.eps>
+(epstopdf)                    date: 2024-01-06 11:32:12
+(epstopdf)                    size: 181524 bytes
+(epstopdf)             Output file: <Images//omega_true-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-06 11:33:00
+(epstopdf)                    size: 54551 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//omega_true-eps-converted-to.pdf Images//omega_true.eps>
+(epstopdf)             \includegraphics on input line 20.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Images//omega_true-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images//omega_true-eps-converted-to.pdf, id=477, 256.96pt x 192.72pt>
+File: Images//omega_true-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//omega_true-eps-converted-to.pdf>
+Package pdftex.def Info: Images//omega_true-eps-converted-to.pdf  used on input line 20.
+(pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+Package epstopdf Info: Source file: <Images//Bm_dot.eps>
+(epstopdf)                    date: 2024-01-06 12:35:14
+(epstopdf)                    size: 92254 bytes
+(epstopdf)             Output file: <Images//Bm_dot-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-06 12:35:18
+(epstopdf)                    size: 35209 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//Bm_dot-eps-converted-to.pdf Images//Bm_dot.eps>
+(epstopdf)             \includegraphics on input line 20.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Images//Bm_dot-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images//Bm_dot-eps-converted-to.pdf, id=478, 256.96pt x 192.72pt>
+File: Images//Bm_dot-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//Bm_dot-eps-converted-to.pdf>
+Package pdftex.def Info: Images//Bm_dot-eps-converted-to.pdf  used on input line 20.
+(pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 22.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 22.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 22.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 22.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 22.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
+[15 <./Images//B_forRW-eps-converted-to.pdf> <./Images//omega_true-eps-converted-to.pdf> <./Images//Bm_dot-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Images//alpha.eps>
+(epstopdf)                    date: 2024-01-06 12:48:19
+(epstopdf)                    size: 148627 bytes
+(epstopdf)             Output file: <Images//alpha-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-06 12:52:05
+(epstopdf)                    size: 48850 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//alpha-eps-converted-to.pdf Images//alpha.eps>
+(epstopdf)             \includegraphics on input line 28.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Images//alpha-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images//alpha-eps-converted-to.pdf, id=502, 256.96pt x 192.72pt>
+File: Images//alpha-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//alpha-eps-converted-to.pdf>
+Package pdftex.def Info: Images//alpha-eps-converted-to.pdf  used on input line 28.
+(pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
+Package epstopdf Info: Source file: <Images//alpha_zoom.eps>
+(epstopdf)                    date: 2024-01-06 12:48:42
+(epstopdf)                    size: 148130 bytes
+(epstopdf)             Output file: <Images//alpha_zoom-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-06 12:52:06
+(epstopdf)                    size: 55824 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//alpha_zoom-eps-converted-to.pdf Images//alpha_zoom.eps>
+(epstopdf)             \includegraphics on input line 28.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Images//alpha_zoom-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images//alpha_zoom-eps-converted-to.pdf, id=505, 256.96pt x 192.72pt>
+File: Images//alpha_zoom-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//alpha_zoom-eps-converted-to.pdf>
+Package pdftex.def Info: Images//alpha_zoom-eps-converted-to.pdf  used on input line 28.
+(pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
+Package epstopdf Info: Source file: <Images//alpha_dot.eps>
+(epstopdf)                    date: 2024-01-06 12:47:22
+(epstopdf)                    size: 190572 bytes
+(epstopdf)             Output file: <Images//alpha_dot-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-06 12:53:27
+(epstopdf)                    size: 56910 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//alpha_dot-eps-converted-to.pdf Images//alpha_dot.eps>
+(epstopdf)             \includegraphics on input line 30.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Images//alpha_dot-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images//alpha_dot-eps-converted-to.pdf, id=506, 256.96pt x 192.72pt>
+File: Images//alpha_dot-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//alpha_dot-eps-converted-to.pdf>
+Package pdftex.def Info: Images//alpha_dot-eps-converted-to.pdf  used on input line 30.
+(pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 30.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 30.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 30.
+Package epstopdf Info: Source file: <Images//alpha_dot_zoom.eps>
+(epstopdf)                    date: 2024-01-06 12:47:46
+(epstopdf)                    size: 188379 bytes
+(epstopdf)             Output file: <Images//alpha_dot_zoom-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-06 12:53:28
+(epstopdf)                    size: 74311 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Images//alpha_dot_zoom-eps-converted-to.pdf Images//alpha_dot_zoom.eps>
+(epstopdf)             \includegraphics on input line 30.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Images//alpha_dot_zoom-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images//alpha_dot_zoom-eps-converted-to.pdf, id=509, 256.96pt x 192.72pt>
+File: Images//alpha_dot_zoom-eps-converted-to.pdf Graphic file (type pdf)
+<use Images//alpha_dot_zoom-eps-converted-to.pdf>
+Package pdftex.def Info: Images//alpha_dot_zoom-eps-converted-to.pdf  used on input line 30.
+(pdftex.def)             Requested size: 245.82962pt x 184.3739pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 30.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 30.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 30.
+) [16 <./Images//alpha-eps-converted-to.pdf> <./Images//alpha_zoom-eps-converted-to.pdf> <./Images//alpha_dot-eps-converted-to.pdf> <./Images//alpha_dot_zoom-eps-converted-to.pdf>] (SAD report.bbl
 LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 8.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\t1jkptt.fd
 File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
 )
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 20.
-) [16
+) [17
 
 ] (SAD report.aux)
 Package rerunfilecheck Info: File `"SAD report".out' has not changed.
-(rerunfilecheck)             Checksum: 5E2D4AEA5534B45ABEE58686FC3E5895;4786.
+(rerunfilecheck)             Checksum: 90AE99D2B727362AB0577744ABBE821D;5176.
  ) 
 Here is how much of TeX's memory you used:
- 32910 strings out of 476361
- 614320 string characters out of 5788046
- 1887993 words of memory out of 5000000
- 52509 multiletter control sequences out of 15000+600000
+ 33000 strings out of 476361
+ 616858 string characters out of 5788046
+ 1890993 words of memory out of 5000000
+ 52584 multiletter control sequences out of 15000+600000
  642144 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,26n,80p,1127b,746s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,26n,80p,1185b,746s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on "SAD report.pdf" (19 pages, 1083568 bytes).
+Output written on "SAD report.pdf" (20 pages, 1411242 bytes).
 PDF statistics:
- 573 PDF objects out of 1000 (max. 8388607)
- 141 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 644 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 500000)
+ 355 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -30,4 +30,6 @@
 \contentsline {subsubsection}{\numberline {10.2.1}Control law for the Slew and Tracking Manuever}{13}{subsubsection.10.2.1}%
 \contentsline {subsubsection}{\numberline {10.2.2}Actuator command logic for Slew and Nadir pointing}{14}{subsubsection.10.2.2}%
 \contentsline {section}{\numberline {11}Conclusion}{15}{section.11}%
-\contentsline {section}{Bibliography}{16}{section*.50}%
+\contentsline {subsection}{\numberline {11.1}Detumbling analysis}{15}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Slew and tracking phase analysis}{16}{subsection.11.2}%
+\contentsline {section}{Bibliography}{17}{section*.55}%
