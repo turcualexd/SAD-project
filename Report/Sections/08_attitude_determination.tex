@@ -6,7 +6,7 @@ The problem of estimating the attitude matrix from the available measurements is
 \begin{empheq}{equation}
 J(\boldsymbol{A_{BN}})=\frac{1}{2}\sum_{i=1}^N\alpha_i\lVert \boldsymbol{s_i} - \boldsymbol{A_{BN}v_i} \rVert^2
 \end{empheq}
-in which   $\{\boldsymbol{s_i}\}$ is a set of the N measured unit vectors in body frame and $\{\boldsymbol{v_i}\}$ the corresponding set of unitt vectors in the inertial frame, computed using the on-board models. The set of weights $\{\alpha_i\}$ was chosen based on the relative accuracy of each sensor. It was assumed that the weight vector $\underline{\alpha}$ is normalized to 1, i.e. $\sum_{i=1}^N\alpha_i=1$. This method needs at least two available measurements, so it works also in the case that the Earth is outside the FOV of the horizon sensor. \\
+in which   $\{\boldsymbol{s_i}\}$ is a set of the N measured unit vectors in body frame and $\{\boldsymbol{v_i}\}$ the corresponding set of unitt vectors in the inertial frame, computed using the on-board models. The set of weights $\{\alpha_i\}$ was chosen based on the relative accuracy of each sensor. It was assumed that the weight vector $\boldsymbol{\alpha}$ is normalized to 1, i.e. $\sum_{i=1}^N\alpha_i=1$. This method needs at least two available measurements, so it works also in the case that the Earth is outside the FOV of the horizon sensor. \\
 Since $\boldsymbol{A_{BN}}$ is a orthogonal matrix and $\boldsymbol{s_i}$ and $\boldsymbol{v_i}$ are unit vectors, with some simple algebraic passages, the expression of J can be rewritten as: 
 
 \begin{empheq}{equation}
@@ -16,7 +16,7 @@ J(\boldsymbol{A_{BN}})=1-\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_{B
 The optimal solution minimizes J, therefore maximizes 
 
 \begin{empheq}{equation}
-\Tilde{J}(\boldsymbol{A_{BN}})=\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_BN}\boldsymbol{v_i})=Tr(\boldsymbol{A_{BN}}\boldsymbol{B}^T)
+\Tilde{J}(\boldsymbol{A_{BN}})=\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_{BN}}\boldsymbol{v_i})=Tr(\boldsymbol{A_{BN}}\boldsymbol{B}^T)
 \end{empheq}
 
 where Tr is the trace operator and $\boldsymbol{B}=\sum_{i=1}^N\alpha_i\boldsymbol{s_iv_i}^T$.\\

@@ -2,8 +2,14 @@
 \contentsline {section}{Abstract}{I}{Doc-Start}%
 \contentsline {section}{Contents}{II}{Doc-Start}%
 \contentsline {section}{\numberline {1}Symbols}{III}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Analisi della missione}{III}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Analisi della missione 2}{III}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Framework analysis}{III}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Dynamics}{III}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Kinematics}{III}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Disturbances analysis}{III}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Sensors}{III}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Attitude determination}{III}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Actuators}{IV}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Control logic}{IV}{subsection.1.10}%
 \contentsline {section}{\numberline {2}Requirements}{1}{section.2}%
 \contentsline {section}{\numberline {3}Framework Analysis}{1}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Satellite characterization}{1}{subsection.3.1}%
@@ -28,5 +34,5 @@
 \contentsline {subsection}{\numberline {10.1}De-tumbling phase: the B-dot control}{11}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Slew and Nadir pointing phases}{12}{subsection.10.2}%
 \contentsline {subsubsection}{\numberline {10.2.1}Control law for the Slew and Tracking Manuever}{12}{subsubsection.10.2.1}%
-\contentsline {subsubsection}{\numberline {10.2.2}Actuator command logic for Slew and Nadir pointing}{13}{subsubsection.10.2.2}%
-\contentsline {section}{Bibliography}{15}{figure.caption.46}%
+\contentsline {subsubsection}{\numberline {10.2.2}Actuator command logic for Slew and Nadir pointing}{14}{subsubsection.10.2.2}%
+\contentsline {section}{Bibliography}{16}{figure.caption.48}%

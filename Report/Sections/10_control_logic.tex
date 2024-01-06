@@ -80,7 +80,18 @@ field vector $\boldsymbol{B}$ comes from the magnetometer measurment.
 In the context of the simulation environment on Simulink, the formulation choosen for the b-dot control comes from \cite{bdot} of Avanzini et Al. Some precaution has to be taken
 when implementing the law, since the numerical derivative of a mesaured (hence noisy) signal has to be performed. This inconvinence can be overcome by using a low-pass filter \cite{crass_book}.
 In order to make some sense out of the calculation, a discrete low-pass Butterworth filter of the 1st order has been used just after the discrete derivative block. 
-Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the results of simulation are coherent
+Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the results of simulation are coherent.
+Moreover, the gain value $k_{\omega}$ has to be defined. Avanzini et al. extensively discuss this parameter and propose a method for its characterization in \cite{bdot}. In particular the indicative formula is the following:
+
+\begin{empheq}{equation}
+    k_{\omega} = 2n (1 + \sin{\xi}) \min{\left( I_1, I_2, I_3 \right)}
+\end{empheq}
+0.0363
+Where $n$ represent the mean motion of the orbit, $\xi$ the inlcination of the orbit with respect to the magnetic equator. Notice that  during the detumbling the inertia moments are all equal. The value obtained is 
+\begin{empheq}{equation}
+    k_{\omega} = 0.0363 \; kg\cdot m^2s^{-1}
+\end{empheq}
+
 
 
 \subsection{Slew and Nadir pointing phases}
@@ -164,8 +175,8 @@ The chosen poles are:
 The gain matrix can be used for the linear-control law. For simplicity, it wasn't used a matrix for the non-linear control but only a scalar, in particular it was selected the order of magnitude of the gain matrix from linear control just calculated.
 The values for the gains were then refined with trial and error. The response of the system was satisfactory with the following values:
 \begin{equation*}
-	k_p = 0.001 \qquad
-	k_d = 0.6 
+	k_p = 0.001 \; kg \cdot m^2 s^{-2}\qquad
+	k_d = 0.6   \; kg \cdot m^2 s^{-1}
 \end{equation*}
 
 

@@ -1,6 +1,6 @@
 \section{Symbols}
 \label{sec:symbols}
-%\setcounter{subsection}{2}
+\setcounter{subsection}{2}
 \newsavebox\ltmcbox
 \renewcommand{\arraystretch}{1.2}
 \renewcommand\tabularxcolumn[1]{m{#1}}
@@ -8,32 +8,185 @@
 \begin{multicols}{2}
 	\raggedcolumns
 
-	\subsection{Analisi della missione}
+	\subsection{Framework analysis}
 	\vspace{-10pt}
 	\small
 	\setbox\ltmcbox\vbox{
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
-		$\bm{A_e}$ & $[m^2]$ & area di efflusso totale \\
-		$\bm{\phi}$ & $[rad]$ & angolo di traiettoria del razzo
+		$\bm{I}$ & $[kg/m^2]$ & inertia matrix \\
+		$a$ & $[km]$ & semi-major axis \\
+		$e$ & $[-]$ & eccentricty \\
+		$i$ & $[deg]$ & inclination \\
+		$\omega$ & $[deg]$ & pericentre anomaly \\
+		$\Omega$ & $[deg]$ & RAAN \\
+		$\theta$ & $[rad]$ & true anomaly \\
+		$n$ & $[rad/s]$ & mean anomaly \\
+		$\mathcal{P}$ & $[-]$ & perifocal frame \\
+		$\mathcal{N}$ & $[-]$ & inertial frame \\
+		$\bm{A_{PN}}$ & $[-]$ & rotation matrix from intertial to perifocal frame\\
+		$\bm{r_p}$ & $[km]$ & S/C position in $\mathcal{P}$ frame \\
+		$\bm{r_p}$ & $[km]$ & S/C position in $\mathcal{N}$ frame 
 	\end{xltabular}
 	\unskip
 	\unpenalty
 	\unpenalty}
 	\unvbox\ltmcbox
 
-	\subsection{Analisi della missione 2}
+	\subsection{Dynamics}
 	\vspace{-10pt}
 	\small
 	\setbox\ltmcbox\vbox{
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
-		$\bm{A_e}$ & $[m^2]$ & area di efflusso totale \\
-		$\bm{\phi}$ & $[rad]$ & angolo di traiettoria del razzo
+		$\mathcal{B}$ & $[-]$ & body frame \\
+		$\bm{x_b}$ & $[-]$ & x direction of the $\mathcal{B}$ frame \\
+		$\bm{y_b}$ & $[-]$ & y direction of the $\mathcal{B}$ frame \\
+		$\bm{z_b}$ & $[-]$ & z direction of the $\mathcal{B}$ frame \\
+		$\bm{\omega}$ & $[rad/s]$ & angular velocity in $\mathcal{B}$ frame \\
+		$\bm{M_d}$ & $[Nm]$ & disturbances torque \\
+		$\bm{M_c}$ & $[Nm]$ & control torque 
 	\end{xltabular}
 	\unskip
 	\unpenalty
 	\unpenalty}
 	\unvbox\ltmcbox
 
+	\subsection{Kinematics}
+	\vspace{-10pt}
+	\small
+	\setbox\ltmcbox\vbox{
+	\makeatletter\col@number\@ne
+	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
+		$\bm{s}$ & $[rad]$ & set of Euler angles \\
+		$\bm{\dot{s}}$ & $[rad/s]$ & set of Euler angle's rates \\
+		$312$ & $[-]$ & sequence of axis' rotation \\
+		$313$ & $[-]$ & sequence of axis' rotation \\
+		$\phi$ & $[rad]$ & first rotation's angle \\
+		$\theta$ & $[rad]$ & second rotation's angle \\
+		$\psi$ & $[rad]$ & third rotation's angle \\
+		$\bm{A_{BN}}$ & $[Nm]$ & attitude matrix \\
+		$tol$ & $[-]$ & tolerance value for singularity check 
+	\end{xltabular}
+	\unskip
+	\unpenalty
+	\unpenalty}
+	\unvbox\ltmcbox
+
+	\subsection{Disturbances analysis}
+	\vspace{-10pt}
+	\small
+	\setbox\ltmcbox\vbox{
+	\makeatletter\col@number\@ne
+	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
+		$\bm{M}$ & $[Nm]$ & disturbance torque \\
+		$\bm{D}$ & $[Am^{2}]$ & magnetic dipole from coils or parasitic currents \\
+		$\bm{B}$ & $[T]$ & magnetic field \\
+		$V$      & $[Tm]$ & magnetic field scalar potential \\
+		$ECEF$   & [-] & Earth Centered Earth Fixed frame \\
+		$r$ & $[m]$ & radial distance from Earth's centre to S/C position (ECEF) \\
+		$\theta$ & $[rad]$ & longitude (ECEF) \\
+		$\phi$ & $[rad]$ & co-latitude (ECEF) \\
+        $P^{n,m} (\cos \theta)$ & $[-]$ & Gauss normalized associated Legendre functions \\
+		$g^{n,m} (t)$ & $[nT]$ & Schmidt semi-normalized spherical harmonic coefficients \\
+        $h^{n,m} (t)$ & $[nT]$ & Schmidt semi-normalized spherical harmonic coefficients \\
+		$F_i$ & $[N]$ & disturbance force acting on i-th panel \\
+		$P$ & $[Pa]$ & Sun's pressure of radiation \\
+		$A_i$ & $[Pa]$ & area of i-th panel \\
+		$\bm{\hat{S}_B}$ & $[-]$ & Sun's direction in $\mathcal{B}$ frame \\
+		$\bm{\hat{N}_{B,i}}$ & $[-]$ &  i-th panel's normal direction in $\mathcal{B}$ frame \\
+		$\rho_s$ & $[-]$ & coefficient of specular reflection \\
+		$\rho_a$ & $[-]$ & coefficient of absorption \\
+		$\rho_d$ & $[-]$ & coefficient of diffusion \\
+		$\epsilon$ & $[deg]$ & obliquity of Earth \\
+		$C_D$ & $[-]$ & coefficient of drag \\
+		$\bm{r_i}$ & $[m]$ & position of centre of action of the force \\
+		$\bm{v_{B,i}}$ & $[m/s]$ & relative velocity in $\mathcal{B}$ frame of the i-th panel \\
+		$\bm{\hat{v}_{B,i}}$ & $[s^{-1}]$ & direction of relative velocity in $\mathcal{B}$ frame of the i-th panel \\
+		$\rho$ & $[kg/m^3]$ & denisty of air \\
+		$\rho_0$ & $[kg/m^3]$ & reference denisty of air from US Standard Atmosphere model (1976)\\
+		$h_0$ & $[km]$ & reference heigh from US Standard Atmosphere model (1976)\\
+		$H$ & $[km]$ & scaling height from US Standard Atmosphere model (1976)\\
+		$G$ & $[m^3 kg^{-1} s^{-2}]$ & universal gravitational constant \\
+		$m_t$ & $[kg]$ & mass of Earth \\
+		$c_i$ & $[-]$ & director cosines of the radial direction in the $\mathcal{B}$ frame \\
+	\end{xltabular}
+	\unskip
+	\unpenalty
+	\unpenalty}
+	\unvbox\ltmcbox
+
+	\subsection{Sensors}
+	\vspace{-10pt}
+	\small
+	\setbox\ltmcbox\vbox{
+	\makeatletter\col@number\@ne
+	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
+		$Np$ & $[rad^2s]$ & noise power \\
+		$Ts$ & $[s]$ & sampling time \\
+		$\sigma^2$ & $[rad^2]$ & variance of the measurment \\
+		$N.S.D.$ & $[nT/ \sqrt{Hz}]$ & noise spectral density \\
+		$I$ & $[A]$ & intensity of current \\
+		$\alpha$ & $[A/W]$ & coefficient of the sun sensor \\
+		$S$ & $[m^{2}]$ & sensor' surface area \\
+		$W$ & $[W/m^{2}]$ & intensity of incident radiation\\
+		$\theta$ & $[rad]$ & angle of incident light\\
+	\end{xltabular}
+	\unskip
+	\unpenalty
+	\unpenalty}
+	\unvbox\ltmcbox
+
+	\subsection{Attitude determination}
+	\vspace{-10pt}
+	\small
+	\setbox\ltmcbox\vbox{
+	\makeatletter\col@number\@ne
+	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
+		$J$ & $[-]$ & cost function \\
+		$\alpha_i$ & $[-]$ & weight on i-th sensor for J function \\
+		$\bm{s_i}$ & $[-]$ & unit vector measured by sensor in $\mathcal{B}$ frame\\
+		$\bm{v_i}$ & $[-]$ & unit vector calcuated by on-board model in $\mathcal{N}$ frame \\
+		$\phi$ & $[rad]$ & error angle between true and measured direction without bias \\
+		$E\left[\phi\right]$ & $[rad]$ & expected valure of error angle \\
+		$\sigma_{\phi}^2$ & $[rad^2]$ & variance of error angle \\
+		$\sigma_{\phi}$ & $[rad]$ & standard deviation of error angle \\
+		
+	\end{xltabular}
+	\unskip
+	\unpenalty
+	\unpenalty}
+	\unvbox\ltmcbox
+
+	\subsection{Actuators}
+	\vspace{-10pt}
+	\small
+	\setbox\ltmcbox\vbox{
+	\makeatletter\col@number\@ne
+	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
+		
+	\end{xltabular}
+	\unskip
+	\unpenalty
+	\unpenalty}
+	\unvbox\ltmcbox
+
+	\subsection{Control logic}
+	\vspace{-10pt}
+	\small
+	\setbox\ltmcbox\vbox{
+	\makeatletter\col@number\@ne
+	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
+		$\bm{B_B}$ & $[T]$ & magnetic field in $\mathcal{B}$ frame\\
+		$\bm{\hat{\dot{B_B}}}$ & $[1/s]$ & derivative of magnetic field unit direction in $\mathcal{B}$ frame \\
+		$k_{omega}$ & $[-]$ & derivative of magnetic field unit direction in $\mathcal{B}$ frame \\
+		$\mathcal{LVLH}$ & $[-]$ & local vertical local horizontal frame \\
+		$\bm{A_{BL}}$ & $[-]$ & error matrix between $\mathcal{B}$ and $\mathcal{LVLH}$ frame
+
+	\end{xltabular}
+	\unskip
+	\unpenalty
+	\unpenalty}
+	\unvbox\ltmcbox
+	
 \end{multicols}

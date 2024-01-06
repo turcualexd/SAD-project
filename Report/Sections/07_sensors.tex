@@ -50,7 +50,7 @@ Chronologically, first the misalignment is calculated, then the noise is introdu
     direction is initially unitary, the length of the bias vector introduced can be considered as $\tan{\theta_{small}} \approx \theta_{small}$,
     where $\theta_{small}$ represents the angle between real measurment and misaligned measurment. The $\theta_{small}$ selected is ... 
     \item In the Simulink environment the white noise has to be defined through the power spectral density. This was selected as $N_p = \sigma^2 {T_s} $, 
-    where $sigma^2$ represents the variance as the standard deviation squared, while $T_s$ is the sampling time of the sensor.
+    where $\sigma^2$ represents the variance as the standard deviation squared, while $T_s$ is the sampling time of the sensor.
     It was decided to consider as standard deviation the value of $1\deg$ (that is the accuracy from \autoref{table:Hor_sensor})
 \end{itemize}
 
@@ -95,8 +95,7 @@ given by the magnetometer requirments.
 
 Then the measurments errors have to be added, a first misalignment error modeled in the same way of the horizon sensor in \autoref{subsec:horizon_sensor}. For this case the perpendicular
 vector has been scaled by a factor of (...).
-The accuracy error, induced by the noise, has been modeled through a band-limited white noise added on each component. The value of the PSD is the square of 
-the NSD presented in \autoref{table:mag_sensor}.
+The accuracy error, induced by the noise, has been modeled through a band-limited white noise added on each component. The value of $N_{p}$ is the square of NSD presented in \autoref{table:mag_sensor}.
 
 
 \subsection{Sun Sensor}

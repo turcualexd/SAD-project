@@ -42,7 +42,7 @@ The formula to calculate the force acting on each discrete panel $i$ is the foll
 \end{equation}
 
 In order to simulate this kind of disturbance, the coefficients of absorption $\rho_a$, specular reflection $\rho_s$ and diffusion $\rho_d$ must be decided. Since these three parameters are related through an energetic balance as $\rho_a + \rho_d + \rho_s = 1$, only two of them are indipendent while the third follows. These values clearly depends on the material of the main body and the solar panels of the spacecraft.
-In order to determine the force on each surface, the geometry of the panels of the satellite must be given (\autoref{subsec:sat_characterization}), in particular the surface of each panel $S_i$ and direction of the normal of the panel $\boldsymbol{\hat{N}_{B,i}}$ expressed in $\mathcal{B}$ frame.
+In order to determine the force on each surface, the geometry of the panels of the satellite must be given (\autoref{subsec:sat_characterization}), in particular the surface of each panel $A_i$ and direction of the normal of the panel $\boldsymbol{\hat{N}_{B,i}}$ expressed in $\mathcal{B}$ frame.
 The direction of Sun $\boldsymbol{\hat{S}_B}$ is modeled in ECI frame considering the obliquity $\epsilon$ of Earth's rotation axis with respect to the ecliptic plane, then it is rotated in $\mathcal{B}$ frame through the attitude matrix.
 
 Lastly, to be able to compute the torque it must be known where the resulting force acts on each panel (i.e. the centre of SRP force of the panel). It is assumed as a first approximation that the forces act on the geometric center of the corresponding plate. In order to correctly calculate the total torque, a shadow check must be performed. This has been implemented in Simulink by checking the sign of the dot product between the normal versor of the plate $\boldsymbol{\hat{N}_{B,i}}$ and the Sun direction $\boldsymbol{\hat{S}_B}$.
@@ -56,7 +56,7 @@ Over extended periods, the spacecraft's engagement with the higher strates of Ea
 For the simulation, the geometry of the panels is defined in \autoref{subsec:sat_characterization}. The coefficient of drag $C_D$ is set to $2.2$, the relative velocity considers both the rotation of Earth around its axis and the rotation motion of the spacecraft.
 
 As for the SRP case (\autoref{subsec:dist_SRP}), a sort of shadow check has been implemented based on the dot product between the relative velocity and the normal of the surface. This check is required since the modelling of the surface is composed of two faces, but only the external face impacts with the relative air movement.
-As for SRP torque, the position of the center of the force $\boldsymbol{r_i}$ should be evaluated for each panel. As a first approximation, the resulting force is placed in the geometric center of the panel.
+As for SRP torque, the position of the center of action of the force $\boldsymbol{r_i}$ should be evaluated for each panel. As a first approximation, the resulting force is placed in the geometric center of the panel.
 
 \begin{equation}
 	\begin{gathered}
