@@ -43,7 +43,7 @@ The formula to calculate the force acting on each discrete panel $i$ is the foll
 
 In order to simulate this kind of disturbance, the coefficients of absorption $\rho_a$, specular reflection $\rho_s$ and diffusion $\rho_d$ must be decided. Since these three parameters are related through an energetic balance as $\rho_a + \rho_d + \rho_s = 1$, only two of them are indipendent while the third follows. These values clearly depends on the material of the main body and the solar panels of the spacecraft.
 In order to determine the force on each surface, the geometry of the panels of the satellite must be given (\autoref{subsec:sat_characterization}), in particular the surface of each panel $S_i$ and direction of the normal of the panel $\boldsymbol{\hat{N}_{B,i}}$ expressed in $\mathcal{B}$ frame.
-The direction of Sun $\boldsymbol{\hat{S}_B}$ is modeled in ECI frame considering the obliquity $\epsilon$ of Earth's rotation axis with respect to the ecliptic plane, then it is rotated in $\mathcal{B}$ frame through the attitude matrix.
+The direction of Sun $\boldsymbol{\hat{S}_B}$ is modeled in ECI frame considering the obliquity $\epsilon = 23.44 \; \deg$ of Earth's rotation axis with respect to the ecliptic plane, then it is rotated in $\mathcal{B}$ frame through the attitude matrix.
 
 Lastly, to be able to compute the torque it must be known where the resulting force acts on each panel (i.e. the centre of SRP force of the panel). It is assumed as a first approximation that the forces act on the geometric center of the corresponding plate. In order to correctly calculate the total torque, a shadow check must be performed. This has been implemented in Simulink by checking the sign of the dot product between the normal versor of the plate $\boldsymbol{\hat{N}_{B,i}}$ and the Sun direction $\boldsymbol{\hat{S}_B}$.
 
@@ -114,7 +114,7 @@ The \( c_1, c_2 \) and \( c_3 \) are the direction cosines of the radial directi
 Therefore if one of the principal axes is aligned with the radial direction the torque will be zero because only one of the direction cosines is non-zero.
 It's clear that this disturbance acts in a continuous manner throughout the orbit motion and the torque produced depends mainly on the attitude matrix.
 
-Instead, the stability configuration depends on the distribution of mass of the spacecraft with respect to the orientation we want to achieve. For our case of study, 
+Instead, the stability configuration depends on the distribution of mass of the spacecraft with respect to the target orientation. For our case of study, 
 inspired by the ESAIL mission from ESA, the satellite is nadir pointing. In particular the $\boldsymbol{x_b}$ direction has to be aligned with the nadir, while the $\boldsymbol{z_b}$ has to be normal with respect to the orbital plane. Using the numerical values of the spacecraft, and the orientation requriements just mentioned this particular configuration results unstable to GG disturbance.
 
 

@@ -4,9 +4,9 @@
 As specified in \autoref{sec:requirements}, the attitude parameters of the satellite are expressed through the use of Euler angles. The kinematics calculated according to this parameterization follows these steps:
 
 \begin{itemize}[wide,itemsep=3pt,topsep=3pt]
-    \item given the angular velocity $\omega$ from dynamics for each time and the initial condition on Euler angles $s_0$, compute the time derivatives of the angles $\dot{s}$;
-    \item integrate the derivatives to obtain the set of Euler angles $s$ for each time;
-    \item from the calculated angles, compute the attitude matrix $A$.
+    \item given the angular velocity $\boldsymbol{\omega}$ from dynamics for each time and the initial condition on Euler angles $\boldsymbol{s_0}$, compute the time derivatives of the angles $\boldsymbol{\dot{s}}$;
+    \item integrate the derivatives to obtain the set of Euler angles $\boldsymbol{s}$ for each time;
+    \item from the calculated angles, compute the attitude matrix $\boldsymbol{A_{BN}}$.
 \end{itemize}
 
 When dealing with this type of parameterization, a major issue arises due to the singularity conditions on the second angle $\theta$ for any chosen set of three Euler angles. This can cause the derivatives of the other two angles to tend towards infinity. The problem is a result of the fact that, under these specific conditions, the set of Euler angles is not uniquely defined, as the first and third rotations are performed on the same physical direction.

@@ -204,9 +204,8 @@ close all;
 t = out.tout;
 omega = out.omega;
 omega = squeeze(omega);
-Mc = out.Mc;
-alpha = out.alpha;
-alpha = squeeze(alpha);
+Mc = squeeze(out.Mc);
+alpha = squeeze(out.alpha);
 Abl = out.Abl;
 Bm_dot = out.Bm_dot;
 Bm_dot = squeeze(Bm_dot);
@@ -227,77 +226,113 @@ t_slew_sim = out.t_slew_sim;
 
 err_omega = vecnorm(omega_stim.' - omega(:,length(t)-size(omega_stim,1)+1:end));
 
-% omega
-figure
-hold on
-grid on
-plot(t/T, omega, 'LineWidth', 1.5)
-xlabel('Periods of orbit', 'Interpreter', 'latex')
-ylabel('$\omega$ [rad/s]', 'Interpreter', 'latex')
-legend('$\omega_x$', '$\omega_y$', '$\omega_z$', 'Interpreter', 'latex')
+flag = squeeze(out.flag);
 
-% % Bm_dot
+rwx = squeeze(out.wheel_x);
+rwy = squeeze(out.wheel_y);
+D = squeeze(out.D);
+
+% % omega
 % figure
 % hold on
 % grid on
-% plot(t/T, Bm_dot, 'LineWidth', 1.5)
+% plot(t/T, omega, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
 % xlabel('Periods of orbit', 'Interpreter', 'latex')
-% ylabel('$\dot{B}_m$ [T/s]', 'Interpreter', 'latex')
-% legend('$\dot{B}_{m,x}$', '$\dot{B}_{m,y}$', '$\dot{B}_{m,z}$', 'Interpreter', 'latex')
+% ylabel('$\omega$ [rad/s]', 'Interpreter', 'latex')
+% legend('$\omega_x$', '$\omega_y$', '$\omega_z$', 'Detumbling end time', 'Interpreter', 'latex')
+% 
+% % Bm_dot_norm_hat
+% figure
+% hold on
+% grid on
+% plot(t/T, Bm_dot_norm, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$||\dot{\hat{B}}_m||$ [1/s]', 'Interpreter', 'latex')
+% legend('','Detumbling end time')
+% 
+% % alpha
+% figure
+% hold on
+% grid on
+% plot(t/T, 0.5*alpha, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\alpha [deg]$', 'Interpreter', 'latex')
+% legend('$\alpha_x$', '$\alpha_y$', '$\alpha_z$', 'Detumbling end time', 'Interpreter', 'latex')
+% 
+% % alpha zoom
+% figure
+% hold on
+% grid on
+% plot(t/T, 0.5*alpha, 'LineWidth', 1.5)
+% xlim([1 2])
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\alpha [deg]$', 'Interpreter', 'latex')
+% legend('$\alpha_x$', '$\alpha_y$', '$\alpha_z$', 'Interpreter', 'latex')
+% 
+% % omega_bl
+% figure
+% hold on
+% grid on
+% plot(t/T, alpha_dot, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\omega_{BL} [deg/s]$', 'Interpreter', 'latex')
+% legend('$\omega_{BL,x}$', '$\omega_{BL,y}$', '$\omega_{BL,z}$', 'Detumbling end time', 'Interpreter', 'latex')
+% 
+% % omega_bl zoom
+% figure
+% hold on
+% grid on
+% plot(t/T, alpha_dot, 'LineWidth', 1.5)
+% xlim([1 2])
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\omega_{BL} [deg/s]$', 'Interpreter', 'latex')
+% legend('$\omega_{BL,x}$', '$\omega_{BL,y}$', '$\omega_{BL,z}$', 'Interpreter', 'latex')
+% 
+% % error estimated omega
+% figure
+% hold on
+% grid on
+% plot(t_slew_sim/T, err_omega, 'LineWidth', 1.5)
+% xlim([t_slew_sim(1)/T 2])
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('error [rad/s]', 'Interpreter', 'latex')
 
-% Bm_dot_norm
+% % torque
+% figure
+% hold on
+% grid on
+% plot(t/T, Mc, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% plot(t_slew/T, (flag+7)*1e-4, 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$M_c$ [Nm]', 'Interpreter', 'latex')
+% legend('$M_{c,x}$', '$M_{c,y}$', '$M_{c,z}$', 'Detumbling end time', 'Control flag', 'Interpreter', 'latex')
+
+% reaction wheels
 figure
 hold on
 grid on
-plot(t/T, Bm_dot_norm, 'LineWidth', 1.5)
+plot(t/T, rwx, 'LineWidth', 1.5)
+plot(t/T, rwy, 'LineWidth', 1.5)
 xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% yline(w_sat, 'b--', 'LineWidth', 1.5)
+% yline(-w_sat, 'b--', 'LineWidth', 1.5)
 xlabel('Periods of orbit', 'Interpreter', 'latex')
-ylabel('$||\dot{\hat{B}}_m||$ [1/s]', 'Interpreter', 'latex')
-legend('','Detumbling end time')
+ylabel('$\omega_{RW} [rad/s]$', 'Interpreter', 'latex')
+legend('$\omega_{RW,x}$', '$\omega_{RW,y}$', 'Detumbling end time', 'Interpreter', 'latex')
 
-% alpha
+% dipole
 figure
 hold on
 grid on
-plot(t/T, alpha, 'LineWidth', 1.5)
+plot(t/T, D, 'LineWidth', 1.5)
+xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+yline(max_dip, 'b--', 'LineWidth', 1.5)
+yline(-max_dip, 'b--', 'LineWidth', 1.5)
 xlabel('Periods of orbit', 'Interpreter', 'latex')
-ylabel('$\alpha [deg]$', 'Interpreter', 'latex')
-legend('$\alpha_x$', '$\alpha_y$', '$\alpha_z$', 'Interpreter', 'latex')
-
-% alpha
-figure
-hold on
-grid on
-plot(t/T, alpha, 'LineWidth', 1.5)
-xlim([1 2])
-xlabel('Periods of orbit', 'Interpreter', 'latex')
-ylabel('$\alpha [deg]$', 'Interpreter', 'latex')
-legend('$\alpha_x$', '$\alpha_y$', '$\alpha_z$', 'Interpreter', 'latex')
-
-% alpha_dot
-figure
-hold on
-grid on
-plot(t/T, alpha_dot, 'LineWidth', 1.5)
-xlabel('Periods of orbit', 'Interpreter', 'latex')
-ylabel('$\dot{\alpha} [deg/s]$', 'Interpreter', 'latex')
-legend('$\dot{\alpha}_x$', '$\dot{\alpha}_y$', '$\dot{\alpha}_z$', 'Interpreter', 'latex')
-
-% alpha_dot
-figure
-hold on
-grid on
-plot(t/T, alpha_dot, 'LineWidth', 1.5)
-xlim([1 2])
-xlabel('Periods of orbit', 'Interpreter', 'latex')
-ylabel('$\dot{\alpha} [deg/s]$', 'Interpreter', 'latex')
-legend('$\dot{\alpha}_x$', '$\dot{\alpha}_y$', '$\dot{\alpha}_z$', 'Interpreter', 'latex')
-
-% omega_stim
-figure
-hold on
-grid on
-plot(t_slew_sim, err_omega, 'LineWidth', 1.5)
-xlim([t_slew_sim(1) t_slew_sim(1)+10])
-xlabel('Time of simulation [s]', 'Interpreter', 'latex')
-ylabel('error [rad/s]', 'Interpreter', 'latex')
+ylabel('D [Am$^2$]', 'Interpreter', 'latex')
+legend('$D_x$', '$D_y$', '$D_z$', 'Detumbling end time', 'Saturation limits', 'Interpreter', 'latex')

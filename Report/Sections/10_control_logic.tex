@@ -91,15 +91,15 @@ Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the r
 
 The goal for the control system at this phase of the mission, is to track the $\mathcal{LVLH}$ frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the $\mathcal{LVLH}$ frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $\boldsymbol{A_{BL}}$, which leads from the $\mathcal{LVLH}$ to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as:
 
-\begin{equation} \label{eq:alpha}
-    \boldsymbol{\alpha}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V
+\begin{equation}
+    \boldsymbol{\epsilon}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V
 \end{equation}
 
 The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a skew-symmetric matrix back to its generating vector. 
 The angular velocity error was defined as:
 
-\begin{equation} \label{eq:alpha_dot}
-    \boldsymbol{\dot{\alpha}} = \boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T
+\begin{equation}
+    \boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T
 \end{equation}
 
 $\Vec{\omega}$ was obtained by taking the numerical derivative of the matrix $A_{BN}$, the matrix computed with the attitude determination algorithm, and then inverting the formula:
@@ -109,7 +109,7 @@ $\Vec{\omega}$ was obtained by taking the numerical derivative of the matrix $A_
 \end{equation}
 
 Since $\boldsymbol{A_{BN}}$ is affected by noise, taking its derivative numerically amplifies it, leading to a bad estimation of the angular velocity. Therefore a discrete lowpass Butterworth filter was applied before the computation of $\boldsymbol{\omega}$. This was set as a 1st order filter with cut-off frequency at 1 rad/s. Once computed $\boldsymbol{\alpha}$ and $\boldsymbol{\omega}_{BL}$ a suitable control law was: 
-$$\boldsymbol{M}_c=-k_p\boldsymbol{\alpha}-k_d\boldsymbol{{\omega}_{BL}}$$
+$$\boldsymbol{M}_c=-k_1\boldsymbol{\epsilon}-k_2\boldsymbol{{\omega}_{BL}}$$
 
 This kind of control law is inspired by the linear full-state feedback control  $\boldsymbol{u} = -\boldsymbol{kx} $. In particular, referred to the linearized Euler equations in which a set of three Euler angles $\boldsymbol{\alpha} = \left(\alpha_1 \alpha_2 \alpha_3 \right)$ is introduced. This set of small angles represent the misalignment between the $\mathcal{B}$ and $\mathcal{LVLH}$ frame. When this linearization is made, the state $\boldsymbol{x}$ for the state-space formulation, contains $\boldsymbol{\alpha}$ and $\dot{\boldsymbol{\alpha}}$. If the $\boldsymbol{u} = -\boldsymbol{kx} $ is implemented with that state, the control law becomes a \textit{Proportional-Derivative} control, in the form:
 $$\boldsymbol{M}_c=-\boldsymbol{K_p}\boldsymbol{\alpha}-\boldsymbol{K_d}\dot{\boldsymbol{\alpha}}$$
