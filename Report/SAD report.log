@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  7 JAN 2024 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  7 JAN 2024 21:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3427,15 +3427,15 @@ Package rerunfilecheck Info: File `"SAD report".out' has not changed.
 (rerunfilecheck)             Checksum: 82799CE7943B4F8655D0FEECA7C96C54;6223.
  ) 
 Here is how much of TeX's memory you used:
- 33146 strings out of 476361
- 620097 string characters out of 5788046
+ 33152 strings out of 476361
+ 620164 string characters out of 5788046
  1902993 words of memory out of 5000000
- 52681 multiletter control sequences out of 15000+600000
- 645046 words of font info for 195 fonts, out of 8000000 for 9000
+ 52683 multiletter control sequences out of 15000+600000
+ 657624 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,26n,80p,1180b,863s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on "SAD report.pdf" (23 pages, 1768058 bytes).
+Output written on "SAD report.pdf" (23 pages, 1768357 bytes).
 PDF statistics:
  786 PDF objects out of 1000 (max. 8388607)
  192 named destinations out of 1000 (max. 500000)
