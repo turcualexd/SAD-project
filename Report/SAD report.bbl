@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{esail_site}
 ESA.
@@ -23,6 +23,34 @@ ESA.
 James~R. Wertz.
 \newblock {\em Spacecraft Attitude Determination And Control}.
 \newblock Kluwer Academic Publishers, 1978.
+
+\bibitem{horizon_sensor_site}
+Meisei.
+\newblock Horizon sensor.
+\newblock Website, 2020.
+\newblock Site:
+  \url{https://www.meisei.co.jp/english/products/space/satellite-components/p1380}.
+
+\bibitem{sun_sensor_site}
+AAC ClydeSpace.
+\newblock Sun sensor.
+\newblock Website, 2021.
+\newblock Site:
+  \url{https://www.aac-clyde.space/what-we-do/space-products-components/adcs/ss200}.
+
+\bibitem{magnetorquer_site}
+AAC ClydeSpace.
+\newblock Magnetorquer.
+\newblock Website, 2021.
+\newblock Site:
+  \url{https://www.aac-clyde.space/what-we-do/space-products-components/adcs/mtq800-10}.
+
+\bibitem{reactionwheel_site}
+O.C.E. Technologies.
+\newblock Rw40.
+\newblock Website, 2022.
+\newblock Site:
+  \url{https://satsearch.co/products/oce-technology-rw40-reaction-wheel-4nms}.
 
 \bibitem{bdot}
 {Giulio Avanzini, Fabrizio Giulietti}.

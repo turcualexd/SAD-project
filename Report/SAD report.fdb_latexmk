@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex SAD report"] 1704573741 "SAD report.aux" "SAD report.bbl" "SAD report" 1704577177 0
-  "./bibliography.bib" 1704468103 1634 930353f9a482875f8b727baad7e7d6a2 ""
+["bibtex SAD report"] 1704587192 "SAD report.aux" "SAD report.bbl" "SAD report" 1704587288 0
+  "./bibliography.bib" 1704581024 2936 beb5ef8892315f906cf91a45fed5cde9 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291864736 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "SAD report.aux" 1704577176 20449 71fb85b2d0133b58b5612ca5efd4b59a "pdflatex"
+  "SAD report.aux" 1704587287 22347 6e565f0d4514151c99d885f2a8f999db "pdflatex"
   (generated)
   "SAD report.bbl"
   "SAD report.blg"
   (rewritten before read)
-["pdflatex"] 1704577173 "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" "SAD report.pdf" "SAD report" 1704577177 0
+["pdflatex"] 1704587284 "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" "SAD report.pdf" "SAD report" 1704587288 0
   "C:/Users/turcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1704406291 95607 034e0737ccfe37fc78b0169eb44187f4 ""
   "C:/Users/turcu/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1684232945 23188739 a2fc3e86f82404b52dad9870f4800c11 ""
   "C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -276,22 +276,22 @@
   "Images//orbit.eps" 1704468103 435323 7e181460183c10667f8bc0efe22e8684 ""
   "Images//orbit_2.eps" 1704468103 406291 9a47fee1636b66dc8134acd918e568c0 ""
   "Images//raggiera_polimi.eps" 1704468103 1813066 68b21695bbcbb6d7e09839c06406f8f3 ""
-  "SAD report.aux" 1704577176 20449 71fb85b2d0133b58b5612ca5efd4b59a "pdflatex"
-  "SAD report.bbl" 1704573741 1290 8f76ac90ab9b663fa3f29b75612a6545 "bibtex SAD report"
-  "SAD report.out" 1704577176 5400 1cc598daa0ed0992e1266be73d062f4d "pdflatex"
+  "SAD report.aux" 1704587287 22347 6e565f0d4514151c99d885f2a8f999db "pdflatex"
+  "SAD report.bbl" 1704587192 2086 f71df8e9b1e7883f20290b059ffa6ad0 "bibtex SAD report"
+  "SAD report.out" 1704587287 6208 658bd1244bb0071bed280f41928b4dce "pdflatex"
   "SAD report.tex" 1704555255 8783 fd2729565012fd02c613406bf41643ad ""
-  "SAD report.toc" 1704577176 2892 a19d1a7907b8bc883ee44e3a24b30155 "pdflatex"
+  "SAD report.toc" 1704587287 3449 79aa938715b2608055fef9500a2d589a "pdflatex"
   "Sections/00_abstract.tex" 1704535559 1503 14d8528e15f8630b0b19ce07a56fa780 ""
-  "Sections/01_symbols.tex" 1704468103 971 63788c6fa9fc2daaff76df3f1fd42a19 ""
+  "Sections/01_symbols.tex" 1704587284 9689 5776a2e3c45e293a5bf36603707332c7 ""
   "Sections/02_requirements.tex" 1704468103 788 b480ef771e3b5655bccdc6d302bce039 ""
   "Sections/03_framework.tex" 1704497064 4779 956405bc67154aecaf7daae667375dd0 ""
   "Sections/04_dynamics.tex" 1704468103 1912 383e06d0d70ace0af2d0324b3548567f ""
   "Sections/05_kinematics.tex" 1704572150 6694 7390ccf3420800281c8698b9361a88eb ""
-  "Sections/06_disturbances.tex" 1704574312 11989 fa4f963ff2f8967c8529151632668270 ""
-  "Sections/07_sensors.tex" 1704566243 9549 cc2333e33225a227fd52d1530f7fede7 ""
-  "Sections/08_attitude_determination.tex" 1704569442 6579 1e180a94bb7fa44e255418362cf6a11a ""
-  "Sections/09_actuators.tex" 1704573928 7852 1408b917b497f949fbe8581341d1d0df ""
-  "Sections/10_control_logic.tex" 1704553026 19331 79695e0292d5d431f505b72d3aae2ebf ""
+  "Sections/06_disturbances.tex" 1704580710 11999 37f47eab20157d9b91f05d12ce3a929e ""
+  "Sections/07_sensors.tex" 1704581209 9590 b2dab0dd852a5a64edb11569afd136cc ""
+  "Sections/08_attitude_determination.tex" 1704581287 6580 a3e6b3b211dc7ec58f60380e77c4d7df ""
+  "Sections/09_actuators.tex" 1704582941 6900 516dba6ea6a3492793895fe8112216bd ""
+  "Sections/10_control_logic.tex" 1704586552 20129 e7e7e9a46a679e620f527dc048d746fe ""
   "Sections/11_sim_results.tex" 1704577173 7123 689f44b850bf66f444dde1c3ac4e1a4d ""
   "c:/Users/turcu/Desktop/Progetti/SAD-project/Report/SAD report.tex" 1704555255 8783 fd2729565012fd02c613406bf41643ad ""
   (generated)
