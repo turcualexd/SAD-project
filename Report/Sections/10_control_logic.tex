@@ -31,7 +31,7 @@ control law is due to the fact that magnetorquers posses very intersting propret
     \item the possibility to smoothly modulate the control torque, without inducing coupling with flexible modes (when bang-bang techniques are not adopted);
     \item significant savings in terms of weight and complexity since no moving parts are present.
 \end{itemize}
-Instead, the major drawback of this kind of system is surely the underactuated property. In general the magnetorquer cannot provide an arbitrarly
+Instead, the major drawback of this kind of system is surely the underactuated property. In general, the magnetorquer cannot provide an arbitrarly
 oriented control torque due to the physical law that rules this device.
 
 \begin{empheq}{equation}
@@ -77,17 +77,17 @@ Regarding the control law \autoref{eq:ctrl_bdot}, it has to be seen that the vec
 direction of the magnetic field. Also, notice that all the vector in the above relationship are in the $\mathcal{B}$ frame since the magnetic 
 field vector $\boldsymbol{B}$ comes from the magnetometer measurment.
 
-In the context of the simulation environment on Simulink, the formulation chosen for the b-dot control comes from \cite{bdot} of Avanzini et Al. Some precaution has to be taken
+In the context of the simulation environment on Simulink, the formulation chosen for the b-dot control comes from \cite{bdot} of Avanzini et al work. Some precaution has to be taken
 when implementing the law, since the numerical derivative of a mesaured (hence noisy) signal has to be performed. This inconvinence can be overcome by using a low-pass filter \cite{crass_book}.
 In order to make some sense out of the calculation, a discrete low-pass Butterworth filter of the 1st order has been used just after the discrete derivative block. 
 Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the results of simulation are coherent.
-Moreover, the gain value $k_{\omega}$ has to be defined. Avanzini et al. extensively discuss this parameter and propose a method for its characterization in \cite{bdot}. In particular the indicative formula is the following:
+Moreover, the gain value $k_{\omega}$ has to be defined. Avanzini et al. extensively discuss this parameter and propose a method for its characterization \cite{bdot}. In particular the indicative formula is the following:
 
 \begin{equation}
     k_{\omega} = 2n (1 + \sin{\xi}) \min{\left( I_x, I_y, I_z \right)}
 \end{equation}
 
-Where $n$ represent the mean motion of the orbit, $\xi$ the inlcination of the orbit with respect to the magnetic equator. Notice that  during the detumbling the inertia moments are all equal. The value obtained is 
+Where $n$ represent the mean motion of the orbit, $\xi$ the inclination of the orbit with respect to the magnetic equator. Notice that  during the detumbling the inertia moments are all equal. The value obtained is 
 \begin{equation*}
     k_{\omega} = 0.0363 \; kg\cdot m^2s^{-1}
 \end{equation*}
@@ -100,7 +100,7 @@ Where $n$ represent the mean motion of the orbit, $\xi$ the inlcination of the o
 \subsubsection{Control law for the Slew and Tracking Manuever}
 \label{subsubsec:slew_nadir_law}
 
-The goal for the control system at this phase of the mission, is to track the $\mathcal{LVLH}$ frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the $\mathcal{LVLH}$ frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $\boldsymbol{A_{BL}}$, which leads from the $\mathcal{LVLH}$ to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as:
+The goal for the control system at this phase of the mission is to track the $\mathcal{LVLH}$ frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the $\mathcal{LVLH}$ frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $\boldsymbol{A_{BL}}$, which leads from the $\mathcal{LVLH}$ to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as:
 
 \begin{equation}
     \boldsymbol{\epsilon}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V
@@ -110,9 +110,11 @@ The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a ske
 The angular velocity error was defined as:
 
 \begin{equation}
+    \label{eq:omega_bl_vec}
     \boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T
 \end{equation}
 
+For the case under analysis, in which the orbit is slightly elliptical, it would have been more precise to use the true anomaly rate $\dot{theta}$ instead of the mean motion $n$ in \autoref{eq:omega_bl_vec}. It was used $n$ for simplicity, this doesn't affect the performance of the controller since the orbit is almost circular.  
 $\boldsymbol{\omega}$ was obtained by taking the numerical derivative of the matrix $\boldsymbol{A_{BN}}$, the matrix computed with the attitude determination algorithm, and then inverting the formula:
 
 \begin{equation}
@@ -125,7 +127,7 @@ Since $\boldsymbol{A_{BN}}$ is affected by noise, taking its derivative numerica
     \boldsymbol{M}_c=-k_1\boldsymbol{\epsilon}-k_2\boldsymbol{{\omega}_{BL}}
 \end{equation}
 
-This kind of control law is inspired by the linear full-state feedback control  $\boldsymbol{u} = -\boldsymbol{kx} $. In particular, referred to the linearized Euler equations in which a set of three Euler angles $\boldsymbol{\alpha} = \left(\alpha_1 \alpha_2 \alpha_3 \right)$ is introduced. This set of small angles represent the misalignment between the $\mathcal{B}$ and $\mathcal{LVLH}$ frame. When this linearization is made, the state $\boldsymbol{x}$ for the state-space formulation, contains $\boldsymbol{\alpha}$ and $\dot{\boldsymbol{\alpha}}$. If the $\boldsymbol{u} = -\boldsymbol{kx} $ is implemented with that state, the control law becomes a \textit{Proportional-Derivative} control, in the form:
+This kind of control law is inspired by the linear full-state feedback control  $\boldsymbol{u} = -\boldsymbol{kx} $. In particular, referred to the linearized Euler equations in which a set of three Euler angles $\boldsymbol{\alpha} = \left[\alpha_x \; \alpha_y \; \alpha_z \right]$ is introduced. This set of small angles represent the misalignment between the $\mathcal{B}$ and $\mathcal{LVLH}$ frame. When this linearization is made, the state $\boldsymbol{x}$ for the state-space formulation, contains $\boldsymbol{\alpha}$ and $\dot{\boldsymbol{\alpha}}$. If the $\boldsymbol{u} = -\boldsymbol{kx} $ is implemented with that state, the control law becomes a \textit{Proportional-Derivative} control, in the form:
 
 \begin{equation}
     \boldsymbol{M}_c=-\boldsymbol{K_p}\boldsymbol{\alpha}-\boldsymbol{K_d}\dot{\boldsymbol{\alpha}}
@@ -162,7 +164,7 @@ Since the linear control theory allows to use different metholodogies to calucla
     \end{tabular}
 \end{equation}
 
-The first equation of the system represent the state space dynamics, which can be studied for the stability properties, while the second one represents the output coming from the sensors. The open-loop poles calculated for this system are:
+The first equation of the system represent the state space dynamics, which can be studied for the stability properties, while the second one represents the output coming from the sensors. The open-loop poles calculated for this system were:
 \begin{equation}
     \boldsymbol{p_{open}} =
     \begin{bmatrix}
@@ -172,13 +174,13 @@ The first equation of the system represent the state space dynamics, which can b
     \end{bmatrix}
 \end{equation}
 
-The gain matrix $\boldsymbol{K} = [\boldsymbol{K_d} \; \boldsymbol{K_p}]$ is assesed through the the \textit{place(A,B,p)} Matlab function that requires the state-space matrices $\boldsymbol{A}$ and $\boldsymbol{B}$, and also the closed-loop poles that are desired $\boldsymbol{p}$. At this point, this vector of six poles must be hypotized. Some precatuions must be taken when the poles are decided:
+The gain matrix $\boldsymbol{K} = [\boldsymbol{K_d} \; \boldsymbol{K_p}]$ was assesed through the the \textit{place(A,B,p)} Matlab function that requires the state-space matrices $\boldsymbol{A}$ and $\boldsymbol{B}$, and also the closed-loop poles that are desired $\boldsymbol{p}$. At this point, this vector of six poles must be hypotized. Some precatuions must be taken when the poles are decided:
 \begin{itemize}[wide,itemsep=3pt,topsep=3pt]
     \item closed-loop poles shall not be too far from the corresponding open-loop poles, since there are constraints on the capabilities of the actuator;
     \item the real part of the closed-loop poles must be negative in order to guarantee asymptotic stability;
     \item the imaginary part of the poles should be decided in order to minimize the overshoot;
 \end{itemize}
-The chosen poles are: 
+The chosen poles were: 
 \begin{equation}
     \boldsymbol{p} =
     \begin{bmatrix}

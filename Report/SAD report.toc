@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {3}Framework Analysis}{1}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Satellite characterization}{1}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Orbit characterization}{1}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Dynamics}{2}{section.4}%
+\contentsline {section}{\numberline {4}Dynamics}{3}{section.4}%
 \contentsline {section}{\numberline {5}Kinematics}{3}{section.5}%
 \contentsline {section}{\numberline {6}Disturbances analysis}{4}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Magnetic Disturbance}{4}{subsection.6.1}%
@@ -32,12 +32,12 @@
 \contentsline {subsection}{\numberline {9.1}Magnetorquers}{10}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Reaction Wheels}{11}{subsection.9.2}%
 \contentsline {section}{\numberline {10}Control logic}{11}{section.10}%
-\contentsline {subsection}{\numberline {10.1}De-tumbling phase: the B-dot control}{11}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.1}De-tumbling phase: the B-dot control}{12}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Slew and Nadir pointing phases}{13}{subsection.10.2}%
 \contentsline {subsubsection}{\numberline {10.2.1}Control law for the Slew and Tracking Manuever}{13}{subsubsection.10.2.1}%
 \contentsline {subsubsection}{\numberline {10.2.2}Actuator command logic for Slew and Nadir pointing}{14}{subsubsection.10.2.2}%
 \contentsline {section}{\numberline {11}Simulation results}{15}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Detumbling analysis}{15}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.1}Detumbling analysis}{16}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2}Slew and tracking phase analysis}{16}{subsection.11.2}%
 \contentsline {subsection}{\numberline {11.3}Control action analysis}{17}{subsection.11.3}%
-\contentsline {section}{Bibliography}{19}{section*.71}%
+\contentsline {section}{Bibliography}{20}{section*.71}%

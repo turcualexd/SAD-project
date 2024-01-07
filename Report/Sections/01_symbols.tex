@@ -26,7 +26,7 @@
 		$\mathcal{N}$ & $[-]$ & inertial frame \\
 		$\bm{A_{PN}}$ & $[-]$ & rotation matrix from intertial to perifocal frame\\
 		$\bm{r_p}$ & $[km]$ & S/C position in $\mathcal{P}$ frame \\
-		$\bm{r_p}$ & $[km]$ & S/C position in $\mathcal{N}$ frame 
+		$\bm{r_N}$ & $[km]$ & S/C position in $\mathcal{N}$ frame 
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -106,7 +106,7 @@
 		$\bm{\hat{v}_{B,i}}$ & $[s^{-1}]$ & direction of relative velocity in $\mathcal{B}$ frame of the i-th panel \\
 		$\rho$ & $[kg/m^3]$ & denisty of air \\
 		$\rho_0$ & $[kg/m^3]$ & reference denisty of air from US Standard Atmosphere model (1976)\\
-		$h_0$ & $[km]$ & reference heigh from US Standard Atmosphere model (1976)\\
+		$h_0$ & $[km]$ & reference height from US Standard Atmosphere model (1976)\\
 		$H$ & $[km]$ & scaling height from US Standard Atmosphere model (1976)\\
 		$G$ & $[m^3 kg^{-1} s^{-2}]$ & universal gravitational constant \\
 		$m_t$ & $[kg]$ & mass of Earth \\
@@ -149,7 +149,7 @@
 		$\bm{s_i}$ & $[-]$ & unit vector measured by sensor in $\mathcal{B}$ frame\\
 		$\bm{v_i}$ & $[-]$ & unit vector calcuated by on-board model in $\mathcal{N}$ frame \\
 		$\phi$ & $[rad]$ & error angle between true and measured direction without bias \\
-		$E\left[\phi\right]$ & $[rad]$ & expected valure of error angle \\
+		$E\left[\phi\right]$ & $[rad]$ & expected value of error angle \\
 		$\sigma_{\phi}^2$ & $[rad^2]$ & variance of error angle \\
 		$\sigma_{\phi}$ & $[rad]$ & standard deviation of error angle \\
 		
@@ -168,10 +168,10 @@
 		$\bm{D}$ & $[Am^{2}]$ & magnetic dipole from magnetorquers \\
 		$\bm{M}$ & $[Nm]$ & control torque \\
 		$\bm{h}$ & $[kgm^2/s]$ & angular momentum of wheels + satellite \\
-		$\bm{h_r}$ & $[kgm^2/s]$ & relative angular momentum \\
-		$\bm{\dot{h}_r}$ & $[kgm^2/s^2]$ & relative angular momentum rate \\
-		$\bm{\omega_{max}}$ & $[RPM]$ & saturation of reaction wheels \\
-		$\bm{\dot{h}_{max}}$ & $[Nm]$ & maximum available torque for reaction wheels \\
+		$\bm{h_r}$ & $[kgm^2/s]$ & relative angular momentum of reaction wheel \\
+		$\bm{\dot{h}_r}$ & $[kgm^2/s^2]$ & relative angular momentum rate of reaction wheel \\
+		$\bm{\omega_{max}}$ & $[RPM]$ & saturation speed of reaction wheel \\
+		$\bm{\dot{h}_{max}}$ & $[Nm]$ & maximum available torque for reaction wheel \\
 		$\bm{\omega_r}$ & $[rad/s]$ & relative angular velocity of reaction wheel \\
 		$\bm{\dot{\omega}_r}$ & $[rad/s^2]$ & relative angular velocity rate of reaction wheel \\
 		$\sigma_\omega$ & $[RPM]$ & standard deviation on $\omega_r$
@@ -190,7 +190,7 @@
 		$\bm{B_B}$ & $[T]$ & magnetic field in $\mathcal{B}$ frame\\
 		$\bm{\dot{\hat{B}}_B}$ & $[1/s]$ & magnetic field rate unit direction in $\mathcal{B}$ frame \\
 		$k_{\omega}$ & $[kg \cdot m^2/s]$ & gain for detumbling phase \\
-		$\bm{\dot{A}_{B,N}}$ & $[1/s]$ & rate of attitude matrix \\
+		$\bm{\dot{A}_{BN}}$ & $[1/s]$ & rate of attitude matrix \\
 		$\bm{B_N}$ & $[T]$ & magnetic field in $\mathcal{N}$ frame \\
 		$\bm{\dot{B}_N}$ & $[T/s]$ & magnetic field rate in $\mathcal{N}$ frame \\
 		$\mathcal{LVLH}$ & $[-]$ & local vertical local horizontal frame \\

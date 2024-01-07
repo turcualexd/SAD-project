@@ -37,7 +37,7 @@ To fulfill this request, a good option could be to position the sensor on the fa
 payload, that is the face of the spacecraft main body (cube) that has normal along the $\boldsymbol{x_b}$ 
 direction. 
 
-The model implemented to simulate the behaviour of the sensor in the Simulink environment takes the real position of the S/C with respect to centre of Earth expressed in inertial space, changes its direction multiplying by -1 and expresses it in the $\mathcal{B}$ frame through the real attitude matrix $\boldsymbol{A_{B,N}}$. 
+The model implemented to simulate the behaviour of the sensor in the Simulink environment takes the real position of the S/C with respect to centre of Earth expressed in inertial space, changes its direction multiplying by -1 and expresses it in the $\mathcal{B}$ frame through the real attitude matrix $\boldsymbol{A_{BN}}$. 
 This unit vector is the input of the sensor block, here it is sampled through a zero-order hold of frequency specified by
 \autoref{table:Hor_sensor} to simulate the digital nature of the sensor. Then some errors of measurments has to be added.
 It was decided to model two typical effects of real sensor: the mounting error that cause misalignment and also an 
@@ -49,7 +49,7 @@ Chronologically, first the misalignment is calculated, then the noise is introdu
     this vector has to be small with respect to the unit direction considered as the measurment. Since the vector of the measured 
     direction is initially unitary, the length of the bias vector introduced can be considered as $\tan{\theta_{small}} \approx \theta_{small}$,
     where $\theta_{small}$ represents the angle between real measurment and misaligned measurment. The $\theta_{small}$ selected is ... 
-    \item In the Simulink environment the white noise has to be defined through the power spectral density. This was selected as $N_p = \sigma^2 {T_s} $, 
+    \item In the Simulink environment the white noise has to be defined through the noise power. This was selected as $N_p = \sigma^2 {T_s} $, 
     where $\sigma^2$ represents the variance as the standard deviation squared, while $T_s$ is the sampling time of the sensor.
     It was decided to consider as standard deviation the value of $1\deg$ (that is the accuracy from \autoref{table:Hor_sensor})
 \end{itemize}
@@ -68,7 +68,7 @@ by the time-varying flux. When external field is present, the symmetry of the al
 secondary coil is produced. This net flux can be read by the time-history of a voltmeter on the secondary coil, since the spacing of the measured output
 voltage depends on the external magnetic field value. 
 
-Since magnetometer are usually characterized by low accuracy values, a deep search has been conducted to find a high-accuracy and low-noise typology. A suitable sensor is the \textit{MM200} furnished by \textit{AAC ClydeSpace}. The following performance paramters characterize the sensor:
+Since magnetometer are usually characterized by low accuracy values, a deep search has been conducted to find a high-accuracy and low-noise typology. A suitable sensor is the \textit{MM200} furnished by \textit{AAC ClydeSpace}. The following performance parameters characterize the sensor:
 
 \begin{table}[H]
 
@@ -92,7 +92,7 @@ block \autoref{sec:kinematics}. This is the input vector that has to be sampled 
 of frequencies can be chosen: it was used the same frequency of the horizon sensor from \autoref{table:Hor_sensor} since it respects the constraint 
 given by the magnetometer requirments. 
 
-Then the measurments errors have to be added, a first misalignment error modeled in the same way of the horizon sensor in \autoref{subsec:horizon_sensor}. For this case the perpendicular
+Then the measurements errors have to be added, a first misalignment error modeled in the same way of the horizon sensor in \autoref{subsec:horizon_sensor}. For this case the perpendicular
 vector has been scaled by a factor of (...).
 The accuracy error, induced by the noise, has been modeled through a band-limited white noise added on each component. The value of $N_{p}$ is the square of NSD presented in \autoref{table:mag_sensor}.
 
