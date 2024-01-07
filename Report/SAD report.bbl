@@ -38,6 +38,11 @@ AAC ClydeSpace.
 \newblock Site:
   \url{https://www.aac-clyde.space/what-we-do/space-products-components/adcs/ss200}.
 
+\bibitem{crass_book}
+John l.~Crassidis F.~Landis~Markley.
+\newblock {\em Fundamentals of Spacecraft Attitude Determination and Control}.
+\newblock Springer, 2014.
+
 \bibitem{magnetorquer_site}
 AAC ClydeSpace.
 \newblock Magnetorquer.
@@ -62,10 +67,5 @@ O.C.E. Technologies.
 {M. Lovera, A. Astolfi}.
 \newblock {Spacecraft attitude control using magnetic actuators}.
 \newblock {\em Elsevier}, 40(4):1405--1414, 2 2004.
-
-\bibitem{crass_book}
-John l.~Crassidis F.~Landis~Markley.
-\newblock {\em Fundamentals of Spacecraft Attitude Determination and Control}.
-\newblock Springer, 2014.
 
 \end{thebibliography}

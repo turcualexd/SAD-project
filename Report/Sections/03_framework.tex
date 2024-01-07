@@ -5,7 +5,7 @@
 \subsection{Satellite characterization}
 \label{subsec:sat_characterization}
 
-The satellite design was inspired by ESAIL, a microsatellite developed by exactEarth in cooperation with ESA. ESAIL was primarily developed for ship targeting.\cite{esail_site} Two configurations of the satellite are implemented: the undeployed configuration for the detumbling phase and the extended configuration for the slew and tracking phase. The deployed configuration is modeled as a cubic central body of side $70$ cm and four solar panels, modeled as rectangular bodies of dimensions $70 \times 70 \times 1$ cm. Solar panels are set along $\boldsymbol{y_B}$ axis of body frame $\mathcal{B}$ with the normal of surface parallel to $\boldsymbol{z_B}$ axis, as shown in \autoref{fig:CAD}.
+The satellite design was inspired by ESAIL, a microsatellite developed by exactEarth in cooperation with ESA. ESAIL was primarily developed for ship targeting.\cite{esail_site} Two configurations of the satellite were implemented: the undeployed configuration for the detumbling phase and the extended configuration for the slew and tracking phase. The deployed configuration is modeled as a cubic central body of side $70$ cm and four solar panels, modeled as rectangular bodies of dimensions $70 \times 70 \times 1 \; \text{cm}^3$. Solar panels are set along $\boldsymbol{y_B}$ axis of body frame $\mathcal{B}$ with the normal of surface parallel to $\boldsymbol{z_B}$ axis, as shown in \autoref{fig:CAD}.
 
 \cfig{CAD.pdf}{CAD model of the satellite}{CAD}{1}
 
@@ -35,9 +35,9 @@ The undeployed configuration is an isotropic cube of side 70 cm with the same ma
 \subsection{Orbit characterization}
 \label{subsec:orbit_characterization}
 
-The orbit adopted for the simulation is a nearly polar, LEO, Sun-synchronous orbit (SSO). Polar orbits allows to scan the whole globe during the several orbits thanks to Earth's rotation. SSO are orbits that maintain the same angle between their orbital plane and the direction that connects the Earth with the Sun \cite{curtis_book}. This allows the spacecraft to monitor the Earth surface with the same conditions of light (or eventually darkness, if the plane is oriented in a certain way). Furthermore, a SSO can be selected to ensure constant visibility of the Sun.\cite{esa_sso_site}
+The orbit adopted for the simulation is a nearly polar, LEO, Sun-synchronous orbit (SSO). Polar orbits allows to scan the whole globe during several orbits thanks to Earth's rotation. SSO are orbits that maintain the same angle between their orbital plane and the direction that connects the Earth with the Sun.\cite{curtis_book} This allows the spacecraft to monitor the Earth surface with the same conditions of light (or eventually darkness if the plane is oriented in a certain way). Furthermore, a SSO can be selected to ensure constant visibility on the Sun.\cite{esa_sso_site}
 
-The data of the relation is based on the ephemeris of an ESAIL mission taken at 12:00 UT on December 16th, 2023. The orbit was then propagated using the simple two-body problem without any perturbations.
+The orbital data are based on the ephemeris of an ESAIL mission taken at 12:00 UT on December 16th, 2023. The orbit was then propagated using the simple two-body problem without any perturbations.
 
 This is an approximation as several disturbances act on the satellite (as discussed in \autoref{sec:disturbances_analysis}). Using the ephemeris as the initial condition has the advantage of allowing the simulation of spacecraft motion in two or three periods of the orbit to be considered as Sun-synchronous. This is because the time of simulation is a snapshot compared to the time of action of the J2 effect responsible for the Sun-synchronous orbit, which is one year. Clearly, a more detailed simulation should consider the variation of the orbital parameters due to J2 and all the other perturbations.
 
@@ -61,7 +61,7 @@ The orbital parameters chosen as described above are the following:
 
 \twofigII{orbit.eps}{Orbit representation}{leo_orbit}{orbit_2.eps}{View from Sun direction}{leo_orbit2}{1}
 
-In \autoref{fig:leo_orbit} and \autoref{fig:leo_orbit2} the Sun direction is plotted. It's easy to see that the orbit never goes into eclipse condition.
+In \autoref{fig:leo_orbit} and \autoref{fig:leo_orbit2} the Sun direction is plotted. This direction was computed by taking the ephemeris of the Earth with respect to the Sun at 12:00 UT December 16th in the Earth centered Equatorial frame. Since the orbital periods considered are relatively small compared to the Sun's motion, its position was maintained constant during the simulation. It's easy to see that the orbit never goes into eclipse condition.
 
 On Simulink, the model implemented to retrieve the orbital position is based on the integration of the true anomaly:
 
@@ -90,5 +90,5 @@ The position in the inertial frame $\mathcal{N}$ is calculated using the transpo
 $\boldsymbol{A_{PN}} = \boldsymbol{R_3} \left( \omega \right) \boldsymbol{R_1} \left( i \right) \boldsymbol{R_3}  \left( \Omega \right)$:
 
 \begin{equation}
-    \boldsymbol{r_N} = \boldsymbol{A_{PN}^T r_p}
+    \boldsymbol{r_N} = \boldsymbol{A_{PN}^T r_P}
 \end{equation}

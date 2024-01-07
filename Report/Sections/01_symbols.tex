@@ -14,9 +14,9 @@
 	\setbox\ltmcbox\vbox{
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
-		$\bm{I}$ & $[kg/m^2]$ & inertia matrix \\
+		$\bm{I}$ & $[kg/m^2]$ & inertia matrix of S/C \\
 		$a$ & $[km]$ & semi-major axis \\
-		$e$ & $[-]$ & eccentricty \\
+		$e$ & $[-]$ & eccentricity \\
 		$i$ & $[deg]$ & inclination \\
 		$\omega$ & $[deg]$ & pericentre anomaly \\
 		$\Omega$ & $[deg]$ & RAAN \\
@@ -24,9 +24,9 @@
 		$n$ & $[rad/s]$ & mean anomaly \\
 		$\mathcal{P}$ & $[-]$ & perifocal frame \\
 		$\mathcal{N}$ & $[-]$ & inertial frame \\
-		$\bm{A_{PN}}$ & $[-]$ & rotation matrix from intertial to perifocal frame\\
-		$\bm{r_p}$ & $[km]$ & S/C position in $\mathcal{P}$ frame \\
-		$\bm{r_p}$ & $[km]$ & S/C position in $\mathcal{N}$ frame 
+		$\bm{A_{PN}}$ & $[-]$ & rotation matrix from inertial to perifocal frame \\
+		$\bm{r_P}$ & $[km]$ & S/C position in $\mathcal{P}$ frame \\
+		$\bm{r_N}$ & $[km]$ & S/C position in $\mathcal{N}$ frame
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -40,13 +40,13 @@
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
 		$\mathcal{B}$ & $[-]$ & body frame \\
-		$\bm{x_b}$ & $[-]$ & x direction of the $\mathcal{B}$ frame \\
-		$\bm{y_b}$ & $[-]$ & y direction of the $\mathcal{B}$ frame \\
-		$\bm{z_b}$ & $[-]$ & z direction of the $\mathcal{B}$ frame \\
+		$\bm{x_b}$ & $[-]$ & x direction in $\mathcal{B}$ frame \\
+		$\bm{y_b}$ & $[-]$ & y direction in $\mathcal{B}$ frame \\
+		$\bm{z_b}$ & $[-]$ & z direction in $\mathcal{B}$ frame \\
 		$\bm{\omega}$ & $[rad/s]$ & angular velocity in $\mathcal{B}$ frame \\
-		$\bm{\dot{\omega}}$ & $[rad/s]$ & angular velocity rate in $\mathcal{B}$ frame \\
+		$\bm{\dot{\omega}}$ & $[rad/s^2]$ & angular velocity rate in $\mathcal{B}$ frame \\
 		$\bm{M_d}$ & $[Nm]$ & disturbances torque \\
-		$\bm{M_c}$ & $[Nm]$ & control torque 
+		$\bm{M_c}$ & $[Nm]$ & control torque
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -63,11 +63,11 @@
 		$\bm{\dot{s}}$ & $[rad/s]$ & set of Euler angle's rates \\
 		$312$ & $[-]$ & sequence of axis' rotation \\
 		$313$ & $[-]$ & sequence of axis' rotation \\
-		$\phi$ & $[rad]$ & first rotation's angle \\
-		$\theta$ & $[rad]$ & second rotation's angle \\
-		$\psi$ & $[rad]$ & third rotation's angle \\
-		$\bm{A_{BN}}$ & $[Nm]$ & attitude matrix \\
-		$tol$ & $[-]$ & tolerance value for singularity check 
+		$\phi$ & $[rad]$ & first rotation angle \\
+		$\theta$ & $[rad]$ & second rotation angle \\
+		$\psi$ & $[rad]$ & third rotation angle \\
+		$\bm{A_{BN}}$ & $[-]$ & attitude matrix \\
+		$tol$ & $[-]$ & tolerance value for singularity check
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -82,18 +82,19 @@
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
 		$\bm{M}$ & $[Nm]$ & disturbance torque \\
 		$\bm{D}$ & $[Am^{2}]$ & magnetic dipole from coils or parasitic currents \\
-		$\bm{B}$ & $[T]$ & magnetic field \\
+		$\bm{B}$ & $[T]$ & magnetic field vector \\
 		$V$      & $[Tm]$ & magnetic field scalar potential \\
-		$ECEF$   & [-] & Earth Centered Earth Fixed frame \\
-		$r$ & $[m]$ & radial distance from Earth's centre to S/C position (ECEF) \\
+		$ECEF$   & [-] & Earth-Centered Earth-Fixed frame \\
+		$a$ & $[km]$ & Earth's equatorial radius \\
+		$r$ & $[km]$ & radial distance from Earth's centre to S/C position (ECEF) \\
 		$\theta$ & $[rad]$ & longitude (ECEF) \\
 		$\phi$ & $[rad]$ & co-latitude (ECEF) \\
         $P^{n,m} (\cos \theta)$ & $[-]$ & Gauss normalized associated Legendre functions \\
 		$g^{n,m} (t)$ & $[nT]$ & Schmidt semi-normalized spherical harmonic coefficients \\
         $h^{n,m} (t)$ & $[nT]$ & Schmidt semi-normalized spherical harmonic coefficients \\
-		$F_i$ & $[N]$ & disturbance force acting on i-th panel \\
-		$P$ & $[Pa]$ & Sun's pressure of radiation \\
-		$A_i$ & $[Pa]$ & area of i-th panel \\
+		$\bm{F_i}$ & $[N]$ & disturbance force acting on i-th panel \\
+		$P$ & $[Pa]$ & Sun's radiation pressure \\
+		$A_i$ & $[m^2]$ & area of i-th panel \\
 		$\bm{\hat{S}_B}$ & $[-]$ & Sun's direction in $\mathcal{B}$ frame \\
 		$\bm{\hat{N}_{B,i}}$ & $[-]$ &  i-th panel's normal direction in $\mathcal{B}$ frame \\
 		$\rho_s$ & $[-]$ & coefficient of specular reflection \\
@@ -103,14 +104,14 @@
 		$C_D$ & $[-]$ & coefficient of drag \\
 		$\bm{r_i}$ & $[m]$ & position of centre of action of the force \\
 		$\bm{v_{B,i}}$ & $[m/s]$ & relative velocity in $\mathcal{B}$ frame of the i-th panel \\
-		$\bm{\hat{v}_{B,i}}$ & $[s^{-1}]$ & direction of relative velocity in $\mathcal{B}$ frame of the i-th panel \\
-		$\rho$ & $[kg/m^3]$ & denisty of air \\
-		$\rho_0$ & $[kg/m^3]$ & reference denisty of air from US Standard Atmosphere model (1976)\\
-		$h_0$ & $[km]$ & reference heigh from US Standard Atmosphere model (1976)\\
+		$\bm{\hat{v}_{B,i}}$ & $[-]$ & direction of relative velocity in $\mathcal{B}$ frame of the i-th panel \\
+		$\rho$ & $[kg/m^3]$ & density of air \\
+		$\rho_0$ & $[kg/m^3]$ & reference density of air from US Standard Atmosphere model (1976) \\
+		$h_0$ & $[km]$ & reference height from US Standard Atmosphere model (1976)\\
 		$H$ & $[km]$ & scaling height from US Standard Atmosphere model (1976)\\
 		$G$ & $[m^3 kg^{-1} s^{-2}]$ & universal gravitational constant \\
 		$m_t$ & $[kg]$ & mass of Earth \\
-		$c_i$ & $[-]$ & director cosines of the radial direction in the $\mathcal{B}$ frame \\
+		$c_i$ & $[-]$ & direction cosines of the radial direction in $\mathcal{B}$ frame
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -124,14 +125,14 @@
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
 		$Np$ & $[rad^2s]$ & noise power \\
-		$Ts$ & $[s]$ & sampling time \\
+		$T_s$ & $[s]$ & sampling time \\
 		$\sigma^2$ & $[rad^2]$ & variance of the measurment \\
 		$N.S.D.$ & $[nT/ \sqrt{Hz}]$ & noise spectral density \\
 		$I$ & $[A]$ & intensity of current \\
-		$\alpha$ & $[A/W]$ & coefficient of the sun sensor \\
-		$S$ & $[m^{2}]$ & sensor' surface area \\
+		$\alpha$ & $[A/W]$ & coefficient of the Sun sensor \\
+		$S$ & $[m^{2}]$ & sensor surface area \\
 		$W$ & $[W/m^{2}]$ & intensity of incident radiation\\
-		$\theta$ & $[rad]$ & angle of incident light\\
+		$\theta$ & $[rad]$ & angle of incident light
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -145,14 +146,13 @@
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
 		$J$ & $[-]$ & cost function \\
-		$\alpha_i$ & $[-]$ & weight on i-th sensor for J function \\
-		$\bm{s_i}$ & $[-]$ & unit vector measured by sensor in $\mathcal{B}$ frame\\
-		$\bm{v_i}$ & $[-]$ & unit vector calcuated by on-board model in $\mathcal{N}$ frame \\
+		$\alpha_i$ & $[-]$ & weight of i-th sensor for J function \\
+		$\bm{s_i}$ & $[-]$ & unit vector measured by i-th sensor in $\mathcal{B}$ frame\\
+		$\bm{v_i}$ & $[-]$ & unit vector calculated by on-board model in $\mathcal{N}$ frame \\
 		$\phi$ & $[rad]$ & error angle between true and measured direction without bias \\
-		$E\left[\phi\right]$ & $[rad]$ & expected valure of error angle \\
+		$E\left[\phi\right]$ & $[rad]$ & expected value of error angle \\
 		$\sigma_{\phi}^2$ & $[rad^2]$ & variance of error angle \\
-		$\sigma_{\phi}$ & $[rad]$ & standard deviation of error angle \\
-		
+		$\sigma_{\phi}$ & $[rad]$ & standard deviation of error angle
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -167,14 +167,14 @@
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
 		$\bm{D}$ & $[Am^{2}]$ & magnetic dipole from magnetorquers \\
 		$\bm{M}$ & $[Nm]$ & control torque \\
-		$\bm{h}$ & $[kgm^2/s]$ & angular momentum of wheels + satellite \\
-		$\bm{h_r}$ & $[kgm^2/s]$ & relative angular momentum \\
-		$\bm{\dot{h}_r}$ & $[kgm^2/s^2]$ & relative angular momentum rate \\
-		$\bm{\omega_{max}}$ & $[RPM]$ & saturation of reaction wheels \\
-		$\bm{\dot{h}_{max}}$ & $[Nm]$ & maximum available torque for reaction wheels \\
+		$\bm{h}$ & $[kgm^2/s]$ & angular momentum of reaction wheels + satellite \\
+		$\bm{h_r}$ & $[kgm^2/s]$ & relative angular momentum of reaction wheel \\
+		$\bm{\dot{h}_r}$ & $[kgm^2/s^2]$ & relative angular momentum rate of reaction wheel \\
+		$\bm{\omega_{max}}$ & $[RPM]$ & saturation speed of reaction wheel \\
+		$\bm{\dot{h}_{max}}$ & $[Nm]$ & maximum available torque for reaction wheel \\
 		$\bm{\omega_r}$ & $[rad/s]$ & relative angular velocity of reaction wheel \\
 		$\bm{\dot{\omega}_r}$ & $[rad/s^2]$ & relative angular velocity rate of reaction wheel \\
-		$\sigma_\omega$ & $[RPM]$ & standard deviation on $\omega_r$
+		$\sigma_\omega$ & $[RPM]$ & standard deviation on $\bm{\omega_r}$
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -188,9 +188,9 @@
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
 		$\bm{B_B}$ & $[T]$ & magnetic field in $\mathcal{B}$ frame\\
-		$\bm{\dot{\hat{B}}_B}$ & $[1/s]$ & magnetic field rate unit direction in $\mathcal{B}$ frame \\
+		$\bm{\dot{\hat{B}}_B}$ & $[1/s]$ & unit vector velocity of magnetic field in $\mathcal{B}$ frame \\
 		$k_{\omega}$ & $[kg \cdot m^2/s]$ & gain for detumbling phase \\
-		$\bm{\dot{A}_{B,N}}$ & $[1/s]$ & rate of attitude matrix \\
+		$\bm{\dot{A}_{BN}}$ & $[1/s]$ & rate of attitude matrix \\
 		$\bm{B_N}$ & $[T]$ & magnetic field in $\mathcal{N}$ frame \\
 		$\bm{\dot{B}_N}$ & $[T/s]$ & magnetic field rate in $\mathcal{N}$ frame \\
 		$\mathcal{LVLH}$ & $[-]$ & local vertical local horizontal frame \\
@@ -222,7 +222,7 @@
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
 		$\bm{B_m}$ & $[T]$ & measured magnetic field \\
 		$\lVert \boldsymbol{\dot{\hat{{B}}}_m} \rVert$ & $[1/s]$ & norm of rate of change of direction of $\bm{B_m}$ \\
-		$\bm{\omega_{estim}}$ & $[rad/s]$ & onboard estimation of angular velocity
+		$\bm{\omega_{estim}}$ & $[rad/s]$ & on-board estimation of angular velocity
 	\end{xltabular}
 	\unskip
 	\unpenalty

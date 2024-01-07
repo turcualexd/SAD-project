@@ -1,12 +1,11 @@
 \begin{abstract}
 \addcontentsline{toc}{section}{Abstract}
-\vspace*{5mm}
+\vspace*{10mm}
 
-The following report discusses the attitude dynamics and control of a microsatellite in Sun-syncrhonous low-Earth orbit. The mission of the satellite is to point the Earth, due to the payload requirement. The simulation was carried out in Simulink environment. The rotational dynamics was modeled through Euler equations, the kinematics was parametrized through two sets of Euler angles (312 - 313). The environment disturbances that was accounted for were the magnetic field interaction and gravity gradient torque. They were considered the most relevant after a general analysis of all the four main disturbances (SRP, air drag torque, magentic torque, gravity gradient torque). The orbital motion was modeled as a restricted two body problem. 
+The presented report discusses the attitude dynamics and control of a microsatellite in Sun-synchronous low-Earth orbit. The mission of the satellite is to point the Earth, due to the payload requirement. The simulation was carried out in Simulink environment. The rotational dynamics was modeled through the Euler equations, the kinematics was parametrized through two sets of Euler angles (312 - 313). The environment disturbances considered were magnetic field interaction and gravity gradient torque, as they resulted to be the most relevant after a general analysis of all the four main disturbances (SRP, air drag, magnetic, gravity gradient). The orbital motion was modeled as a restricted two-body problem. 
 
-The on-board sensors were a horizon sensor, a magnetometer and a sun sensor. They were all modeled in Simulink, taking as reference real sensors. The actuators installed on the satellite were a magnetorquer and two reaction wheels, modeled referring to real actuators. 
+The on-board sensors are a horizon sensor, a magnetometer and a Sun sensor. They were all modeled in Simulink taking as reference some real sensors. The actuators installed on the satellite are a magnetorquer and two reaction wheels, modeled referring to some real counterparts as well.
 
-The control logic implemented on-board considers two algorithms. The first deals with the de-tumbling of the spacecraft using the B-dot control, until a certain condition on the value of the derivative of B is satisfied. The second contemplates the slew and tracking manoeuvre togheter. This last phase is performed through an extension of the PD controller for non-linear dynamics. 
-
+The control logic implemented on-board considers two algorithms. The first one deals with the de-tumbling of the spacecraft using the B-dot control, and continues until a certain condition on the value of the derivative of $\boldsymbol{B}$ is satisfied. The second contemplates the slew and tracking manoeuvres together. This last phase is performed through an extension of the PD controller for non-linear dynamics.
 
 \end{abstract}

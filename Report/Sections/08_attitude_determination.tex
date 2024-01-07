@@ -1,21 +1,21 @@
 \section{Attitude determination}
 \label{subsec:attitude_det}
 
-The problem of estimating the attitude matrix from the available measurements is central to spacecraft control. To determine the attitude of the spacecraft, the sensor models introduced earlier were used. The method used to determine the attitude is the SVD method, which has been developed whitin the framework of Wahba's problem. The latter consists in finding the orthogonal matrix which minimizes the weighted cost function:
+The problem of estimating the attitude matrix from the available measurements is central to spacecraft control. To determine the attitude of the spacecraft, the sensor models introduced earlier were used. The method used to determine the attitude is the SVD method \cite{crass_book}, which has been developed within the framework of Wahba's problem. The latter consists in finding the orthogonal matrix which minimizes the weighted cost function:
 
 \begin{equation}
     J(\boldsymbol{A_{BN}})=\frac{1}{2}\sum_{i=1}^N\alpha_i\lVert \boldsymbol{s_i} - \boldsymbol{A_{BN}v_i} \rVert^2
 \end{equation}
 
-in which $\{\boldsymbol{s_i}\}$ is a set of the N measured unit vectors in body frame and $\{\boldsymbol{v_i}\}$ the corresponding set of unitt vectors in the inertial frame, computed using the on-board models. The set of weights $\{\alpha_i\}$ was chosen based on the relative accuracy of each sensor. It was assumed that the weight vector $\boldsymbol{\alpha}$ is normalized to 1, i.e. $\sum_{i=1}^N\alpha_i=1$. This method needs at least two available measurements, so it works also in the case that the Earth is outside the FOV of the horizon sensor.
+in which $\{\boldsymbol{s_i}\}$ is a set of the N measured unit vectors in body frame and $\{\boldsymbol{v_i}\}$ is the corresponding set of unit vectors in the inertial frame, computed using the on-board models. The set of weights $\{\alpha_i\}$ were chosen basing on the relative accuracy of each sensor. It was assumed that the weight vector $\boldsymbol{\alpha}$ is normalized to 1, i.e. $\sum_{i=1}^N\alpha_i=1$. This method needs at least two available measurements, so it works also in the case that the Earth is outside the FOV of the horizon sensor.
 
-Since $\boldsymbol{A_{BN}}$ is a orthogonal matrix and $\boldsymbol{s_i}$ and $\boldsymbol{v_i}$ are unit vectors, with some simple algebraic passages, the expression of J can be rewritten as:
+Since $\boldsymbol{A_{BN}}$ is an orthogonal matrix while $\boldsymbol{s_i}$ and $\boldsymbol{v_i}$ are unit vectors, through some simple algebraic passages it is possible to rewrite the expression of J as:
 
 \begin{equation}
     J(\boldsymbol{A_{BN}})=1-\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_{BN}}\boldsymbol{v_i})
 \end{equation}
 
-The optimal solution minimizes J, therefore maximizes:
+The optimal solution minimizes J, therefore it maximizes $\Tilde{J}$:
 
 \begin{equation}
     \Tilde{J}(\boldsymbol{A_{BN}})=\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_{BN}}\boldsymbol{v_i})=Tr(\boldsymbol{A_{BN}}\boldsymbol{B}^T)
@@ -29,10 +29,11 @@ Since a direct solution is computationally expensive, a single value decompositi
     \boldsymbol{B}=\boldsymbol{USV}^T=\boldsymbol{U}diag([\boldsymbol{s_1} \ \ \boldsymbol{s_2} \ \ \boldsymbol{s_3}])\boldsymbol{V}^T
 \end{empheq}
 
-$\boldsymbol{U}$ and $\boldsymbol{V}$ are orthogonal matrices, representing the matrices of eigenvectors of $\boldsymbol{BB}^T$ and $\boldsymbol{B}^T\boldsymbol{B}$ respectively, $\boldsymbol{S}$ is the diagonal matrix containing the square roots of the eigenvalues of $\boldsymbol{B}^T\boldsymbol{B}$. The matrices can be defined as:
+$\boldsymbol{U}$ and $\boldsymbol{V}$ are orthogonal matrices, representing the matrices of eigenvectors of $\boldsymbol{BB}^T$ and $\boldsymbol{B}^T\boldsymbol{B}$ respectively, $\boldsymbol{S}$ is the diagonal matrix containing the square roots of the eigenvalues of $\boldsymbol{B}^T\boldsymbol{B}$. 
+Also other two matrices can be defined:
 
 \begin{equation}
-    \boldsymbol{U_{+}}=\boldsymbol{U}diag([1 \ \ 1 \ \ det(\boldsymbol{U})]) \ \ \ and \ \ \ \boldsymbol{v_{+}}=\boldsymbol{V}diag([1 \ \ 1 \ \ det(\boldsymbol{V})])
+    \boldsymbol{U_{+}}=\boldsymbol{U}diag([1 \ \ 1 \ \ det(\boldsymbol{U})]) \ \ \ \text{and} \ \ \ \boldsymbol{V_{+}}=\boldsymbol{V}diag([1 \ \ 1 \ \ det(\boldsymbol{V})])
 \end{equation}
 
 Then:
@@ -47,7 +48,7 @@ where:
     \boldsymbol{s_3'}=\boldsymbol{s_3}\det(\boldsymbol{U})\det(\boldsymbol{V})
 \end{equation}
 
-Now it can be defined the matrix $\boldsymbol{W}$ and its representation in terms of Euler axis/angles:
+Now it can be defined the matrix $\boldsymbol{W}$ and its representation in terms of Euler axis/angle:
 
 \begin{equation}
     \boldsymbol{W}=\boldsymbol{U_{+}}^T\boldsymbol{A}\boldsymbol{V_{+}}=cos\theta \boldsymbol{I_3} -sin\theta[\boldsymbol{e}\  \times]+(1-cos\theta) \boldsymbol{e}\boldsymbol{e}^T
@@ -63,8 +64,10 @@ The trace is maximized for $\theta=0$, which gives $\boldsymbol{W}=\boldsymbol{I
     \boldsymbol{A}=\boldsymbol{U_{+}V_{+}}^T=\boldsymbol{U}diag([1 \  \ \ 1 \ \ \ det(\boldsymbol{U})det(\boldsymbol{V})])\boldsymbol{V}^T
 \end{equation}
 
-As previously mentioned, the weights required to construct the $\boldsymbol{B}$ matrix are determined by the relative accuracy of each sensor. As no data regarding the magnetometer's accuracy in degrees was provided, the following procedure was implemented to assess its relative accuracy and assign a weight to each sensor.
-A period of three orbits was simulated, assuming to be already in the tracking phase, in order to be sure to be in the FOV of the Earth horizon sensor. During the simulation it was computed the angle $\phi$ between the ideal unit vector and the measured one. For instance, when discussing the magnetometer, $\phi$ represents the angle between the unit vector parallel to the magnetic field and the unit vector measured by the magnetometer. For each sensor $\phi$ is a random number, it was then computed the expected value and the standard deviation with the formulas reported below:
+Since sensor's measurements are affected by noise, a discrete low-pass Butterworth filter was added just after the calculation of the attitude matrix. The cut-off frequency was set to $0.5$ rad/s for a 2nd order filter.
+ 
+As previously mentioned, the weights required to construct the $\boldsymbol{B}$ matrix are determined by the relative accuracy of each sensor. As no data regarding the magnetometer's accuracy in degrees was provided, the following procedure was used to reconstruct its relative accuracy and assign a weight to each sensor.
+A period of three orbits was simulated, assuming to be already in the tracking phase, in order to be sure to be in the FOV of the Earth horizon sensor. During the simulation it was computed the angle $\phi$ between the ideal unit vector and the measured one. For instance, when discussing the magnetometer, $\phi$ represents the angle between the unit vector parallel to the magnetic field and the unit vector measured by the magnetometer. For each sensor $\phi$ is a random number, it was then computed the expected value and the standard deviation using the formulas reported below:
 
 \begin{equation}
     E[\phi]=\frac{1}{3T}\int_{0}^{3T}\phi dt \ \ \ \  \ \ \ \ \sigma_{\phi}^2=\frac{1}{3T}\int_{0}^{3T}(\phi - E[\phi])^2 dt \ \ \ \ \ \ \ \ \sigma_{\phi}=\sqrt{\sigma_{\phi}^2}
@@ -92,7 +95,7 @@ where $T$ is the period of the orbit. The integrals were evaluated numerically. 
     
 \end{table}
 
-Basing on the previous results, it were chosen the weights reported in \autoref{table:weights}:
+Based on \autoref{table:exp_std}, it was chosen the weights $\alpha_1$ used in the attitude determination with three sensors and the weights $\alpha_2$ used in the attitude determination with two sensors. The values are reported in \autoref{table:weights}:
 
 \begin{table}[H]
 
@@ -113,5 +116,3 @@ Basing on the previous results, it were chosen the weights reported in \autoref{
     \label{table:weights}
     
 \end{table}
-
-Since the attitude determination algorithm has been implement to work either if earth horizon measurments are not available, the $\alpha_2$ weights are also calculated to fulfill the following requirement: $\sum_{i=1}^N\alpha_i=1$.
