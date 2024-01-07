@@ -8,13 +8,13 @@ coming from sensors and actuators has to be evaluated. As a consequence, the des
 even though a perfect control $\boldsymbol{u}$ can be designed by placing the fastest poles (in the linear case), then the actuator system will be highly penalized by not being able 
 to perform that torque. As a consequence, it is important to bear in mind that when designing the control logic, always keep in consideration the actuators that will be used. 
 
-In the case under analysis, the magnetorquer actuators posses some useful and powerful proprerties, in particular when they are coupled with a magnetometer, the theory tells that
+In the case under analysis, the magnetorquer actuators posses some useful and powerful properties, in particular when they are coupled with a magnetometer, the theory tells that
 the de-tumbling phase can be easily implemented \cite{bdot}. On the other side, the control for a direction pointing (i.e. Nadir), in the case of magnetorquer is more difficult due to the unpleasent
 underactuated property of these magnetic systems. Infact, considering the equation of the actuator for the magnetorquer, and implementing that into the system equations, would result into a istantanteously
 uncontrollable system as cited in \cite{lovera}. Nevertheless, by following the steps presented in \cite{lovera}, a fully magnetic actuated control can be reached but not without some 
-effort and also drawbacks. In order not to complicate the next discussion, it was choosen the take into consideration also reaction wheels as a secondary actuator system.
+effort and also drawbacks. In order not to complicate the next discussion, it was chosen the take into consideration also reaction wheels as a secondary actuator system.
 
-In the next sub-sections the logic implemented in the Simulink environment will be presented, then all the more detailed actuator's cosniderations will be clarified. 
+In the next sub-sections the logic implemented in the Simulink environment will be presented, then all the more detailed actuator's considerations will be clarified. 
 \subsection{De-tumbling phase: the B-dot control}
 \label{subsec:detumbling}
 The De-tumbling phase is performed immediately after the release of the spacecraft by the launcher, at this moment the angular velocities are random and depends
@@ -58,7 +58,7 @@ The idea of this kind of command is that the variation in magnetic field $\bolds
 \end{empheq}
 
 The approximation symbol is due to the fact that when $\omega >> 1$, the variation of the magnetic field vector in $\mathcal{B}$ frame is mainly 
-due to the rotation of the frame and less due to the changing of $\boldsymbol{b}_N$ (that is caused by the evolution in he orbital position and other slow
+due to the rotation of the frame and less due to the changing of $\boldsymbol{B}_N$ (that is caused by the evolution in he orbital position and other slow
 variations due to geomagnetic field). With the above equation it has been demonstrated that $\boldsymbol{\omega}$ and $\dot{\boldsymbol{B}}$ are strictly related, so making the control
 law proportional to $\dot{\boldsymbol{B}}$ would be similar to make it proportional to $\boldsymbol{\omega}$ (like the 'standard' de-tumbling law). 
 This mathematical considerations imply that for a detumbling law, it could be sufficient to have a magnetometer and a magnetorquer without a direct measurment of the angular
@@ -77,20 +77,20 @@ Regarding the control law \autoref{eq:ctrl_bdot}, it has to be seen that the vec
 direction of the magnetic field. Also, notice that all the vector in the above relationship are in the $\mathcal{B}$ frame since the magnetic 
 field vector $\boldsymbol{B}$ comes from the magnetometer measurment.
 
-In the context of the simulation environment on Simulink, the formulation choosen for the b-dot control comes from \cite{bdot} of Avanzini et Al. Some precaution has to be taken
+In the context of the simulation environment on Simulink, the formulation chosen for the b-dot control comes from \cite{bdot} of Avanzini et Al. Some precaution has to be taken
 when implementing the law, since the numerical derivative of a mesaured (hence noisy) signal has to be performed. This inconvinence can be overcome by using a low-pass filter \cite{crass_book}.
 In order to make some sense out of the calculation, a discrete low-pass Butterworth filter of the 1st order has been used just after the discrete derivative block. 
 Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the results of simulation are coherent.
 Moreover, the gain value $k_{\omega}$ has to be defined. Avanzini et al. extensively discuss this parameter and propose a method for its characterization in \cite{bdot}. In particular the indicative formula is the following:
 
-\begin{empheq}{equation}
-    k_{\omega} = 2n (1 + \sin{\xi}) \min{\left( I_1, I_2, I_3 \right)}
-\end{empheq}
-0.0363
+\begin{equation}
+    k_{\omega} = 2n (1 + \sin{\xi}) \min{\left( I_x, I_y, I_z \right)}
+\end{equation}
+
 Where $n$ represent the mean motion of the orbit, $\xi$ the inlcination of the orbit with respect to the magnetic equator. Notice that  during the detumbling the inertia moments are all equal. The value obtained is 
-\begin{empheq}{equation}
+\begin{equation*}
     k_{\omega} = 0.0363 \; kg\cdot m^2s^{-1}
-\end{empheq}
+\end{equation*}
 
 
 
@@ -98,54 +98,71 @@ Where $n$ represent the mean motion of the orbit, $\xi$ the inlcination of the o
 \label{subsec:slew_subsec}
 
 \subsubsection{Control law for the Slew and Tracking Manuever}
-
 \label{subsubsec:slew_nadir_law}
 
-The goal for the control system at this phase of the mission, is to track the $\mathcal{LVLH}$ frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the $\mathcal{LVLH}$ frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $\boldsymbol{A_{BL}}$, which leads from the $\mathcal{LVLH}$ to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as 
-$$\boldsymbol{\alpha}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V$$
-The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a skew-symmetric matrix back to its generating vector. 
-The angular velocity error was defined as $$\boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T$$ 
-$\Vec{\omega}$ was obtained by taking the numerical derivative of the matrix $A_{BN}$, the matrix computed with the attitude determination algorithm, and then inverting the formula 
-\begin{empheq}{equation}
-    \label{}  \dot{\boldsymbol{A}}\boldsymbol{_{BN}} = -[\boldsymbol{\omega} \times] \boldsymbol{A_{BN}}
-\end{empheq}
-
-Since $\boldsymbol{A_{BN}}$ is affected by noise, taking its derivative numerically amplifies it, leading to a bad estimation of the angular velocity. Therefore a discrete lowpass Butterworth filter was applied before the computation of $\boldsymbol{\omega}$. This was set as a 1st order filter with cut-off frequency at 1 rad/s. Once computed $\boldsymbol{\alpha}$ and $\boldsymbol{\omega}_{BL}$ a suitable control law was: 
-$$\boldsymbol{M}_c=-k_p\boldsymbol{\alpha}-k_d\boldsymbol{{\omega}_{BL}}$$
-
-This kind of control law is inspired by the linear full-state feedback control  $\boldsymbol{u} = -\boldsymbol{kx} $. In particular, referred to the linearized Euler equations in which a set of three Euler angles $\boldsymbol{\alpha} = \left(\alpha_1 \alpha_2 \alpha_3 \right)$ is introduced. This set of small angles represent the misalignment between the $\mathcal{B}$ and $\mathcal{LVLH}$ frame. When this linearization is made, the state $\boldsymbol{x}$ for the state-space formulation, contains $\boldsymbol{\alpha}$ and $\dot{\boldsymbol{\alpha}}$. If the $\boldsymbol{u} = -\boldsymbol{kx} $ is implemented with that state, the control law becomes a \textit{Proportional-Derivative} control, in the form:
-$$\boldsymbol{M}_c=-\boldsymbol{K_p}\boldsymbol{\alpha}-\boldsymbol{K_d}\dot{\boldsymbol{\alpha}}$$
-
-Since the linear control theory allows to use different metholodogies to caluclate the gains matrices $\boldsymbol{k_p}$ and $\boldsymbol{k_d}$, the linearized control law was firstly analyzed. In particular, the pole placment technique was used, on the following state-space representation of the system. 
+The goal for the control system at this phase of the mission, is to track the $\mathcal{LVLH}$ frame. In order to obtain the right alignment of the frames, both the attitude error and the angular velocity error should be zero. Infact the tracking of the $\mathcal{LVLH}$ frame means not only to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. In this case of control, the attitude error matrix is $\boldsymbol{A_{BL}}$, which leads from the $\mathcal{LVLH}$ to the body frame, and the goal is to make it close to the identity matrix. For this reason, it was desired to make the extra diagonal terms close to zero and the error vector was defined as:
 
 \begin{equation}
-    \begin{tabular}{c c c c}
+    \boldsymbol{\epsilon}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V
+\end{equation}
+
+The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a skew-symmetric matrix back to its generating vector. 
+The angular velocity error was defined as:
+
+\begin{equation}
+    \boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T
+\end{equation}
+
+$\boldsymbol{\omega}$ was obtained by taking the numerical derivative of the matrix $\boldsymbol{A_{BN}}$, the matrix computed with the attitude determination algorithm, and then inverting the formula:
+
+\begin{equation}
+    \boldsymbol{\dot{A}_{BN}} = -[\boldsymbol{\omega} \times] \boldsymbol{A_{BN}}
+\end{equation}
+
+Since $\boldsymbol{A_{BN}}$ is affected by noise, taking its derivative numerically amplifies it, leading to a bad estimation of the angular velocity. Therefore a discrete lowpass Butterworth filter was applied before the computation of $\boldsymbol{\omega}$. This was set as a 1st order filter with cut-off frequency at 1 rad/s. Once computed $\boldsymbol{\alpha}$ and $\boldsymbol{\omega}_{BL}$ a suitable control law was:
+
+\begin{equation}
+    \boldsymbol{M}_c=-k_1\boldsymbol{\epsilon}-k_2\boldsymbol{{\omega}_{BL}}
+\end{equation}
+
+This kind of control law is inspired by the linear full-state feedback control  $\boldsymbol{u} = -\boldsymbol{kx} $. In particular, referred to the linearized Euler equations in which a set of three Euler angles $\boldsymbol{\alpha} = \left(\alpha_1 \alpha_2 \alpha_3 \right)$ is introduced. This set of small angles represent the misalignment between the $\mathcal{B}$ and $\mathcal{LVLH}$ frame. When this linearization is made, the state $\boldsymbol{x}$ for the state-space formulation, contains $\boldsymbol{\alpha}$ and $\dot{\boldsymbol{\alpha}}$. If the $\boldsymbol{u} = -\boldsymbol{kx} $ is implemented with that state, the control law becomes a \textit{Proportional-Derivative} control, in the form:
+
+\begin{equation}
+    \boldsymbol{M}_c=-\boldsymbol{K_p}\boldsymbol{\alpha}-\boldsymbol{K_d}\dot{\boldsymbol{\alpha}}
+\end{equation}
+
+Since the linear control theory allows to use different metholodogies to caluclate the gains matrices $\boldsymbol{K_p}$ and $\boldsymbol{K_d}$, the linearized control law was firstly analyzed. In particular, the pole placment technique was used, on the following state-space representation of the system. 
+
+\begin{equation}
+    \begin{tabular}{c c c c c}
         $\begin{dcases}
             \dot{\boldsymbol{x}} = \boldsymbol{Ax} + \boldsymbol{Bu} \\
             \boldsymbol{y}       = \boldsymbol{Cx} + \boldsymbol{Du} \\
         \end{dcases}$
+        & &
         $\boldsymbol{A} =
         \begin{bmatrix}
-            0 & (1-K_x)n & 0 & -n^2K_x & 0 & 0 \\   
-            (K_y-1)n & 0 & 0 & 0 & -n^2K_y & 0 \\   
-            0 & 0 & 0 & 0 & 0 & 0 \\   
-            1 & 0 & 0 & 0 & 0 & 0 \\   
-            0 & 1 & 0 & 0 & 0 & 0 \\   
-            0 & 0 & 1 & 0 & 0 & 0   
+            0 & (1-K_x)n & 0 & -n^2K_x & 0 & 0 & \\   
+            (K_y-1)n & 0 & 0 & 0 & -n^2K_y & 0 & \\   
+            0 & 0 & 0 & 0 & 0 & 0 & \\   
+            1 & 0 & 0 & 0 & 0 & 0 & \\   
+            0 & 1 & 0 & 0 & 0 & 0 & \\   
+            0 & 0 & 1 & 0 & 0 & 0 &
         \end{bmatrix}$
+        & &
         $\boldsymbol{B}=
         \begin{bmatrix}
-            \frac{1}{I_x} & 0 & 0 \\   
-            0 & \frac{1}{I_x} & 0 \\   
-            0 & 0 & \frac{1}{I_x} \\   
-            0 & 0 & 0 & \\   
-            0 & 0 & 0 & \\
-            0 & 0 & 0 &   
+            \frac{1}{I_x} & 0 & 0 \\
+            0 & \frac{1}{I_x} & 0 \\
+            0 & 0 & \frac{1}{I_x} \\
+            0 & 0 & 0 \\   
+            0 & 0 & 0 \\
+            0 & 0 & 0
         \end{bmatrix}$
     \end{tabular}
 \end{equation}
 
-The open-loop poles caluclated for this system are:
+The first equation of the system represent the state space dynamics, which can be studied for the stability properties, while the second one represents the output coming from the sensors. The open-loop poles calculated for this system are:
 \begin{equation}
     \boldsymbol{p_{open}} =
     \begin{bmatrix}
@@ -156,7 +173,7 @@ The open-loop poles caluclated for this system are:
 \end{equation}
 
 The gain matrix $\boldsymbol{K} = [\boldsymbol{K_d} \; \boldsymbol{K_p}]$ is assesed through the the \textit{place(A,B,p)} Matlab function that requires the state-space matrices $\boldsymbol{A}$ and $\boldsymbol{B}$, and also the closed-loop poles that are desired $\boldsymbol{p}$. At this point, this vector of six poles must be hypotized. Some precatuions must be taken when the poles are decided:
-\begin{itemize}
+\begin{itemize}[wide,itemsep=3pt,topsep=3pt]
     \item closed-loop poles shall not be too far from the corresponding open-loop poles, since there are constraints on the capabilities of the actuator;
     \item the real part of the closed-loop poles must be negative in order to guarantee asymptotic stability;
     \item the imaginary part of the poles should be decided in order to minimize the overshoot;
@@ -171,12 +188,12 @@ The chosen poles are:
     \end{bmatrix}
 \end{equation}
 
-
 The gain matrix can be used for the linear-control law. For simplicity, it wasn't used a matrix for the non-linear control but only a scalar, in particular it was selected the order of magnitude of the gain matrix from linear control just calculated.
 The values for the gains were then refined with trial and error. The response of the system was satisfactory with the following values:
+
 \begin{equation*}
-	k_p = 0.001 \; kg \cdot m^2 s^{-2}\qquad
-	k_d = 0.6   \; kg \cdot m^2 s^{-1}
+	k_1 = 0.001 \; kg \cdot m^2 s^{-2}\qquad
+	k_2 = 0.6   \; kg \cdot m^2 s^{-1} 
 \end{equation*}
 
 
@@ -195,10 +212,10 @@ If just one reaction wheel would be used, it should be disactivated when the res
 to the undeterminate problem of defining a command to the magnetoactuator \autoref{eq:ctrl_bdot}.  
 
 Following the considerations given just above, the command is always given in the form:
-\begin{empheq}{equation}
+\begin{equation}
     \label{eq:cmd}
     \boldsymbol{cmd} = [D_x \ \ D_y \ \ D_z \ \ -\Dot{h}_x \ \ -\Dot{h}_y]^T
-\end{empheq} 
+\end{equation}
 
 where $D_x$, $D_y$ and $D_z$ are the dipoles to be given by the magnetic actuators, $\Dot{h}_x$ and $\Dot{h}_y$ are the moments to be given by the reaction wheels.
 

@@ -93,10 +93,6 @@
 \newcommand{\pdev}[2]{\frac{\partial#1}{\partial#2}}
 % NB: you can also override some existing commands with the keyword \renewcommand
 
-%----------------------------------------------------------------------------
-%	ADD YOUR PACKAGES (be careful of package interaction)
-%----------------------------------------------------------------------------
-
 
 %----------------------------------------------------------------------------
 %	ADD YOUR DEFINITIONS AND COMMANDS (be careful of existing commands)
@@ -223,6 +219,7 @@
 % INDEX
 %-----------------------------------------------------------------------------
 
+\phantomsection
 {\hypersetup{linkcolor=black}\tableofcontents}
 
 \clearpage
@@ -283,10 +280,15 @@
 \input{Sections/10_control_logic}
 
 %-----------------------------------------------------------------------------
+
+\input{Sections/11_sim_results}
+
+%-----------------------------------------------------------------------------
 % BIBLIOGRAFIA
 %-----------------------------------------------------------------------------
 
 \clearpage
+\phantomsection
 \bibliography{bibliography}
 
 %-----------------------------------------------------------------------------

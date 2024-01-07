@@ -44,6 +44,7 @@
 		$\bm{y_b}$ & $[-]$ & y direction of the $\mathcal{B}$ frame \\
 		$\bm{z_b}$ & $[-]$ & z direction of the $\mathcal{B}$ frame \\
 		$\bm{\omega}$ & $[rad/s]$ & angular velocity in $\mathcal{B}$ frame \\
+		$\bm{\dot{\omega}}$ & $[rad/s]$ & angular velocity rate in $\mathcal{B}$ frame \\
 		$\bm{M_d}$ & $[Nm]$ & disturbances torque \\
 		$\bm{M_c}$ & $[Nm]$ & control torque 
 	\end{xltabular}
@@ -164,7 +165,16 @@
 	\setbox\ltmcbox\vbox{
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
-		
+		$\bm{D}$ & $[Am^{2}]$ & magnetic dipole from magnetorquers \\
+		$\bm{M}$ & $[Nm]$ & control torque \\
+		$\bm{h}$ & $[kgm^2/s]$ & angular momentum of wheels + satellite \\
+		$\bm{h_r}$ & $[kgm^2/s]$ & relative angular momentum \\
+		$\bm{\dot{h}_r}$ & $[kgm^2/s^2]$ & relative angular momentum rate \\
+		$\bm{\omega_{max}}$ & $[RPM]$ & saturation of reaction wheels \\
+		$\bm{\dot{h}_{max}}$ & $[Nm]$ & maximum available torque for reaction wheels \\
+		$\bm{\omega_r}$ & $[rad/s]$ & relative angular velocity of reaction wheel \\
+		$\bm{\dot{\omega}_r}$ & $[rad/s^2]$ & relative angular velocity rate of reaction wheel \\
+		$\sigma_\omega$ & $[RPM]$ & standard deviation on $\omega_r$
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -178,15 +188,45 @@
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
 		$\bm{B_B}$ & $[T]$ & magnetic field in $\mathcal{B}$ frame\\
-		$\bm{\hat{\dot{B_B}}}$ & $[1/s]$ & derivative of magnetic field unit direction in $\mathcal{B}$ frame \\
-		$k_{omega}$ & $[-]$ & derivative of magnetic field unit direction in $\mathcal{B}$ frame \\
+		$\bm{\dot{\hat{B}}_B}$ & $[1/s]$ & magnetic field rate unit direction in $\mathcal{B}$ frame \\
+		$k_{\omega}$ & $[kg \cdot m^2/s]$ & gain for detumbling phase \\
+		$\bm{\dot{A}_{B,N}}$ & $[1/s]$ & rate of attitude matrix \\
+		$\bm{B_N}$ & $[T]$ & magnetic field in $\mathcal{N}$ frame \\
+		$\bm{\dot{B}_N}$ & $[T/s]$ & magnetic field rate in $\mathcal{N}$ frame \\
 		$\mathcal{LVLH}$ & $[-]$ & local vertical local horizontal frame \\
-		$\bm{A_{BL}}$ & $[-]$ & error matrix between $\mathcal{B}$ and $\mathcal{LVLH}$ frame
-
+		$\bm{A_{BL}}$ & $[-]$ & error matrix between $\mathcal{B}$ and $\mathcal{LVLH}$ frame \\
+		$\xi$ & $[\deg]$ & angle between orbital plane and magnetic equator \\
+		$\bm{\epsilon}$ & $[-]$ & attitude error for non-linear control \\
+		$\bm{\omega_{BL}}$ & $[rad/s]$ & angular velocity error between $\mathcal{LVLH}$ and $\mathcal{B}$ frames \\
+		$k_1$ & $[kg \cdot m^2/s^2]$ & gain on attitude error for non-linear control \\
+		$k_2$ & $[kg \cdot m^2/s]$ & gain on angular velocity error for non-linear control \\
+		$\bm{\alpha}$ & $[rad]$ & small Euler angles between $\mathcal{B}$ and $\mathcal{LVLH}$ frame \\
+		$\bm{\dot{\alpha}}$ & $[rad/s]$ & small Euler angles rate between $\mathcal{B}$ and $\mathcal{LVLH}$ frame \\
+		$\bm{K_p}$ & $[kg \cdot m^2/s^2]$ & gain matrix on $\bm{\alpha}$ for linear control \\
+		$\bm{K_d}$ & $[kg \cdot m^2/s]$ & gain matrix on $\bm{\dot{\alpha}}$ for linear control \\
+		$K_x$ & $[-]$ & yaw inertial coefficient \\
+		$K_y$ & $[-]$ & roll inertial coefficient \\
+		$\bm{p_{open}}$ & $[1/s]$ & open-loop poles for the dynamic system \\
+		$\bm{p}$ & $[1/s]$ & closed-loop poles for the dynamic system
 	\end{xltabular}
 	\unskip
 	\unpenalty
 	\unpenalty}
 	\unvbox\ltmcbox
-	
+
+	\subsection{Simulation results}
+	\vspace{-10pt}
+	\small
+	\setbox\ltmcbox\vbox{
+	\makeatletter\col@number\@ne
+	\begin{xltabular}{\linewidth}{cc>{\raggedright\arraybackslash}X}
+		$\bm{B_m}$ & $[T]$ & measured magnetic field \\
+		$\lVert \boldsymbol{\dot{\hat{{B}}}_m} \rVert$ & $[1/s]$ & norm of rate of change of direction of $\bm{B_m}$ \\
+		$\bm{\omega_{estim}}$ & $[rad/s]$ & onboard estimation of angular velocity
+	\end{xltabular}
+	\unskip
+	\unpenalty
+	\unpenalty}
+	\unvbox\ltmcbox
+
 \end{multicols}

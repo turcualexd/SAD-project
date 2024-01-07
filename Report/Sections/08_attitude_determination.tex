@@ -1,46 +1,76 @@
 \section{Attitude determination}
 \label{subsec:attitude_det}
 
-The problem of estimating the attitude matrix from the available measurements is central to spacecraft control. To determine the attitude of the spacecraft, the sensor models introduced earlier were used. The method used to determine the attitude is the SVD method, which has been developed whitin the framework of Wahba's problem. The latter consists in finding the orthogonal matrix which  minimizes the weighted cost function
+The problem of estimating the attitude matrix from the available measurements is central to spacecraft control. To determine the attitude of the spacecraft, the sensor models introduced earlier were used. The method used to determine the attitude is the SVD method, which has been developed whitin the framework of Wahba's problem. The latter consists in finding the orthogonal matrix which minimizes the weighted cost function:
+
+\begin{equation}
+    J(\boldsymbol{A_{BN}})=\frac{1}{2}\sum_{i=1}^N\alpha_i\lVert \boldsymbol{s_i} - \boldsymbol{A_{BN}v_i} \rVert^2
+\end{equation}
+
+in which $\{\boldsymbol{s_i}\}$ is a set of the N measured unit vectors in body frame and $\{\boldsymbol{v_i}\}$ the corresponding set of unitt vectors in the inertial frame, computed using the on-board models. The set of weights $\{\alpha_i\}$ was chosen based on the relative accuracy of each sensor. It was assumed that the weight vector $\boldsymbol{\alpha}$ is normalized to 1, i.e. $\sum_{i=1}^N\alpha_i=1$. This method needs at least two available measurements, so it works also in the case that the Earth is outside the FOV of the horizon sensor.
+
+Since $\boldsymbol{A_{BN}}$ is a orthogonal matrix and $\boldsymbol{s_i}$ and $\boldsymbol{v_i}$ are unit vectors, with some simple algebraic passages, the expression of J can be rewritten as:
+
+\begin{equation}
+    J(\boldsymbol{A_{BN}})=1-\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_{BN}}\boldsymbol{v_i})
+\end{equation}
+
+The optimal solution minimizes J, therefore maximizes:
+
+\begin{equation}
+    \Tilde{J}(\boldsymbol{A_{BN}})=\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_{BN}}\boldsymbol{v_i})=Tr(\boldsymbol{A_{BN}}\boldsymbol{B}^T)
+\end{equation}
+
+where Tr is the trace operator and $\boldsymbol{B}=\sum_{i=1}^N\alpha_i\boldsymbol{s_iv_i}^T$.
+
+Since a direct solution is computationally expensive, a single value decomposition technique is used. The matrix $\boldsymbol{B}$ can be decomposed as:
 
 \begin{empheq}{equation}
-J(\boldsymbol{A_{BN}})=\frac{1}{2}\sum_{i=1}^N\alpha_i\lVert \boldsymbol{s_i} - \boldsymbol{A_{BN}v_i} \rVert^2
-\end{empheq}
-in which   $\{\boldsymbol{s_i}\}$ is a set of the N measured unit vectors in body frame and $\{\boldsymbol{v_i}\}$ the corresponding set of unitt vectors in the inertial frame, computed using the on-board models. The set of weights $\{\alpha_i\}$ was chosen based on the relative accuracy of each sensor. It was assumed that the weight vector $\boldsymbol{\alpha}$ is normalized to 1, i.e. $\sum_{i=1}^N\alpha_i=1$. This method needs at least two available measurements, so it works also in the case that the Earth is outside the FOV of the horizon sensor. \\
-Since $\boldsymbol{A_{BN}}$ is a orthogonal matrix and $\boldsymbol{s_i}$ and $\boldsymbol{v_i}$ are unit vectors, with some simple algebraic passages, the expression of J can be rewritten as: 
-
-\begin{empheq}{equation}
-J(\boldsymbol{A_{BN}})=1-\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_{BN}}\boldsymbol{v_i})
+    \boldsymbol{B}=\boldsymbol{USV}^T=\boldsymbol{U}diag([\boldsymbol{s_1} \ \ \boldsymbol{s_2} \ \ \boldsymbol{s_3}])\boldsymbol{V}^T
 \end{empheq}
 
-The optimal solution minimizes J, therefore maximizes 
+$\boldsymbol{U}$ and $\boldsymbol{V}$ are orthogonal matrices, representing the matrices of eigenvectors of $\boldsymbol{BB}^T$ and $\boldsymbol{B}^T\boldsymbol{B}$ respectively, $\boldsymbol{S}$ is the diagonal matrix containing the square roots of the eigenvalues of $\boldsymbol{B}^T\boldsymbol{B}$. The matrices can be defined as:
 
-\begin{empheq}{equation}
-\Tilde{J}(\boldsymbol{A_{BN}})=\sum_{i=1}^N\alpha_i(\boldsymbol{s_i}^T\boldsymbol{A_{BN}}\boldsymbol{v_i})=Tr(\boldsymbol{A_{BN}}\boldsymbol{B}^T)
-\end{empheq}
+\begin{equation}
+    \boldsymbol{U_{+}}=\boldsymbol{U}diag([1 \ \ 1 \ \ det(\boldsymbol{U})]) \ \ \ and \ \ \ \boldsymbol{v_{+}}=\boldsymbol{V}diag([1 \ \ 1 \ \ det(\boldsymbol{V})])
+\end{equation}
 
-where Tr is the trace operator and $\boldsymbol{B}=\sum_{i=1}^N\alpha_i\boldsymbol{s_iv_i}^T$.\\
-Since a direct solution is computationally expensive, a single value decomposition technique is used. The matrix B can be decomposed as:
+Then:
 
-\begin{empheq}{equation}
-\boldsymbol{B}=\boldsymbol{USV}^T=\boldsymbol{U}diag([\boldsymbol{s_1} \ \ \boldsymbol{s_2} \ \ \boldsymbol{s_3}])\boldsymbol{V}^T
-\end{empheq}
+\begin{equation}
+    \boldsymbol{B}=\boldsymbol{U_{+}}\boldsymbol{S'}\boldsymbol{V_{+}}^T=\boldsymbol{B}=\boldsymbol{U_{+}}diag([\boldsymbol{s_1} \ \ \boldsymbol{s_2} \ \ \boldsymbol{s_3}'])\boldsymbol{V_{+}}^T
+\end{equation}
 
-U and V are orthogonal matrices, representing the matrices of eigenvectors of $BB^T$ and $B^TB$ respectively, S is the diagonal matrix containing the square roots of the eigenvalues of $B^TB$. We can define the matrices
-$$\boldsymbol{U_{+}}=\boldsymbol{U}diag([1 \ \ 1 \ \ det(\boldsymbol{U})]) \ \ \ and \ \ \ \boldsymbol{v_{+}}=\boldsymbol{V}diag([1 \ \ 1 \ \ det(\boldsymbol{V})])$$
-Then 
-$$\boldsymbol{B}=\boldsymbol{U_{+}}\boldsymbol{S'}\boldsymbol{V_{+}}^T=\boldsymbol{B}=\boldsymbol{U_{+}}diag([\boldsymbol{s_1} \ \ \boldsymbol{s_2} \ \ \boldsymbol{s_3}'])\boldsymbol{V_{+}}^T$$
-where $$\boldsymbol{s_3'}=\boldsymbol{s_3}\det(\boldsymbol{U})\det(\boldsymbol{V})$$
-Now it can be defined the matrix W and its representation in terms of Euler axis/angle:
-$$\boldsymbol{W}=\boldsymbol{U_{+}}^T\boldsymbol{A}\boldsymbol{V_{+}}=cos\theta \boldsymbol{I_3} -sin\theta[\boldsymbol{e}\  \times]+(1-cos\theta) \boldsymbol{e}\boldsymbol{e}^T$$
-$$Tr\left(\boldsymbol{AB}^T\right)=Tr\left(\boldsymbol{WS'}\right)=\boldsymbol{e}^T\boldsymbol{S'}\boldsymbol{e} + cos\theta\left(Tr\left(S'\right)-\boldsymbol{e}^T\boldsymbol{S'e}\right)$$
-The trace is maximized for $\theta=0$, which gives $\boldsymbol{W}=\boldsymbol{I_3}$ and thus the optimal attitude matrix is
-$$\boldsymbol{A}=\boldsymbol{U_{+}V_{+}}^T=\boldsymbol{U}diag([1 \  \ \ 1 \ \ \ det(\boldsymbol{U})det(\boldsymbol{V})])\boldsymbol{V}^T$$
+where:
 
-As previously mentioned, the weights required to construct the B matrix are determined by the relative accuracy of each sensor. As no data regarding the magnetometer's accuracy in degrees was provided, the following procedure was implemented to assess its relative accuracy and assign a weight to each sensor.
-A period of three orbits was simulated, assuming to be already in the tracking phase, in order to be sure to be in the FOV of the Earth horizon sensor. During the simulation it was computed the angle $\phi$ between the ideal unit vector and the measured one. For instance, when discussing the magnetometer, $\phi$ represents the angle between the unit vector parallel to the magnetic field and the unit vector measured by the magnetometer. For each sensor $\phi$ is a random number, it were then computed the expected value and the standard deviation with the formulas reported below
-$$E[\phi]=\frac{1}{3T}\int_{0}^{3T}\phi dt \ \ \ \  \ \ \ \ \sigma_{\phi}^2=\frac{1}{3T}\int_{0}^{3T}(\phi - E[\phi])^2 dt \ \ \ \ \ \ \ \ \sigma_{\phi}=\sqrt{\sigma_{\phi}^2}$$
-where T is the period of the orbit. The integrals were evaluated numerically. The results obtained are reported in \autoref{table:exp_std}
+\begin{equation}
+    \boldsymbol{s_3'}=\boldsymbol{s_3}\det(\boldsymbol{U})\det(\boldsymbol{V})
+\end{equation}
+
+Now it can be defined the matrix $\boldsymbol{W}$ and its representation in terms of Euler axis/angles:
+
+\begin{equation}
+    \boldsymbol{W}=\boldsymbol{U_{+}}^T\boldsymbol{A}\boldsymbol{V_{+}}=cos\theta \boldsymbol{I_3} -sin\theta[\boldsymbol{e}\  \times]+(1-cos\theta) \boldsymbol{e}\boldsymbol{e}^T
+\end{equation}
+
+\begin{equation}
+    Tr\left(\boldsymbol{AB}^T\right)=Tr\left(\boldsymbol{WS'}\right)=\boldsymbol{e}^T\boldsymbol{S'}\boldsymbol{e} + cos\theta\left(Tr\left(\boldsymbol{S'}\right)-\boldsymbol{e}^T\boldsymbol{S'e}\right)
+\end{equation}
+
+The trace is maximized for $\theta=0$, which gives $\boldsymbol{W}=\boldsymbol{I_3}$ and thus the optimal attitude matrix is:
+
+\begin{equation}
+    \boldsymbol{A}=\boldsymbol{U_{+}V_{+}}^T=\boldsymbol{U}diag([1 \  \ \ 1 \ \ \ det(\boldsymbol{U})det(\boldsymbol{V})])\boldsymbol{V}^T
+\end{equation}
+
+As previously mentioned, the weights required to construct the $\boldsymbol{B}$ matrix are determined by the relative accuracy of each sensor. As no data regarding the magnetometer's accuracy in degrees was provided, the following procedure was implemented to assess its relative accuracy and assign a weight to each sensor.
+A period of three orbits was simulated, assuming to be already in the tracking phase, in order to be sure to be in the FOV of the Earth horizon sensor. During the simulation it was computed the angle $\phi$ between the ideal unit vector and the measured one. For instance, when discussing the magnetometer, $\phi$ represents the angle between the unit vector parallel to the magnetic field and the unit vector measured by the magnetometer. For each sensor $\phi$ is a random number, it was then computed the expected value and the standard deviation with the formulas reported below:
+
+\begin{equation}
+    E[\phi]=\frac{1}{3T}\int_{0}^{3T}\phi dt \ \ \ \  \ \ \ \ \sigma_{\phi}^2=\frac{1}{3T}\int_{0}^{3T}(\phi - E[\phi])^2 dt \ \ \ \ \ \ \ \ \sigma_{\phi}=\sqrt{\sigma_{\phi}^2}
+\end{equation}
+
+where $T$ is the period of the orbit. The integrals were evaluated numerically. The results obtained are reported in \autoref{table:exp_std}:
 
 \begin{table}[H]
 
@@ -62,7 +92,7 @@ where T is the period of the orbit. The integrals were evaluated numerically. Th
     
 \end{table}
 
-Basing on the previous results, it were chosen the weights reported in the next \autoref{table:weights}
+Basing on the previous results, it were chosen the weights reported in \autoref{table:weights}:
 
 \begin{table}[H]
 
@@ -73,7 +103,7 @@ Basing on the previous results, it were chosen the weights reported in the next 
     \hline
     $\bm{Magnetometer}$ & $0.80$ & $0.80$  \\
     \hline
-    $\bm{Sun\;Sensor}$ & $0.15$ & $0.2$  \\
+    $\bm{Sun\;Sensor}$ & $0.15$ & $0.20$  \\
     \hline
     $\bm{Earth\;Sensor}$ & $0.05$ & $\bm{-}$  \\
     \hline

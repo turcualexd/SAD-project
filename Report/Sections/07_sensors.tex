@@ -2,7 +2,7 @@
 \label{sec:sensors}
 
 Sensors are fundamental tools that allows the SC to know its orientation or angular velocity. Their presence onboard 
-is fundamental for having a controlled motion of the satellite. In this section, the 3 sensors used will be presented, 
+is fundamental for having a controlled motion of the satellite. In this section the three sensors used will be presented, 
 it will be also clarified the motivation that lead the team to choose two additional sensors over the horizon sensor 
 assigned. 
 
@@ -43,7 +43,7 @@ This unit vector is the input of the sensor block, here it is sampled through a 
 It was decided to model two typical effects of real sensor: the mounting error that cause misalignment and also an 
 accuracy error modeled with a band-limited white noise on all the components of the direction vector.
 Chronologically, first the misalignment is calculated, then the noise is introduced:
-\begin{itemize}
+\begin{itemize}[wide,itemsep=3pt,topsep=3pt]
     \item The misalignment error was computed on Simulink by introducing a small deviation with respect to the nominal condition. This can
     be done by adding a small-scaled vector in the direction perpendicular of the unit vector that has to be measured. The scaling of 
     this vector has to be small with respect to the unit direction considered as the measurment. Since the vector of the measured 
@@ -60,7 +60,7 @@ Due to the LEO orbit and seen that from \autoref{subsec:sim_disturbances} the ma
 it was thought that a magnetometer could have been a sensor to implement on-board the satellite. This kind of sensor are in general less accurate 
 than optical sensor as sun sensor or star sensor, but since the magnetic field of LEO orbit is effectively enough strong, the sensor can provide 
 always a measurment. Also, having a magnetorquer assigned as mandatory, the coupling of this actuator with a magnetometer can be exploited during 
-the de-tumbling manuever since a direct dipole command is produced by the so-called \textit{B-dot Control}, extensively discussed in section (...)
+the de-tumbling manuever since a direct dipole command is produced by the so-called \textit{B-dot Control}, extensively discussed in \autoref{subsec:detumbling}.
 
 The fluxgate magnetometer typology is used, where for each body axis, two ferromagnetic cores are used parallel to the specific axis. The primary coil 
 saturates the two bars alternatively in opposite direction, so that the secondary output theoretically can read a null induced voltage output produced 
@@ -68,8 +68,7 @@ by the time-varying flux. When external field is present, the symmetry of the al
 secondary coil is produced. This net flux can be read by the time-history of a voltmeter on the secondary coil, since the spacing of the measured output
 voltage depends on the external magnetic field value. 
 
-Since magnetometer are usually characterized by low accuracy values, we searched for a high-accuracy and low-noise typology. The research of a suitable
-sensor opted for \textit{MM200} furnished by \textit{AAC ClydeSpace}. The following performance paramters characterize the sensor \cite{magnetometer_site}:
+Since magnetometer are usually characterized by low accuracy values, a deep search has been conducted to find a high-accuracy and low-noise typology. A suitable sensor is the \textit{MM200} furnished by \textit{AAC ClydeSpace}. The following performance paramters characterize the sensor:
 
 \begin{table}[H]
 
@@ -78,7 +77,7 @@ sensor opted for \textit{MM200} furnished by \textit{AAC ClydeSpace}. The follow
     \hline
      $\bm{N.S.D \, [nT/\sqrt{Hz}]}$ & $\bm{Frequency \, [Hz]}$ \\
     \hline
-    $1.18$ & $<500$  \\
+    $1.18$ & $30$  \\
     \hline
     \end{tabular}
     
@@ -90,7 +89,7 @@ sensor opted for \textit{MM200} furnished by \textit{AAC ClydeSpace}. The follow
 For the Simulink model, the same approach of the Horizon sensor in \autoref{subsec:horizon_sensor} has been used. In particular, the magnetic fiel vector
 from the block of \autoref{subsec:dist_mag} has been trasnformed into the $\mathcal{B}$ reference frame through the attitude matrix from the true kinematics 
 block \autoref{sec:kinematics}. This is the input vector that has to be sampled with a frequency specified by \autoref{table:mag_sensor}. For this case a range
-of frequencies can be chosen: we used the same frequency of the horizon sensor from \autoref{table:Hor_sensor} since it respects the constraint 
+of frequencies can be chosen: it was used the same frequency of the horizon sensor from \autoref{table:Hor_sensor} since it respects the constraint 
 given by the magnetometer requirments. 
 
 Then the measurments errors have to be added, a first misalignment error modeled in the same way of the horizon sensor in \autoref{subsec:horizon_sensor}. For this case the perpendicular
