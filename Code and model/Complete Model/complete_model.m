@@ -23,8 +23,10 @@ a    = 6.851221970532768e+03;
 e    = 0.001830122216180;
 i    = 1.699980862034725;
 om   = 1.772848103192913;
-OM   = 0.554268509489784;
-th_0 = 3.109851878856139;
+%OM   = 0.554268509489784;
+OM = 0;
+%th_0 = 3.109851878856139;
+th_0 = 0;
 n    = sqrt(mu/a^3);
 T    = 2*pi/n;
 
@@ -45,8 +47,15 @@ rs = -rr;
 
 %--------------------Dynamics and Kinematics subsystems--------------------
 
-omega0  = 0.06 * ones(3,1);
+omega0  = -0.06 + 0.12 * rand(3,1);
+% s0 = [5.11905989575681;
+%      5.69125859039527;
+%      0.797881698340871];
 s0      = 2*pi*rand(3,1);
+% omega0  = [1e-6; 1e-6; n];
+% 
+% s0     = [2.099, -0.2003, -1.703];
+load('init_cond.mat')
 
 tol     = 0.2;  % tolerance for kinematic switch 312 - 313 and viceversa
 
@@ -92,7 +101,7 @@ bias_mag     = bias_mag./norm(bias_mag);
 freq_sun     = 30; 
 bias_sun     = rand(3,1);
 bias_sun     = bias_sun./norm(bias_sun);
-variance_sun = deg2rad(0.5)^2;
+variance_sun = deg2rad(0.3)^2;
 pwr_sd_sun   = (1/freq_sun)*variance_sun;
 
 % Earth Sensor - Meisei Electric
@@ -100,7 +109,7 @@ freq_earth     = 30;
 FOV_earth      = deg2rad(33);   
 bias_earth     = rand(3,1);
 bias_earth     = bias_earth./norm(bias_earth);
-variance_earth = deg2rad(0.5)^2;
+variance_earth = deg2rad(1)^2;
 pwr_sd_earth   = (1/freq_earth)*variance_earth;
 %--------------------------------------------------------------------------
 
@@ -108,9 +117,12 @@ freq_acds = 30;
 
 %---------------------------Att. Determination-----------------------------
 
-alpha1 = 0.4;
-alpha2 = 0.1;
-alpha3 = 0.5;
+alpha1 = 0.05;
+alpha2 = 0.15;
+alpha3 = 0.8;
+
+alpha12 = 0.2; 
+alpha22 = 0.8;
 
 %-------------------------------Actuators----------------------------------
 
@@ -180,3 +192,147 @@ k_gain  = (4*pi/T) * (1 + sin(chsi)) * I1_retr;
 % eig(A)
 % 
 % eig(A - B * K)
+
+load("bias_good.mat")
+%load("bias_bad.mat")
+
+out = sim("Loop_model.slx");
+
+%%
+clc
+close all;
+t = out.tout;
+omega = out.omega;
+omega = squeeze(omega);
+Mc = squeeze(out.Mc);
+alpha = squeeze(out.alpha);
+Abl = out.Abl;
+Bm_dot = out.Bm_dot;
+Bm_dot = squeeze(Bm_dot);
+Bm_dot_norm = vecnorm(Bm_dot);
+Bb = squeeze(out.Bb);
+omega_stim = squeeze(out.omega_stim);
+
+alpha_dot = nan(size(alpha,1), size(alpha,2));
+for i = 1:size(alpha,1)
+    alpha_dot(i,:) = omega(:,i) - Abl(:,:,i) * [0 0 n].';
+end
+
+alpha = rad2deg(alpha);
+alpha_dot = rad2deg(alpha_dot);
+
+t_slew = t(length(t)-size(omega_stim,1)+1:end);
+t_slew_sim = out.t_slew_sim;
+
+err_omega = vecnorm(omega_stim.' - omega(:,length(t)-size(omega_stim,1)+1:end));
+
+flag = squeeze(out.flag);
+
+rwx = squeeze(out.wheel_x);
+rwy = squeeze(out.wheel_y);
+D = squeeze(out.D);
+
+% % omega
+% figure
+% hold on
+% grid on
+% plot(t/T, omega, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\omega$ [rad/s]', 'Interpreter', 'latex')
+% legend('$\omega_x$', '$\omega_y$', '$\omega_z$', 'Detumbling end time', 'Interpreter', 'latex')
+% 
+% % Bm_dot_norm_hat
+% figure
+% hold on
+% grid on
+% plot(t/T, Bm_dot_norm, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$||\dot{\hat{B}}_m||$ [1/s]', 'Interpreter', 'latex')
+% legend('','Detumbling end time')
+% 
+% % alpha
+% figure
+% hold on
+% grid on
+% plot(t/T, 0.5*alpha, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\alpha [deg]$', 'Interpreter', 'latex')
+% legend('$\alpha_x$', '$\alpha_y$', '$\alpha_z$', 'Detumbling end time', 'Interpreter', 'latex')
+% 
+% % alpha zoom
+% figure
+% hold on
+% grid on
+% plot(t/T, 0.5*alpha, 'LineWidth', 1.5)
+% xlim([1 2])
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\alpha [deg]$', 'Interpreter', 'latex')
+% legend('$\alpha_x$', '$\alpha_y$', '$\alpha_z$', 'Interpreter', 'latex')
+% 
+% % omega_bl
+% figure
+% hold on
+% grid on
+% plot(t/T, alpha_dot, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\omega_{BL} [deg/s]$', 'Interpreter', 'latex')
+% legend('$\omega_{BL,x}$', '$\omega_{BL,y}$', '$\omega_{BL,z}$', 'Detumbling end time', 'Interpreter', 'latex')
+% 
+% % omega_bl zoom
+% figure
+% hold on
+% grid on
+% plot(t/T, alpha_dot, 'LineWidth', 1.5)
+% xlim([1 2])
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$\omega_{BL} [deg/s]$', 'Interpreter', 'latex')
+% legend('$\omega_{BL,x}$', '$\omega_{BL,y}$', '$\omega_{BL,z}$', 'Interpreter', 'latex')
+% 
+% % error estimated omega
+% figure
+% hold on
+% grid on
+% plot(t_slew_sim/T, err_omega, 'LineWidth', 1.5)
+% xlim([t_slew_sim(1)/T 2])
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('error [rad/s]', 'Interpreter', 'latex')
+
+% % torque
+% figure
+% hold on
+% grid on
+% plot(t/T, Mc, 'LineWidth', 1.5)
+% xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% plot(t_slew/T, (flag+7)*1e-4, 'LineWidth', 1.5)
+% xlabel('Periods of orbit', 'Interpreter', 'latex')
+% ylabel('$M_c$ [Nm]', 'Interpreter', 'latex')
+% legend('$M_{c,x}$', '$M_{c,y}$', '$M_{c,z}$', 'Detumbling end time', 'Control flag', 'Interpreter', 'latex')
+
+% reaction wheels
+figure
+hold on
+grid on
+plot(t/T, rwx, 'LineWidth', 1.5)
+plot(t/T, rwy, 'LineWidth', 1.5)
+xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+% yline(w_sat, 'b--', 'LineWidth', 1.5)
+% yline(-w_sat, 'b--', 'LineWidth', 1.5)
+xlabel('Periods of orbit', 'Interpreter', 'latex')
+ylabel('$\omega_{RW} [rad/s]$', 'Interpreter', 'latex')
+legend('$\omega_{RW,x}$', '$\omega_{RW,y}$', 'Detumbling end time', 'Interpreter', 'latex')
+
+% dipole
+figure
+hold on
+grid on
+plot(t/T, D, 'LineWidth', 1.5)
+xline(t_slew(1)/T, 'r--', 'LineWidth', 1.5)
+yline(max_dip, 'b--', 'LineWidth', 1.5)
+yline(-max_dip, 'b--', 'LineWidth', 1.5)
+xlabel('Periods of orbit', 'Interpreter', 'latex')
+ylabel('D [Am$^2$]', 'Interpreter', 'latex')
+legend('$D_x$', '$D_y$', '$D_z$', 'Detumbling end time', 'Saturation limits', 'Interpreter', 'latex')

@@ -1,0 +1,256 @@
+\section{Control logic}
+\label{sec:control_logic}
+
+The control logic of the satellite is implemented on the computer that handle all the on-board calculations. In particular, all the data from the in-FOV sensors has to be 
+gathered. Then, based on the mission phase, the necessary control has to be calculated and the commands have to be sent to the system of actuators. The necessary control calculation is 
+discussed in this section. Clearly, every phase of the mission is different, this is due to the mission requirements (i.e. detumble or pointing) or to the physical 
+equations that describe the problem (linear or non-linear). Moreover, when a phase of the mission has to be analyzed and a control applied for it, all the possibilities and limitations 
+coming from sensors and actuators have to be evaluated. As a consequence, the design of a control logic is strictly related to the implementation of the actuators in the system, since
+even though a perfect control $\boldsymbol{u}$ can be designed by placing the fastest poles (in the linear case), the actuators' system would be highly and would not be able 
+to perform the requested torque. As a consequence, it is important to bear in mind when designing the control logic the kind of actuators that will be used.
+
+In the case under analysis, the magnetorquers have some useful and powerful properties, as seen in \autoref{subsec:magnetorquers}. In particular when they are coupled with a magnetometer, the theory tells that
+the de-tumbling phase can be easily implemented \cite{bdot}. On the other side, the control for a direction pointing (i.e. Nadir), in the case of magnetorquer is more difficult due to the unpleasant
+underactuation property of these magnetic systems. Indeed, considering the equation of the actuator for the magnetorquer and implementing that into the system equations would result into a istantanteously
+uncontrollable system as cited in \cite{lovera}. Nevertheless, by following the steps presented in \cite{lovera}, a fully magnetic-actuated control could be reached but not without some 
+effort and drawbacks. In order not to complicate the next discussion, it was chosen the take into consideration two reaction wheels as a secondary actuation system.
+
+In the next subsections the logic implemented in the Simulink environment will be presented, then more specific considerations on the actuators will be clarified.
+
+
+\subsection{De-tumbling phase: the B-dot control}
+\label{subsec:detumbling}
+
+The de-tumbling phase is performed immediately after the release of the spacecraft by the launcher. At this moment the angular velocity is random and depends
+on the launcher motion, and the attitude is also unknown. In order to make the satellite ready to enter in the operational regime so that it can start the 
+pointing phase, the spacecraft must be de-tumbled. This means to create a control capable of decelerating the rotational velocities and 
+fetch them to arbitrarly small values. 
+
+A frequently adopted solution on magnetic-actuated satellites is to implement the so-called \textit{B-dot control}. This method exploits magnetic measurements 
+to produce a direct magnetic dipole command to the magnetorquer that leads to arbitrarly small values of $\boldsymbol{\omega}$.
+Even though the magnetorquers have some problematics (as discussed in \autoref{subsec:magnetorquers}), Avanzini et al. \cite{bdot} demonstrated that asymptotic stability can 
+be reached using only a magnetorquer and a magnetometer through the following law:
+
+\begin{empheq}{equation}
+    \label{eq:ctrl_bdot}
+    \boldsymbol{D} = - \frac{k_{\omega}}{\lVert \boldsymbol{B}_B \rVert} \dot{\hat{\boldsymbol{B}}}\boldsymbol{_B}
+\end{empheq}
+
+The idea of this kind of command is that the variation in magnetic field $\boldsymbol{B}$ in the $\mathcal{B}$ frame can be written as:
+
+\begin{empheq}{equation}
+    \label{eq:b_dot}
+    \dot{\boldsymbol{B}}_B = \frac{d\left( \boldsymbol{A}_{B,N}\boldsymbol{B}_N \right)}{dt} = 
+    \dot{\boldsymbol{A}}_{B,N}\boldsymbol{B}_N + \boldsymbol{A}_{B,N}\dot{\boldsymbol{B}}_N \approx \dot{\boldsymbol{A}}_{B,N}\boldsymbol{B}_N 
+    = - \left[ \boldsymbol{\omega} \times \right]\boldsymbol{A}_{B,N} \boldsymbol{B}_N = - \left[ \boldsymbol{\omega} \times \right]\boldsymbol{B}_B
+\end{empheq}
+
+The approximation symbol is due to the fact that when $\omega >> 1$, the variation of the magnetic field vector in $\mathcal{B}$ frame is mainly 
+due to the rotation of the frame and less due to the changing of $\boldsymbol{B}_N$ (that is caused by the evolution of the orbital position and other slow
+variations due to geomagnetic field). With the above equation it was demonstrated that $\boldsymbol{\omega}$ and $\dot{\boldsymbol{B}}$ are strictly related, so making the control
+law proportional to $\dot{\boldsymbol{B}}$ would be similar to make it proportional to $\boldsymbol{\omega}$ (like the 'standard' de-tumbling law). 
+This mathematical considerations imply that for a detumbling law, itis sufficient to have a magnetometer and a magnetorquer without a direct measurement of the angular
+velocity obtainable by a gyroscope. Another positive consequence of having a proportional law that produces directly a magnetic dipole $\boldsymbol{D}$ is that the command is directly 
+made as an input of the actuator (without inverting any actuator law). It is important to underline that this kind of law would work at his best when angular velocity is high 
+enough to make the assumption of \autoref{eq:b_dot} true. 
+In theory the actuated torque is:
+\begin{empheq}{equation}
+    \label{eq:m_c}
+    \boldsymbol{M_c} = - \frac{k_{\omega}}{\lVert \boldsymbol{B}_B \rVert} \dot{\hat{\boldsymbol{B}}}\boldsymbol{_B}\times \boldsymbol{B_B} 
+\end{empheq}
+It can be noticed that when $\omega >> 1$, \autoref{eq:b_dot} becomes more and more accurate, and so $\boldsymbol{B}_B$ and $\dot{\hat{\boldsymbol{B}}}\boldsymbol{_B}$ are perpendicular, resulting 
+in the maximum actuable control torque.
+
+Regarding the control law in \autoref{eq:ctrl_bdot}, note that the vector derived is not the derivative of the magnetic field vector, but it is the derivative of the unit vector of the magnetic field. It is important to notice that all the vectors in the above relationship are expressed in $\mathcal{B}$ frame, since the magnetic 
+field vector $\boldsymbol{B}$ comes from the magnetometer.
+
+In the context of the simulation environment on Simulink, the formulation chosen for the B-dot control comes from \cite{bdot}. Some precautions have to be taken
+when implementing the law, since the numerical derivative of a measured (hence noisy) signal has to be performed. This inconvenience can be overcome by using a low-pass filter \cite{crass_book}.
+In Simulink, a discrete low-pass Butterworth filter of the 1st order has been used just after the discrete derivative block.
+Setting the cut-off frequency on 0.06 rad/s the signal is pretty clean and the results of simulation are coherent.
+Moreover, the gain value $k_{\omega}$ has to be defined. Avanzini et al.\cite{bdot} extensively discusses this parameter and propose a method for its characterization. The indicative formula is the following:
+
+\begin{equation}
+    k_{\omega} = 2n (1 + \sin{\xi}) \min{\left( I_x, I_y, I_z \right)}
+\end{equation}
+
+Where $n$ represent the mean motion of the orbit, $\xi$ the inclination of the orbit with respect to the magnetic equator. Notice that  during the detumbling the inertia moments are all equal (\autoref{eq:undep_matrix}). The value obtained is:
+\begin{equation*}
+    k_{\omega} = 0.0363 \; kg\cdot m^2s^{-1}
+\end{equation*}
+
+
+
+\subsection{Slew and Nadir pointing phases}
+\label{subsec:slew_subsec}
+
+\subsubsection{Control law for the Slew and Tracking Manoeuvre}
+\label{subsubsec:slew_nadir_law}
+
+The goal for the control system in this phase is to track the $\mathcal{LVLH}$ frame. In order to obtain the right alignment between the frames, both the attitude error and the angular velocity error should go to zero. Indeed, the tracking of $\mathcal{LVLH}$ frame not only means to reduce the error angles but also to arrive at the aligned condition with the correct angular velocity in order to not overshoot the correct position. The attitude error matrix is $\boldsymbol{A_{BL}}$, which leads from the $\mathcal{LVLH}$ to the body frame, and the goal is to make it close to the identity matrix. For this reason, the extra diagonal terms have to be close to zero, so the error vector was defined as:
+
+\begin{equation}
+    \boldsymbol{\epsilon}=(\boldsymbol{A_{BL}}^T- \boldsymbol{A_{BL}})^V
+\end{equation}
+
+The $[\cdot]^V$ operator is the inverse of $[\cdot \; \times]$, so it maps a skew-symmetric matrix back to its generating vector. 
+The angular velocity error was defined as:
+
+\begin{equation}
+    \label{eq:omega_bl_vec}
+    \boldsymbol{\omega_{BL}}=\boldsymbol{\omega}-\boldsymbol{A_{BL}}[0 \ \ 0 \ \ n]^T
+\end{equation}
+
+For the case under analysis, in which the orbit is slightly elliptical, it would have been more precise to use the true anomaly rate $\dot{theta}$ instead of the mean motion $n$ in \autoref{eq:omega_bl_vec}. It was used $n$ for simplicity, this doesn't affect the performance of the controller since the orbit is almost circular.  
+$\boldsymbol{\omega}$ was obtained by taking the numerical derivative of the matrix $\boldsymbol{A_{BN}}$ computed by the attitude determination algorithm, and then inverting the formula:
+
+\begin{equation}
+    \boldsymbol{\dot{A}_{BN}} = -[\boldsymbol{\omega} \times] \boldsymbol{A_{BN}}
+\end{equation}
+
+Since $\boldsymbol{A_{BN}}$ is affected by noise, taking its derivative numerically amplifies it, leading to a bad estimation of the angular velocity. Therefore a discrete lowpass Butterworth filter was applied before the computation of $\boldsymbol{\omega}$. This was set as a 1st order filter with cut-off frequency at 1 rad/s. Once computed $\boldsymbol{\alpha}$ and $\boldsymbol{\omega}_{BL}$, a suitable control law is:
+
+\begin{equation}
+    \boldsymbol{M}_c=-k_1\boldsymbol{\epsilon}-k_2\boldsymbol{{\omega}_{BL}}
+\end{equation}
+
+This kind of control law is inspired by the linear full-state feedback control  $\boldsymbol{u} = -\boldsymbol{kx} $. In particular, it refers to the linearized Euler equations in which a set of three Euler angles $\boldsymbol{\alpha}$ is introduced. This set of small angles represent the misalignment between $\mathcal{B}$ and $\mathcal{LVLH}$ frames. When this linearization is made, the state $\boldsymbol{x}$ for the state-space formulation contains both $\boldsymbol{\alpha}$ and $\dot{\boldsymbol{\alpha}}$. If $\boldsymbol{u} = -\boldsymbol{kx} $ is implemented with that state, the control law becomes a \textit{Proportional-Derivative} control, in the form:
+
+\begin{equation}
+    \boldsymbol{M}_c=-\boldsymbol{K_p}\boldsymbol{\alpha}-\boldsymbol{K_d}\dot{\boldsymbol{\alpha}}
+\end{equation}
+
+Since the linear control theory allows to use different metholodogies to calculate the gains matrices $\boldsymbol{K_p}$ and $\boldsymbol{K_d}$, the linearized control law was firstly analyzed. In particular, the pole placement technique was used, on the following state-space representation of the system:
+
+\begin{equation}
+    \begin{tabular}{c c c c c}
+        $\begin{dcases}
+            \dot{\boldsymbol{x}} = \boldsymbol{Ax} + \boldsymbol{Bu} \\
+            \boldsymbol{y}       = \boldsymbol{Cx} + \boldsymbol{Du} \\
+        \end{dcases}$
+        & &
+        $\boldsymbol{A} =
+        \begin{bmatrix}
+            0 & (1-K_x)n & 0 & -n^2K_x & 0 & 0 & \\   
+            (K_y-1)n & 0 & 0 & 0 & -n^2K_y & 0 & \\   
+            0 & 0 & 0 & 0 & 0 & 0 & \\   
+            1 & 0 & 0 & 0 & 0 & 0 & \\   
+            0 & 1 & 0 & 0 & 0 & 0 & \\   
+            0 & 0 & 1 & 0 & 0 & 0 &
+        \end{bmatrix}$
+        & &
+        $\boldsymbol{B}=
+        \begin{bmatrix}
+            \frac{1}{I_x} & 0 & 0 \\
+            0 & \frac{1}{I_x} & 0 \\
+            0 & 0 & \frac{1}{I_x} \\
+            0 & 0 & 0 \\   
+            0 & 0 & 0 \\
+            0 & 0 & 0
+        \end{bmatrix}$
+    \end{tabular}
+\end{equation}
+
+The first equation of the system represent the state space dynamics, which can be studied for the stability properties, while the second one represents the output coming from the sensors. The open-loop poles calculated for this system were:
+\begin{equation}
+    \boldsymbol{p_{open}} =
+    \begin{bmatrix}
+        0 \pm 0.0011i \\   
+        0 \pm 0.0002i \\   
+        0
+    \end{bmatrix}
+\end{equation}
+
+The gain matrix $\boldsymbol{K} = [\boldsymbol{K_d} \; \boldsymbol{K_p}]$ was assesed through the MATLAB \textit{place(A,B,p)} function, which requires the state-space matrices $\boldsymbol{A}$ and $\boldsymbol{B}$, and also the desired closed-loop poles $\boldsymbol{p}$. At this point, this vector of six poles must be hypotized. Some precautions must be taken when the poles are decided:
+\begin{itemize}[wide,itemsep=3pt,topsep=3pt]
+    \item closed-loop poles shall not be too far from the corresponding open-loop poles, since there are constraints on the capabilities of the actuators;
+    \item the real part of the closed-loop poles must be negative in order to guarantee asymptotic stability;
+    \item the imaginary part of the poles should be decided in order to minimize the overshoot.
+\end{itemize}
+The chosen poles were: 
+\begin{equation}
+    \boldsymbol{p} =
+    \begin{bmatrix}
+        -0.02 \pm 0.1i \\   
+        -0.01 \pm 0.06i \\   
+        -0.05 \pm 0.1i
+    \end{bmatrix}
+\end{equation}
+
+The gain matrix can be used for the linear-control law. For simplicity, it wasn't used a matrix for the non-linear control but only a scalar. In particular, it was kept the order of magnitude coming from the gain matrix of the linear control just calculated.
+The values for the gains were then refined with trial and error. The response of the system was satisfactory with the following values:
+
+\begin{equation*}
+	k_1 = 0.001 \; kg \cdot m^2 s^{-2}\qquad
+	k_2 = 0.6   \; kg \cdot m^2 s^{-1} 
+\end{equation*}
+
+
+\subsubsection{Actuators' command logic for Slew and Nadir pointing}
+\label{subsubsec:act_cmd_logic}
+
+Once the control torque $\boldsymbol{M_c}$ has been calculated, a logic was implemented to translate it into a command to be sent to the actuators. Magnetic actuators generate the torque with the formula
+\begin{empheq}{equation}
+    \label{eq:act}
+    \boldsymbol{M} = - [\boldsymbol{B} \times] \boldsymbol{D}
+\end{empheq}
+
+where $[\boldsymbol{B} \times]$ is the skew symmetric matrix obtained applying the $[\cdot \ \times] $ operator to the magnetic field vector in body frame, measured by the magnetometer.
+However, it is not possible to compute $\boldsymbol{D}$ by inverting \autoref{eq:act} because $[\boldsymbol{B} \times]$ is singular. This reflects the fact that is never possible to generate three independents components of the control torque since $\boldsymbol{M}$ is always perpendicular to both $\boldsymbol{D}$ and $\boldsymbol{B}$. One possible solution is to add one or more reaction wheels.
+
+It was chosen to add two reaction wheels, one along $\boldsymbol{x_B}$ and one along $\boldsymbol{y_B}$ in $\mathcal{B}$ frame. This is because, as it is shown in \autoref{eq:syst1} and \autoref{eq:syst2}, when only one reaction wheel is used, the matrix of the linear system becomes singular when the component of the magnetic field aligned with the reaction wheel is zero. As shown in \autoref{fig:mag_field}, all components of the magnetic field will go to zero at a certain point.
+
+If just one reaction wheel would be used, it should be deactivated when the respective component of $\boldsymbol{B}$ goes to 0. This would mean that for certain times the only actuator that could operate would be the magnetorquer. This would lead 
+to the undeterminate problem of defining a command to the magnetorquer, as seen in \autoref{eq:ctrl_bdot}
+
+Following the considerations just given, the command is always given in the form:
+\begin{equation}
+    \label{eq:cmd}
+    \boldsymbol{cmd} = [D_x \ \ D_y \ \ D_z \ \ -\Dot{h}_x \ \ -\Dot{h}_y]^T
+\end{equation}
+
+where $D_x$, $D_y$ and $D_z$ are the dipoles to be given by the magnetic coils, $\Dot{h}_x$ and $\Dot{h}_y$ are the moments to be given by the reaction wheels.
+
+Only one reaction wheel is used at a time, they are never used together. A logic was implemented to choose which reaction wheel to use. It consists in an if/else construct, implemented in Simulink through two enabled subsystems, which takes as condition $|B_x|\geq 10^{-5} \ T$.
+If the condition is satisfied, the reaction wheel along x is used and the linear system reported below is solved:
+\begin{equation}
+\label{eq:syst1}
+\begin{aligned} 
+    \begin{bmatrix}
+        1 & B_z & -B_y \\
+        -B_z & 0 & B_x \\
+        B_y & -B_x & 0 
+    \end{bmatrix}\begin{bmatrix}
+        -\Dot{h}_x \\
+        D_y \\
+        D_z
+    \end{bmatrix} &=\begin{bmatrix}
+        M_x \\
+        M_y \\
+        M_z
+    \end{bmatrix}
+\end{aligned}
+\end{equation}
+
+ The command vector is assembled as indicated in \autoref{eq:cmd} by taking the solution \autoref{eq:syst1} and setting to zero $D_x$ and $\Dot{h}_y$.  If the condition is not satisfied, the reaction wheel along y is used, the linear system to be solved is 
+\begin{equation}
+ \label{eq:syst2}
+ \begin{aligned} 
+    \begin{bmatrix}
+        0 & B_z & -B_y \\
+        -B_z & 1 & B_x \\
+        B_y & -B_x & 0 
+    \end{bmatrix}\begin{bmatrix}
+        D_x \\
+        -\Dot{h}_y \\
+        D_z
+    \end{bmatrix} &=\begin{bmatrix}
+        M_x \\
+        M_y \\
+        M_z
+    \end{bmatrix}
+  \end{aligned}
+\end{equation}
+  and the command vector is assembled as indicated in \autoref{eq:cmd} by taking the solution of \autoref{eq:syst2} and setting to zero $D_y$ and $\Dot{h}_x$. The idea behind this kind of logic was to be always able to compute the command vector. Indeed, the matrix of \autoref{eq:syst1} is singular when $B_x=0 \ T$ and the matrix of \autoref{eq:syst2} is singular when $B_y= 0 \ T$. It is clear that, using this kind of logic, it is always possible to compute a command to be sent to the actuators. The assumption that was made is that, at every instant of time, at least one of $B_x$ and $B_y$ is non-zero. Looking at the graph in \autoref{fig:mag_field}, it can be noticed that, when $B_x$ is zero, $B_y$ is far from zero and vice-versa. It wasn't chosen to put the second reaction wheel along z axis because, as it is shown in the graph reported in the same figure, $B_z$ is always around the zero value. That condition would generate a high-valued command to the reaction wheels and to the dipoles. Hence, the saturation would happen earlier.
+
+\cfig{B_forRW}{Magnetic Field in $\mathcal{B}$ frame}{mag_field}{0.8}

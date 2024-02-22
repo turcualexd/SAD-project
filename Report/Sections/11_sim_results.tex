@@ -1,0 +1,58 @@
+\section{Simulation results}
+\label{sec:sim_results}
+
+In the present section, the results of the simulation will be presented and discussed. The simulation was executed for a period of two complete orbits in order to observe all the three main phases of the satellite's mission. It was started from random initial conditions on both angular velocity $\boldsymbol{\omega}$ and Euler angles $\boldsymbol{s_0}$.
+The $\boldsymbol{\omega}$ components were limited in range $-0.06 \div 0.06 \; \text{rad/s}$, while $\boldsymbol{s}$ components were in range $0 \div 2 \pi \; \text{rad}$.
+
+Since the final mission of the satellite is Nadir pointing, particular attention is posed on the values of some physical quantities, in particular:
+
+\begin{itemize}[wide,itemsep=3pt,topsep=3pt]
+    \item $\boldsymbol{\omega}$ and $\lVert \boldsymbol{\dot{\hat{{B}}}_m} \rVert$ for the detumbling phase;
+    \item $\boldsymbol{\alpha}$ and $\boldsymbol{\omega_{BL}}$ for the slew and tracking phase, where $\boldsymbol{\alpha} = \frac{1}{2} \left(   \boldsymbol{A_{BL}^T - A_{BL}} \right)^V$.
+\end{itemize}
+
+Furthermore, from the satellite operational point of view, some other physical quantities are relevant, such as the control torques $\boldsymbol{M_c}$. In addition, the angular velocities of the reaction wheels and the magnetorquers' generated dipoles will be analyzed to verify the saturation condition and the consumption power respectively.
+
+
+\subsection{Detumbling analysis}
+\label{subsec:detumb_analysis}
+
+\twofigII{omega_true.eps}{$\boldsymbol{\omega}$ in $\mathcal{B}$ frame}{omega_true}{Bm_dot.eps}{$\lVert \boldsymbol{\dot{\hat{{B}}}_m} \rVert$ in $\mathcal{B}$ frame}{Bm_dot}{1}
+
+As it can be seen in \autoref{fig:omega_true} and \autoref{fig:Bm_dot}, the detumbling has a duration of less than half orbit, then the slew and tracking control engages to keep the angular velocity stabilized. Note that from this particular case nothing general can be deduced, as the period and the behaviour of the detumbling phase strongly depends on the initial conditions of the satellite and also on the criteria on which the control switches to the next phase. In this simulation, this criteria is based on the evaluation of $\lVert \boldsymbol{\dot{\hat{{B}}}_m} \rVert$.
+Looking at the graph in \autoref{fig:Bm_dot}, the detumbling phase ends when the condition $\lVert \boldsymbol{\dot{\hat{{B}}}_m} \rVert < 0.003 \; \text{s}^{-1}$ is satisfied.
+
+\subsection{Slew and tracking phase analysis}
+\label{subsec:slew_analysis}
+
+\twofigII{alpha.eps}{Attitude error $\boldsymbol{\alpha}$}{alpha}{alpha_zoom.eps}{Zoom on $\boldsymbol{\alpha}$}{alpha_zoom}{1}
+
+\twofigII{omega_bl.eps}{Angular velocity error $\boldsymbol{\omega_{BL}}$}{omega_bl}{omega_bl_zoom.eps}{Zoom on $\boldsymbol{\omega_{BL}}$}{omega_bl_zoom}{1}
+
+In \autoref{fig:alpha} and \autoref{fig:omega_bl} it can be seen that, after the detumbling, there is a transient after which both attitude and angular velocity errors converge to zero in a short period of time and keep stabilized.
+To better evaluate the errors in the tracking phase, in \autoref{fig:alpha_zoom} and \autoref{fig:omega_bl_zoom} a zoom on the final phase can be appreciated. The high frequency oscillations are mainly imputable to errors introduced by sensors and actuators. Indeed, both the command to the actuators and the executed control action are affected by noise.
+Moreover, looking at $\alpha_z$ a period behaviour can be noticed. The peaks hit $0.4 \degree$ value every half orbit. This can be related to the \autoref{fig:omega_bl_zoom}, where the zero is crossed in corrispondence of the previous peaks, and the behaviour repeats periodically as well.
+In addition, it can be noticed that the components of $\boldsymbol{\alpha}$ oscillate about non-zero values, as it is present a steady-state error in the system. This could be resolved introducing an integrative term on the control.
+
+It can be noticed from \autoref{fig:alpha} and \autoref{fig:omega_bl} that, at the beginning of slew manoeuvre, both attitude and angular velocity errors increase before going towards zero. This can be explained by \autoref{fig:error_omega}, in which the estimation of the angular velocity done by the alghoritm presented in \autoref{subsubsec:slew_nadir_law} is initially rough as it comes from the numerical derivation of $\boldsymbol{A_{BN}}$.
+
+\twofigII{error_omega_allsim.eps}{$\lVert \boldsymbol{\omega_{estim}} - \boldsymbol{\omega} \rVert$ after detumbling}{error_omega_allsim}{error_omega.eps}{$\lVert \boldsymbol{\omega_{estim}} - \boldsymbol{\omega} \rVert$ in the first $10$ s after detumbling}{error_omega}{1}
+
+As can be seen in \autoref{fig:error_omega_allsim}, after the error in estimated angular velocity decreases it stabilizes itself toward values close to zero.
+
+\subsection{Control action analysis}
+\label{subsec:control_analysis}
+
+Another important perspective to consider is how the actuators behave during the simulation, in particular verifying the torque generated and the reached saturation levels. For this last point, it can be evaluated whether a desaturation alghoritm becomes necessary to be implemented on the reaction wheels. For the dipoles, this analysis could be useful to dimension the energy supply (i.e. the solar panels and batteries).
+
+\cfig{control_torque.eps}{Actuated torque and control logic flag on reaction wheels}{control_torque}{0.95}
+
+From \autoref{fig:control_torque} it can be noticed that the torque is greater but much less noisy on detumbling phase than the tracking phase. Indeed, the control action during the first phase is calculated basing on the information coming only from the magnetometer, which is far more accurate than the other sensors (\autoref{table:exp_std}). Right after the detumbling phase, the slew manoeuvre presents a peak on the control torque requested. It is imputable to the bad estimation on the angular velocity on the starting phase, as seen in \autoref{fig:error_omega}.
+
+During the tracking phase, a low-frequency harmonic can be detected in the control moment, which is most noticeable on the x component. This behaviour can be related to the activation of the reaction wheel on the same axis, as can be seen from the control flag. It can also be seen that the time of activation of the wheel on x axis is longer than that on y axis. A possible alternative to this implementation could involve a better load distribution between the reaction wheels, again taking into account the variation in the magnetic field which rules the control logic.
+
+\twofigII{omega_wheels.eps}{Angular velocities of RW}{omega_wheels}{dipole.pdf}{Dipole of magnetic coils}{dipole}{1}
+
+In \autoref{fig:omega_wheels} is shown the angular velocities of the two reaction wheels. The saturation rates (\autoref{table:RW}) are much bigger in absolute value with respect to the values reached during the simulation.
+The \autoref{fig:dipole} shows instead the magnitude of the magnetic dipoles along the three axis. The most critical phase for the magnetorquer is surely the detumbling phase, since the control torque is relatively high (as noted in \autoref{fig:control_torque}) and magnetorquer is the only actuator used.
+It can be observed that the value of the dipole components saturate almost constantly. Since the dipole supplied by the magnetorquer is directly proportional to the current, the batteries must be sized in order to supply the required energy during the phase with retracted solar panels.

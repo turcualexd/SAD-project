@@ -106,10 +106,10 @@ H=60.828;
 %---------------------------SIMULATION-------------------------------
 
 t0 = 0;
-tf = 3*T;
+tf = 2.5*T;
 sim_options.SolverType='Fixed-Step';
 sim_options.Solver='ode5';
-sim_options.FixedStep='0.';
+sim_options.FixedStep='0.3';
 sim_options.StartTime='t0';
 sim_options.StopTime='tf';
 out   = sim("disturbances_report_sim.slx", sim_options);
@@ -120,26 +120,30 @@ ggT   = out.GRAV_torque.data;
 t     = out.tout;
 
 
-
+%%
 figure;
 subplot(2,2,1)
-plot(t/T, magT, 'LineWidth',2);
-xlabel('Orbits'); ylabel('Magnetic Torque [Nm]')
-title('Magnetic Torque')
+plot(t/T, magT, 'LineWidth', 2);
+xlabel('Orbits','interpreter','latex'); ylabel('Magnetic Torque [Nm]','interpreter','latex')
+title('Magnetic Torque','interpreter','latex');
 grid on;
 
 subplot(2,2,2)
 plot(t/T, dragT, 'LineWidth',2);
-xlabel('Orbits'); ylabel('Drag Torque [Nm]')
-title('Drag Torque')
+xlabel('Orbits','interpreter','latex'); ylabel('Drag Torque [Nm]','interpreter','latex')
+title('Drag Torque','interpreter','latex');
+grid on;
 
 subplot(2,2,3)
 plot(t/T, ggT, 'LineWidth',2)
-xlabel('Orbits'); ylabel('GG Torque [Nm]')
-title('GG Torque')
+xlabel('Orbits','interpreter','latex'); ylabel('GG Torque [Nm]','interpreter','latex')
+title('GG Torque','interpreter','latex');
+grid on;
 
 subplot(2,2,4)
 plot(t/T, srpT, 'LineWidth',2)
-xlabel('Orbits'); ylabel('SRP Torque [Nm]')
-title('SRP Torque')
-
+xlabel('Orbits','interpreter','latex'); ylabel('SRP Torque [Nm]','interpreter','latex')
+title('SRP Torque','interpreter','latex');
+lgd4 = legend('Mx', 'My', 'Mz');
+lg
+grid on;

@@ -1,13 +1,27 @@
 \section{Requirements}
 \label{sec:requirements}
 
-\subsection{Mandatory requests for simulation}
-\label{subsec:mandatory_req}
+\begin{table}[H]
 
-
-
-
-
-
-
-\cite{flight_manual}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    & \textbf{Assigned specification} & \textbf{Modifications}  & \textbf{Motivation for modifications} \\
+    \hline
+    \textbf{Platform} & Microsat & - & - \\
+    \hline
+    \textbf{Attitude parameters} & Euler angles & - & - \\
+    \hline
+    \textbf{Sensor} & Earth Horizon & Magnetic, Sun &
+    \makecell{Magnetic because of magnetorquers \\
+    Sun because no eclipse during orbit} \\
+    \hline
+    \textbf{Actuator} & 3 magnetorquers & 2 reaction wheels &
+    Underactuation of magnetorquers \\
+    \hline
+    \end{tabular}
+    
+    \caption{Mandatory requirements for the project}
+    \label{table:requirements}
+    
+\end{table}

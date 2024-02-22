@@ -1,27 +1,17 @@
 \section{Dynamics}
 \label{sec:dynamics}
-The equations of the dynamics rotating body motion used throughout the 
-simulation are the Euler equations since rigid body motion assumption is made. 
-The set of equations are referred to the principal axis frame 
-of the satellite. This frame will be also called reference frame $\mathcal{B}$,
-it is described by three unit vectors $\left\{ \boldsymbol{x_b, y_b, z_b,} \right\}$, 
-that are in the direction of principal inertia axis. 
 
-\begin{empheq}{equation*}
-    \boldsymbol{I\dot{\omega}} + \boldsymbol{\omega} \times \boldsymbol{I\omega} = \boldsymbol{M_d} + \boldsymbol{M_c}
-\end{empheq}
+The equations of dynamics adopted for a rotating rigid body motion are the Euler equations. The set of equations are referred to the principal inertia axis frame of the satellite. This frame coincides with the body frame $\mathcal{B}$ previously defined (\autoref{subsec:sat_characterization}). It is described by three unit vectors $\left\{ \boldsymbol{x_B}, \boldsymbol{y_B}, \boldsymbol{z_B} \right\}$ that are in the direction of principal inertia axis of the satellite.
 
-In the above equation the external torque has been divided in to 2 contributions, 
-with clear distinction. $M_d$ describes the disturbance torques that act on the 
-spacecraft due to environment and presented in the previous section, while $M_c$ 
-is referred to the control torque that the actuators are generating to perform 
-the tasks required by the control logic. \\
-With particular reference to the Simulink model, two configurations of the satellite 
-were considered: undeployed configuration (for detumbling phase) and extended configuration 
-(for slew and pointing phases). As a consequence, the mass distribution and hence the inertia
-matrix are different in terms of numerical values. This fact has been taken into account by implementing
-a logic in the dynamic block of Simulink, that switches between the two matrices using a flag
-based on the activation of the De-Tumbling control. This istantaneous switch is not completely realistic 
-since the extraction of the panels would require some finite time, and in some way could influence the 
-real dynamic of the satellite. Anyhow, for the microsat considered, the retracted configuration allows a 
-faster detumbling, and also inertia loads and stresses are reduced on the solar panels.
+\begin{equation} \label{eq:euler}
+    \boldsymbol{I \dot{\omega}} + \boldsymbol{\omega} \times \boldsymbol{I \omega} = \boldsymbol{M_d} + \boldsymbol{M_c}
+\end{equation}
+
+In \autoref{eq:euler} the external torque is split into two contributions.
+$\boldsymbol{M_d}$ describes the disturbance torques acting on the spacecraft due to environment, it is treated in more detail in \autoref{sec:disturbances_analysis}.
+$\boldsymbol{M_c}$ is referred to the control torque that the actuators generate in order perform the tasks required by the control logic (see \autoref{sec:control_logic}).
+
+With particular reference to the Simulink model, the two different configurations of the satellite are considered: undeployed configuration for detumbling phase and extended configuration for slew and tracking.
+
+Since the inertia matrix of the system must switch from \autoref{eq:undep_matrix} to \autoref{eq:dep_matrix}, a logic switch has been implemented during the simulation, with the use of a flag based on the activation of the detumbling control.
+This istantaneous switch is not completely realistic since the extraction of the panels would require some finite time and could influence the real dynamic of the satellite. Anyhow, for the microsat considered, the retracted configuration allows a faster detumbling and also reduces the inertia loads and stresses on the solar panels and the structure.
